@@ -1,0 +1,9 @@
+{
+  "main.js": "index.js",
+  "main.css": "styles.css",
+  "icons.eot": "icons.eot",
+  "icons.woff2": "icons.woff2",
+  "icons.woff": "icons.woff",
+  "icons.ttf": "icons.ttf",
+  "index.html": "index.html"
+}
