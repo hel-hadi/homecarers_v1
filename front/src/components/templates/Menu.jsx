@@ -1,10 +1,13 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
+import * as actions from '../../actions/auth.jsx'
+import { connect } from 'react-redux'
+import propTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import '@css/styles.css'
 import '@css/homepage.css'
 
-const Menu = (isAuthenticated) => (
+const Menu = ({ isAuthenticated, logout }) => (
     <div className="ui container">
         <div className="ui large secondary inverted bash menu">
             <a className="toc item">
@@ -30,4 +33,15 @@ const Menu = (isAuthenticated) => (
     </div>
 );
 
-export default Menu
+Menu.propTypes = {
+    isAuthenticated: propTypes.bool.isRequired,
+    logout: propTypes.func.isRequired
+};
+
+function mapStateToProps(state) {
+    return {
+        isAuthenticated: !!state.user.token
+    }
+}
+
+export default connect(mapStateToProps, { logout: actions.logout})(Menu)
