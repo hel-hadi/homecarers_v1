@@ -28,6 +28,12 @@ let config = {
     devServer: {
         port: 3000,
         contentBase: path.join(__dirname, 'public'),
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8080',
+                secure: false
+            }
+        },
         compress: true, // enable gzip compression
         historyApiFallback: {
             disableDotRule: true

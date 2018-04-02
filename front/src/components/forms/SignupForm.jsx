@@ -2,6 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 import isEmail from 'validator/lib/isEmail';
 import isMobilePhone from 'validator/lib/isMobilePhone';
+import InlineError from '../../messages/InlineError.jsx'
 
 class SignupForm extends React.Component {
     state = {
@@ -14,7 +15,7 @@ class SignupForm extends React.Component {
             profession: '',
             num: '',
         },
-        loading: false,
+        loading: 0,
         errors: {}
     };
 
@@ -29,11 +30,11 @@ class SignupForm extends React.Component {
         const errors = this.validate(this.state.data);
         this.setState({ errors });
         if (Object.keys(errors).length === 0) {
-            this.setState({ loading: true });
+            this.setState({ loading: 1 });
             this.props
                 .submit(this.state.data)
                 .catch(err =>
-                    this.setState({ errors: err.response.data.errors, loading: false })
+                    this.setState({ errors: err.response.data.errors, loading: 0 })
                 );
         }
     };
@@ -56,16 +57,16 @@ class SignupForm extends React.Component {
 
         return (
             <div>
-                <form onSubmit={this.onSubmit} loading ={loading} class="ui large form">
-                    <div class="ui stacked">
+                <form onSubmit={this.onSubmit} loading ={loading} className="ui large form">
+                    <div className="ui stacked">
                         { errors.global && <Message negative>
                             <Message.Header> Something Went Wrong</Message.Header>
                             <p>{errors.global}</p>
                         </Message>
                         }
-                        <div class="field" error={!!errors.email} >
-                            <div class="ui left icon input">
-                                <i class="mail icon"></i>
+                        <div className="field" error={!!errors.email} >
+                            <div className="ui left icon input">
+                                <i className="mail icon"></i>
                                 <label htmlFor="email"></label>
                                 <input
                                     type="email"
@@ -76,13 +77,13 @@ class SignupForm extends React.Component {
                                     onChange={this.onChange}
                                 />
                             </div>
-                            {errors.email && <p>error</p>}
+                            {errors.email && <InlineError text={errors.email} />}
                         </div>
-                        <div class="field">
-                            <div class="two fields">
-                                <div class="field" error={!!errors.name}>
-                                    <div class="ui left icon input">
-                                        <i class="user icon"></i>
+                        <div className="field">
+                            <div className="two fields">
+                                <div className="field" error={!!errors.name}>
+                                    <div className="ui left icon input">
+                                        <i className="user icon"></i>
                                         <label htmlFor="name"></label>
                                         <input
                                             type="name"
@@ -93,11 +94,11 @@ class SignupForm extends React.Component {
                                             onChange={this.onChange}
                                         />
                                     </div>
-                                    {errors.name && <p>error</p>}
+                                    {errors.name && <InlineError text={errors.name} />}
                                 </div>
-                                <div class="field" error={!!errors.firstName}>
-                                    <div class="ui left icon input">
-                                        <i class="user icon"></i>
+                                <div className="field" error={!!errors.firstName}>
+                                    <div className="ui left icon input">
+                                        <i className="user icon"></i>
                                         <label htmlFor="firstName"></label>
                                         <input
                                             type="firstName"
@@ -108,13 +109,14 @@ class SignupForm extends React.Component {
                                             onChange={this.onChange}
                                         />
                                     </div>
-                                    {errors.firstName && <p>error</p>}
+                                    {errors.firstName && <InlineError text={errors.firstName} />}
                                 </div>
                             </div>
                         </div>
 
-                        <div class="field" error={!!errors.type}>
-                            <div class="ui left icon input">
+                        <div className="field" error={!!errors.type}>
+                            <div className="ui left icon input">
+
                                 <label htmlFor="category"></label>
                                 <select name="type"
                                         id="type"
@@ -125,18 +127,18 @@ class SignupForm extends React.Component {
                                     <option value="intervenant">Métiers de la Santé</option>
                                 </select>
                             </div>
-                            {errors.type && <p>error</p>}
+                            {errors.type && <InlineError text={errors.type} />}
                         </div>
 
                         {data.type === "medecin" ?
-                            <div class="field" error={!!errors.profession}>
-                                <div class="ui left icon input">
-                                    <i class="user icon"></i>
+                            <div className="field" error={!!errors.profession}>
+                                <div className="ui left icon input">
+                                    <i className="user icon"></i>
                                     <label htmlFor="profession"></label>
 
                                     <select name="profession"
                                             placeholder="Your profession"
-                                            class="ui fluid search dropdown"
+                                            className="ui fluid search dropdown"
                                             value={data.profession}
                                             onChange={this.onChange}>
                                         <option value=""></option>
@@ -239,7 +241,7 @@ class SignupForm extends React.Component {
                                         <option value="Stomatologiste">Stomatologiste</option>
                                     </select>
                                 </div>
-                                {errors.profession && <p>error</p>}
+                                {errors.profession && <InlineError text={errors.profession}/>}
                             </div>
                             :
                             <div>
@@ -248,14 +250,14 @@ class SignupForm extends React.Component {
                         }
                         {data.type === "intervenant" ?
 
-                            <div class="field" error={!!errors.profession}>
-                                <div class="ui left icon input">
-                                    <i class="user icon"></i>
+                            <div className="field" error={!!errors.profession}>
+                                <div className="ui left icon input">
+                                    <i className="user icon"></i>
                                     <label htmlFor="profession"></label>
 
                                     <select name="profession"
                                             placeholder="Your profession"
-                                            class="ui fluid search dropdown"
+                                            className="ui fluid search dropdown"
                                             value={data.profession}
                                             onChange={this.onChange}>
                                         <option value=""></option>
@@ -293,16 +295,16 @@ class SignupForm extends React.Component {
                                         <option value="psychologue">Psychologue</option>
                                     </select>
                                 </div>
-                                {errors.profession && <p>error</p>}
+                                {errors.profession && <InlineError text={errors.profession}/>}
                             </div>
                             :
                             <div>
 
                             </div>
                         }
-                        <div class="field" error={!!errors.password} >
-                            <div class="ui left icon input">
-                                <i class="key icon"></i>
+                        <div className="field" error={!!errors.password} >
+                            <div className="ui left icon input">
+                                <i className="key icon"></i>
                                 <label htmlFor="password"></label>
                                 <input
                                     type="password"
@@ -313,11 +315,11 @@ class SignupForm extends React.Component {
                                     onChange={this.onChange}
                                 />
                             </div>
-                            {errors.password &&<p>error</p>}
+                            {errors.password && <InlineError text={errors.password} />}
                         </div>
-                        <div class="field" error={!!errors.num}>
-                            <div class="ui left icon input">
-                                <i class="phone icon"></i>
+                        <div className="field" error={!!errors.num}>
+                            <div className="ui left icon input">
+                                <i className="phone icon"></i>
                                 <label htmlFor="phone"></label>
                                 <input
                                     type="text"
@@ -328,10 +330,9 @@ class SignupForm extends React.Component {
                                     onChange={this.onChange}
                                 />
                             </div>
-                            {errors.num && <p>error</p>}
+                            {errors.num && <InlineError text={errors.num} />}
                         </div>
-
-                        <button class="ui fluid large teal submit button">Sign Up</button>
+                        <button className="ui fluid large teal submit button">Sign Up</button>
                     </div>
                 </form>
             </div>

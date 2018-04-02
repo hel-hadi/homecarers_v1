@@ -15,7 +15,7 @@ import  img_fiche from '@img/fiche1.png'
 import  img_nurse from '@img/nurse.jpg'
 import  img_profil from '@img/photo_profil.jpg'
 
-const HomePage = (isAuthenticated) => (
+const HomePage = () => (
     <div>
         <div className="pusher">
             <MediaQuery minDeviceWidth={768}>
