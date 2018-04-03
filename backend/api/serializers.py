@@ -1,14 +1,14 @@
-from django.contrib.auth.models import User, Group
+from api.models import User, PatientProfile
 from rest_framework import serializers
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
+        fields = ('first_name', 'last_name', 'email', 'profile')
 
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
+        
+class PatientProfileSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Group
-        fields = ('url', 'name')
+        model = PatientProfile
+        fields = ('user', 'vital_card_number')
