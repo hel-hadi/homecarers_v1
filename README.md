@@ -7,3 +7,10 @@
 + Add, commit and push your changes to your branch
 + Create a pull request to develop on Github
 + Ask for someone to review your code
+
+### Backend install
+
++ Install postgresql
++ Create homecarers database with settings in settings.py
++ ```python3 manage.py runserver``` to start the server
+
