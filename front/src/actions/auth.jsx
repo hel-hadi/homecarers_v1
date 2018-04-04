@@ -1,4 +1,5 @@
 import { USER_LOGGED_IN, USER_LOGGED_OUT } from "../types.jsx";
+import api from '../api.jsx'
 
 export const userLoggedIn = (user) => ({
     type: USER_LOGGED_IN,
