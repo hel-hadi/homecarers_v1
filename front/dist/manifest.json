@@ -1,9 +1,17 @@
 {
   "main.js": "index.js",
   "main.css": "styles.css",
+  "outline-icons.woff": "outline-icons.woff",
   "icons.eot": "icons.eot",
+  "brand-icons.eot": "brand-icons.eot",
   "icons.woff2": "icons.woff2",
   "icons.woff": "icons.woff",
   "icons.ttf": "icons.ttf",
+  "outline-icons.woff2": "outline-icons.woff2",
+  "outline-icons.eot": "outline-icons.eot",
+  "outline-icons.ttf": "outline-icons.ttf",
+  "brand-icons.woff2": "brand-icons.woff2",
+  "brand-icons.woff": "brand-icons.woff",
+  "brand-icons.ttf": "brand-icons.ttf",
   "index.html": "index.html"
 }

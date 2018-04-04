@@ -1,5 +1,6 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
+import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
 import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
 import Menu from '@temp/Menu.jsx'
@@ -156,7 +157,7 @@ const HomePage = () => (
 
         </div>
     </div>
-
 );
+
 
 export default HomePage;
