@@ -11,6 +11,12 @@
 ### Backend install
 
 + Install postgresql
-+ Create homecarers database with settings in settings.py
++ Create homecarers database with the settings in settings.py
+    + Connect to posgresql
+    + ```CREATE DATABASE homecarers;````
+    + ```\c homecarers;````
+    + ```CREATE USER homecarers WITH PASSWORD '42';```
++ ```virtualenv env``` and start your virtualenv
++ ```pip3 install -r requirements.txt``` to install python dependencies
 + ```python3 manage.py runserver``` to start the server
 
