@@ -24,7 +24,7 @@ const Menu = ({ isAuthenticated, logout }) => (
                         <button className="ui inverted button" onClick={() => logout()}>logout </button>
                     </div> :
                     <div>
-                        <Link to='/loginpage' className="ui inverted button">Log in</Link>
+                        <Link to='/login' className="ui inverted button">Log in</Link>
                         <Link to='/signup' className="ui inverted button">Sign Up</Link>
                     </div>
                 }

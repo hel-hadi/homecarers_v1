@@ -30,7 +30,7 @@ let config = {
         contentBase: path.join(__dirname, 'public'),
         proxy: {
             '/api': {
-                target: 'http://localhost:8080',
+                target: 'http://localhost:8081',
                 secure: false
             }
         },

@@ -16,7 +16,7 @@ import  img_fiche from '@img/fiche1.png'
 
 class SignupPage extends React.Component {
     submit = (data) =>
-        this.props.signup(data).then(() => this.props.history.push('/'));
+    this.props.signup(data).then(() => this.props.history.push('/'), console.log(data));
     render() {
         return  <div>
             <MediaQuery minDeviceWidth={768}>

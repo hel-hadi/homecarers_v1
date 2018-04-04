@@ -18,8 +18,8 @@ const DashboardPage = () => (
                 <MediaQuery minWidth={768}>
                     <div class="pusher">
                         <div class="ui vertical inverted masthead center aligned segment">
-                            <br/><br/>
                             <Menu />
+                            <br/><br/>
                             <div class="ui middle aligned stackable grid container">
                                 <div class="eight wide column">
                                     <h1 class="ui page-header">
