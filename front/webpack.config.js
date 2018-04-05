@@ -98,6 +98,7 @@ let config = {
 
 if (!dev) {
     config.plugins.push(new UglifyJSPlugin({
+        minimize: true,
         sourceMap: false
     }));
     config.plugins.push(new HtmlWebpackPlugin({
