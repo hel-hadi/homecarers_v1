@@ -3,13 +3,12 @@ from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.conf import settings
 from django.core.mail import send_mail
+from datetime import date
 
 from .managers import UserManager
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=30, blank=True)
-    last_name = models.CharField(max_length=30, blank=True)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
     is_active = models.BooleanField(default=True)
@@ -26,7 +25,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['last_name', 'first_name', 'profile']
+    REQUIRED_FIELDS = ['profile']
 
     def get_full_name(self):
         '''
@@ -44,10 +43,34 @@ class User(AbstractBaseUser, PermissionsMixin):
     def email_user(self, subject, message, from_email=None, **kwargs):
         send_mail(subject, message, from_email, [self.email], **kwargs)
 
-
-
 class PatientProfile(models.Model):
-        user = models.OneToOneField(settings.AUTH_USER_MODEL, primary_key = True, related_name = 'patient_profile', on_delete=models.CASCADE)
-        vital_card_number = models.BigIntegerField
-        created_at = models.DateTimeField(auto_now_add = True)
-        updated_at = models.DateTimeField(auto_now = True)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, primary_key = True, related_name = 'patient_profile', on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
+    birth_date = models.DateField(blank=True, null=True)
+    vital_card_number = models.BigIntegerField(blank=False, null=False, default=1)
+    created_at = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now = True)
+
+    def get_age(self):
+        '''
+        Returns age of the patient.
+        '''
+        born = self.birth_date
+        today = date.today()
+        return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+class ProfessionalProfile(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, primary_key = True, related_name = 'professional_profile', on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
+    job = models.CharField(max_length=30, blank=True)
+    created_at = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now = True)
+
+class Report(models.Model):
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE)
+    professional = models.ForeignKey(ProfessionalProfile, on_delete=models.CASCADE, blank=True)
+    content = models.CharField(max_length=30, blank=False)
+    created_at = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now = True)
