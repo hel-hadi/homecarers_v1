@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from api.models import User, PatientProfile
+from api.models import User, PatientProfile, ProfessionalProfile, Report
 from rest_framework import viewsets
-from api.serializers import UserSerializer, PatientProfileSerializer
+from api.serializers import UserSerializer, PatientProfileSerializer, ProfessionalProfileSerializer, ReportSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -11,3 +11,11 @@ class UserViewSet(viewsets.ModelViewSet):
 class PatientProfileViewSet(viewsets.ModelViewSet):
     queryset = PatientProfile.objects.all()
     serializer_class = PatientProfileSerializer
+
+class ProfessionalProfileViewSet(viewsets.ModelViewSet):
+    queryset = ProfessionalProfile.objects.all()
+    serializer_class = ProfessionalProfileSerializer
+
+class ReportViewSet(viewsets.ModelViewSet):
+    queryset = Report.objects.all()
+    serializer_class = ReportSerializer
