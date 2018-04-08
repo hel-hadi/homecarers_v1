@@ -66,15 +66,6 @@ class LoginPageMobile extends React.Component {
                     </div>
                 </div>
 
-                <div className="ui inverted vertical footer2 segment">
-                    <div className="ui center aligned container">
-                        <div className="ui horizontal inverted small divided link list">
-                            <a className="item"><h5 className="homewhite">Site Map</h5></a>
-                            <a className="item"><h5 className="homewhite">Contact Us</h5></a>
-
-                        </div>
-                    </div>
-                </div>
             </div>
         );
     }

@@ -55,10 +55,9 @@ const SidebarPage = [
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
     </div>,
-    <MenuMobile>
     <SidebarItem textAlign="center">
-    </SidebarItem>
-    </MenuMobile>,
+        <MenuMobile />
+    </SidebarItem>,
     <div>
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
@@ -68,13 +67,11 @@ const SidebarPage = [
         <a href="https://fr-fr.facebook.com/"><i className="facebook inverted big icon"></i></a>
         <a href="https://fr.linkedin.com/"><i className="linkedin inverted big icon"></i></a>
     </SidebarItem>,
-    <div className="ui inverted vertical footer2 segment">
-        <div className="ui center aligned container">
-            <div className="ui horizontal inverted small divided link list">
-                <a className="item"><h5 className="homewhite">Contact Us</h5></a>
-            </div>
-        </div>
-    </div>
+    <div className="ui hidden divider"></div>,
+    <div className="ui hidden divider"></div>,
+    <SidebarItem textAlign="center">
+        <Link className="homewhite" to='/'>Contact Us</Link>
+    </SidebarItem>
 ];
 
 export default SidebarPage

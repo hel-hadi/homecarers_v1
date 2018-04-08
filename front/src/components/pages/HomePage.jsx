@@ -3,25 +3,21 @@ import { Link } from "react-router-dom";
 import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
 import Menu from '@temp/Menu.jsx'
 import Footer from '@temp/Footer.jsx'
-import 'semantic-ui-css/semantic.min.css'
 import '@css/styles.css'
 import '@css/homepage.css'
-import  img_agenda from '@img/agenda.png'
-import  img_book from '@img/book.png'
-import  img_comm from '@img/comm.png'
-import  img_fiche from '@img/fiche1.png'
-import  img_nurse from '@img/nurse.jpg'
-import  img_profil from '@img/photo_profil.jpg'
-import  img_logo from '@img/logohome.png'
-
-
-
+import img_agenda from '@img/agenda.png'
+import img_book from '@img/book.png'
+import img_comm from '@img/comm.png'
+import img_fiche from '@img/fiche1.png'
+import img_nurse from '@img/nurse.jpg'
+import img_profil from '@img/photo_profil.jpg'
+import img_logo from '@img/logohome.png'
 
 const HomePage = () => (
     <div>
         <div className="pusher">
             <div className="ui vertical inverted masthead center aligned segment">
-                <Menu />
+                <Menu active="homepage" />
                 <br/><br/> <br/><br/>
                 <div className="ui middle  aligned stackable grid container">
                     <div className="eight wide column">

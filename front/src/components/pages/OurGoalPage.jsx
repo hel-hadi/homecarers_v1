@@ -9,7 +9,7 @@ import img_tablette from '@img/tablette.png'
 const OurGoalPage = () => (
     <div>
         <div className="ui vertical inverted masthead center aligned segment">
-            <Menu />
+            <Menu active="ourgoalpage" />
             <br/><br/><br/><br/><br/><br/>
             <div className="ui middle aligned stackable grid container">
                 <div className="eight wide column">

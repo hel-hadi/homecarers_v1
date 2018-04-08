@@ -11,7 +11,7 @@ const AboutUsPage = () => (
     <div>
                 <div className="pusher">
                     <div className="ui vertical inverted masthead center aligned segment">
-                        <Menu />
+                        <Menu active="aboutpage"/>
                         <br/><br/><br/><br/><br/><br/>
 
                         <div className="ui middle aligned stackable grid container">
