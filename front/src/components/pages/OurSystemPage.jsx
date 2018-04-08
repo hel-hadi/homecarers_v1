@@ -10,7 +10,7 @@ import img_secure from '@img/secure.jpg'
 const OurSystemPage = () => (
     <div>
         <div className="ui vertical inverted masthead center aligned segment">
-            <Menu />
+            <Menu active="oursystempage"/>
             <br/><br/><br/> <br/><br/><br/>
             <div className="ui middle aligned stackable grid container">
                 <div className="eight wide column">

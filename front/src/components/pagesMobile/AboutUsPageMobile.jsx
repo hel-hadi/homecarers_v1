@@ -28,7 +28,7 @@ const AboutUsPageMobile = () => (
                         <div className="ui middle aligned stackable grid container">
 
                         <div className="wide column">
-                            <img className="ui large centered rounded image" alt="doctor together" src={img_logo_blanc}/>
+                            <img className="ui medium centered rounded image" alt="doctor together" src={img_logo_blanc}/>
                         </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ const AboutUsPageMobile = () => (
                                     <img src={img_prix} alt="vainqueur" className="ui large centered rounded image" />
                                 </div>
                             </div>
-                            <h4 class="ui horizontal header divider">
+                            <h4 className="ui horizontal header divider">
                                 <a href="">Our Partners</a>
                             </h4>
                             <div className="column">

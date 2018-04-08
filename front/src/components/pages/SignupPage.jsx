@@ -19,7 +19,7 @@ class SignupPage extends React.Component {
         return  <div>
                  <div className="pusher">
                 <div className="ui vertical inverted masthead1 center aligned segment">
-                    <Menu />
+                    <Menu active="signupage" />
                     <br/><br/>
                     <div className="ui middle aligned center aligned grid">
                         <div className="six wide column">

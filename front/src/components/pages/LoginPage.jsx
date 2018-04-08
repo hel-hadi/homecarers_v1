@@ -59,7 +59,7 @@ class LoginPage extends React.Component {
                     </div>
                 </div>
                 <br />
-                <Menu />
+                <Menu active="loginpage" />
             </div>
         );
     }
