@@ -2,11 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import propTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { Sidebar } from 'react-responsive-sidebar'
 import 'semantic-ui-css/semantic.min.css'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, HashRouter } from 'react-router-dom'
 import decode from 'jwt-decode'
 import rootReducer from './rootReducer.jsx'
 import App from './App.jsx'
@@ -30,7 +29,9 @@ if (localStorage.homecareJWT) {
 ReactDOM.render(
   <BrowserRouter>
       <Provider store={store}>
-          <Route component={App} />
+          <HashRouter>
+            <Route component={App} />
+          </HashRouter>
       </Provider>
   </BrowserRouter>,
   document.getElementById('app')

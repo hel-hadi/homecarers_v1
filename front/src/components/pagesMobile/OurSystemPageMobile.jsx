@@ -26,7 +26,7 @@ const OurSystemPageMobile = () => (
             </div>
             <div className="ui middle aligned stackable grid container">
                 <div className="wide column">
-                    <img className="ui large centered rounded image" alt="doctor together" src={img_logo_blanc}/>
+                    <img className="ui medium centered rounded image" alt="doctor together" src={img_logo_blanc}/>
                 </div>
             </div>
         </div>
