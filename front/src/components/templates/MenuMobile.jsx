@@ -1,18 +1,15 @@
 import React from 'react'
 import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
 import propTypes from 'prop-types'
-import 'semantic-ui-css/semantic.min.css'
 import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
-import '@css/styles.css'
-import '@css/homepage.css'
 import * as actions from "../../actions/auth.jsx";
 
 const MenuMobile = ({ isAuthenticated, logout }  ) => (
     <SidebarItem textAlign="center">
         { !isAuthenticated ?
             <div>
-                <Link className="ui active inverted button" to="/loginpage">Sign In</Link>
+                <Link className="ui active inverted button" to="/login">Sign In</Link>
                 <Link className="ui active inverted button" to="/signup">Sign up</Link>
             </div>
             :

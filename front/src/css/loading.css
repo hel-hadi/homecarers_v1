@@ -1,0 +1,24 @@
+.Loading.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #2c4f77;
+}
+
+.Loading.content {
+    width: 100vw;
+    height: 100vh;
+    background: #444;
+}
+
+
+
+@keyframes pulse {
+    from { opacity: 1; }
+    to { opacity: 0.3; }
+}

@@ -38,17 +38,17 @@ class LoginForm extends React.Component {
     render() {
         const { data, errors, loading }= this.state;
         return (
-            <Form onSubmit={this.onSubmit} loading ={loading} class="ui  large form">
-                <div class="ui stacked segment">
+            <Form onSubmit={this.onSubmit} loading ={loading} className="ui  large form">
+                <div className="ui stacked segment">
                     { errors.global && (
                         <Message negative>
                             <Message.Header> Something Went Wrong</Message.Header>
                             <p>{errors.global}</p>
                         </Message>
                     )}
-                    <div class="field" error={!!errors.email} >
-                        <div class="ui left icon input">
-                            <i class="user icon"></i>
+                    <div className="field" error={!!errors.email} >
+                        <div className="ui left icon input">
+                            <i className="user icon"></i>
                             <label htmlFor="email"></label>
                             <input
                                 type="email"
@@ -62,9 +62,9 @@ class LoginForm extends React.Component {
                         {errors.email && <p> error </p>}
                     </div>
 
-                    <div class="field" error={!!errors.password} >
-                        <div class="ui left icon input">
-                            <i class="user icon"></i>
+                    <div className="field" error={!!errors.password} >
+                        <div className="ui left icon input">
+                            <i className="user icon"></i>
                             <label htmlFor="password"></label>
                             <input
                                 type="password"
@@ -77,7 +77,7 @@ class LoginForm extends React.Component {
                         </div>
                         {errors.password && <p> error </p>}
                     </div>
-                    <button class="ui fluid large teal submit button">Login</button>
+                    <button className="ui fluid large teal submit button">Login</button>
                 </div>
             </Form>
         );
