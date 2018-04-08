@@ -32,12 +32,12 @@ let config = {
         port: process.env.PORT,
         inline: true,
         contentBase: path.join(__dirname, 'public'),
-        // proxy: {
-        //     '/api': {
-        //         target: 'http://localhost:8081',
-        //         secure: false
-        //     }
-        // },
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8081',
+                secure: false
+            }
+        },
         compress: true, // enable gzip compression
         historyApiFallback: {
             disableDotRule: true
