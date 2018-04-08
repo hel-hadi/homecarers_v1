@@ -1,11 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
-import MenuMobile from '@temp/MenuMobile.jsx'
 import Footer from '@temp/Footer.jsx'
 import Features from '@temp/Features.jsx'
-import '@css/homepage.css'
-import '@css/styles.css'
 import  img_nurse from '@img/nurse.jpg'
 import  img_logo from '@img/logo.png'
 

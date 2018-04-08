@@ -1,21 +1,13 @@
 import React from 'react'
-import 'semantic-ui-css/semantic.min.css'
 import Menu from '@temp/Menu.jsx'
 import Footer from '@temp/Footer.jsx'
-import OurGoalPageMobile from '@mpages/OurGoalPageMobile.jsx'
-import MediaQuery from 'react-responsive';
-
-import '@css/styles.css'
-import '@css/homepage.css'
 import img_doctor from '@img/doctorbarbu.png'
 import img_logo_blanc from '@img/logo_blanc.png'
 import img_nurse from '@img/nurse1.jpg'
 import img_tablette from '@img/tablette.png'
 
-const OurGoalPage = (isAuthenticated) => (
+const OurGoalPage = () => (
     <div>
-        <MediaQuery minDeviceWidth={768}>
-            <MediaQuery minWidth={768}>
         <div className="ui vertical inverted masthead center aligned segment">
             <Menu />
             <br/><br/><br/><br/><br/><br/>
@@ -87,12 +79,6 @@ const OurGoalPage = (isAuthenticated) => (
             </div>
         </div>
         <Footer />
-            </MediaQuery>
-        </MediaQuery>
-
-        <MediaQuery maxWidth={768}>
-            <OurGoalPageMobile />
-        </MediaQuery>
     </div>
 );
 

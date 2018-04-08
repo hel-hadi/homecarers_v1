@@ -1,12 +1,9 @@
 import React from 'react'
-import 'semantic-ui-css/semantic.min.css'
-import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
 import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
 import Menu from '@temp/Menu.jsx'
-import HomePageMobile from '@mpages/HomePageMobile.jsx'
 import Footer from '@temp/Footer.jsx'
-import MediaQuery from 'react-responsive';
+import 'semantic-ui-css/semantic.min.css'
 import '@css/styles.css'
 import '@css/homepage.css'
 import  img_agenda from '@img/agenda.png'
@@ -15,12 +12,14 @@ import  img_comm from '@img/comm.png'
 import  img_fiche from '@img/fiche1.png'
 import  img_nurse from '@img/nurse.jpg'
 import  img_profil from '@img/photo_profil.jpg'
+import  img_logo from '@img/logohome.png'
+
+
+
 
 const HomePage = () => (
     <div>
         <div className="pusher">
-            <MediaQuery minDeviceWidth={768}>
-            <MediaQuery minWidth={768}>
             <div className="ui vertical inverted masthead center aligned segment">
                 <Menu />
                 <br/><br/> <br/><br/>
@@ -43,6 +42,8 @@ const HomePage = () => (
                         </Link>
                     </div>
                     <div className="six wide right floated column">
+                        <img className="ui medium centered rounded image" alt="doctor" src={img_logo}/>
+
                     </div>
                 </div>
             </div>
@@ -143,21 +144,9 @@ const HomePage = () => (
                     </div>
                 </div>
                 <Footer />
-
-            </MediaQuery>
-            </MediaQuery>
-
-            <MediaQuery maxWidth={768}> {/* Mobile Responsive */}
-                <HomePageMobile />
-            </MediaQuery>
-
-            <MediaQuery maxDeviceWidth={768}>
-                <HomePageMobile />
-            </MediaQuery>
-
         </div>
     </div>
 );
 
 
-export default HomePage;
+export default HomePage
