@@ -1,12 +1,8 @@
 import React from 'react'
 import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
-import propTypes from 'prop-types'
-import 'semantic-ui-css/semantic.min.css'
 import MenuMobile from '@temp/MenuMobile.jsx'
-import { Link } from "react-router-dom";
-import img_logo from '@img/logo.png'
-import '@css/styles.css'
-import '@css/homepage.css'
+import { Link } from "react-router-dom"
+import img_logo from '@img/logohome.png'
 
 const SidebarPage = [
     <div className="center ui grid">
@@ -23,7 +19,7 @@ const SidebarPage = [
     </div>,
     <SidebarItem textAlign="center">
         <div className="ui hidden divider"></div>
-        <img className="ui centered small circular image" alt="chat" src={img_logo} />
+        <img className="ui centered tiny circular image" alt="chat" src={img_logo} />
     </SidebarItem>,
     <Link className="homewhite" to='/'>
         <SidebarItem textAlign="left">
@@ -31,7 +27,6 @@ const SidebarPage = [
             <i className="home icon"></i>
             Home
         </SidebarItem>
-        <div className="ui section divider"></div>
 
     </Link>,
     <Link className="homewhite" to='/oursystempage'>
@@ -39,7 +34,6 @@ const SidebarPage = [
             <i className="cogs icon"></i>
             Our System
         </SidebarItem>
-        <div className="ui section divider"></div>
 
     </Link>,
     <Link className="homewhite" to='/ourgoalpage'>
@@ -47,7 +41,6 @@ const SidebarPage = [
             <i className="clipboard icon"></i>
             Our Goal
         </SidebarItem>
-        <div className="ui section divider"></div>
 
     </Link>,
     <Link className="homewhite" to='/aboutuspage'>
@@ -62,7 +55,10 @@ const SidebarPage = [
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
     </div>,
-    <MenuMobile />,
+    <MenuMobile>
+    <SidebarItem textAlign="center">
+    </SidebarItem>
+    </MenuMobile>,
     <div>
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
@@ -71,7 +67,14 @@ const SidebarPage = [
     <SidebarItem textAlign="center">
         <a href="https://fr-fr.facebook.com/"><i className="facebook inverted big icon"></i></a>
         <a href="https://fr.linkedin.com/"><i className="linkedin inverted big icon"></i></a>
-    </SidebarItem>
+    </SidebarItem>,
+    <div className="ui inverted vertical footer2 segment">
+        <div className="ui center aligned container">
+            <div className="ui horizontal inverted small divided link list">
+                <a className="item"><h5 className="homewhite">Contact Us</h5></a>
+            </div>
+        </div>
+    </div>
 ];
 
 export default SidebarPage

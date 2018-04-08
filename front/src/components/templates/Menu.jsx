@@ -1,11 +1,8 @@
 import React from 'react'
-import 'semantic-ui-css/semantic.min.css'
 import * as actions from '../../actions/auth.jsx'
 import { connect } from 'react-redux'
 import propTypes from 'prop-types'
 import { Link } from "react-router-dom";
-import '@css/styles.css'
-import '@css/homepage.css'
 
 const Menu = ({ isAuthenticated, logout }) => (
     <div className="ui container">

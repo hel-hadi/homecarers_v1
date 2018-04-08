@@ -1,12 +1,10 @@
 import React from 'react'
-import MediaQuery from 'react-responsive'
 import propTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { signup } from '../../actions/users.jsx'
 import Menu from '@temp/Menu.jsx'
 import Footer from '@temp/Footer.jsx'
-import SignupForm from '@form/SignupForm.jsx'
-import SignupPageMobile from '@mpages/SignupPageMobile.jsx'
+import { SignupForm } from "../../actions/routeSplit.jsx"
 import img_logo_blanc from '@img/logo_blanc.png'
 import  img_boy from '@img/doctor2000.svg'
 import  img_agenda from '@img/agenda.png'
@@ -19,8 +17,6 @@ class SignupPage extends React.Component {
     this.props.signup(data).then(() => this.props.history.push('/'), console.log(data));
     render() {
         return  <div>
-            <MediaQuery minDeviceWidth={768}>
-            <MediaQuery minWidth={768}>
                  <div className="pusher">
                 <div className="ui vertical inverted masthead1 center aligned segment">
                     <Menu />
@@ -121,16 +117,7 @@ class SignupPage extends React.Component {
                 </div>
              <Footer />
             </div>
-            </MediaQuery>
-            </MediaQuery>
-            <MediaQuery maxWidth={768}>
-                <SignupPageMobile />
-            </MediaQuery>
-
-            <MediaQuery maxDeviceWidth={768}>
-                <SignupPageMobile />
-            </MediaQuery>
-        </div>;
+        </div>
     }
 }
 

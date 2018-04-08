@@ -1,46 +1,40 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import propTypes from 'prop-types'
+import { Sidebar } from 'react-responsive-sidebar'
 import SidebarPage from '@temp/SidebarPage.jsx'
-import { Sidebar, SidebarItem } from 'react-responsive-sidebar'
-import MediaQuery from 'react-responsive';
-import 'semantic-ui-css/semantic.min.css'
-import HomePage from '@pages/HomePage.jsx'
-import SignupPage from '@pages/SignupPage.jsx'
-import LoginPage from '@pages/LoginPage.jsx'
-import ConfirmationPage from '@pages/ConfirmationPage.jsx'
-import OurGoalPage from '@pages/OurGoalPage.jsx'
-import OurSystemPage from '@pages/OurSystemPage.jsx'
-import DashboardPage from '@pages/DashboardPage.jsx'
-import AboutUsPage from '@pages/AboutUsPage.jsx'
+import MediaQuery from 'react-responsive'
+import propTypes from 'prop-types'
+import * as split from "./actions/routeSplit.jsx"
 import UserRoute from './components/routes/UserRoute.jsx'
 import GuestRoute from './components/routes/GuestRoute.jsx'
 import Favicon from 'react-favicon'
 import img_logo from '@img/logo.png'
+import '@css/styles.css'
+import '@css/homepage.css'
 
 const App = ({ location }) => (
     <div>
         <MediaQuery minWidth={768}> {/* Web Page */}
                 <Favicon url={img_logo}/>
-                <Route location={location}  path="/" exact component={HomePage} />
-                <Route location={location}  path="/ourgoalpage" exact component={OurGoalPage} />
-                <Route location={location}  path="/oursystempage" exact component={OurSystemPage} />
-                <Route location={location}  path="/aboutuspage" exact component={AboutUsPage} />
-                <GuestRoute location={location} path="/signup" exact component={SignupPage} />
-                <GuestRoute location={location} path="/login" exact component={LoginPage} />
-                <UserRoute location={location} path="/dashboard" exact component={DashboardPage} />
+                <Route location={location}  path="/" exact component={split.HomePage} />
+                <Route location={location}  path="/ourgoalpage" exact component={split.OurGoalPage} />
+                <Route location={location}  path="/oursystempage" exact component={split.OurSystemPage} />
+                <Route location={location}  path="/aboutuspage" exact component={split.AboutUsPage} />
+            <Route location={location}  path="/confirmation/:token" exact component={split.ConfirmationPage} />
+            <GuestRoute location={location} path="/signup" exact component={split.SignupPage} />
+                <GuestRoute location={location} path="/login" exact component={split.LoginPage} />
+                <UserRoute location={location} path="/dashboard" exact component={split.DashboardPage} />
         </MediaQuery>
         <MediaQuery maxWidth={768}> {/* Mobile Responsive Page */}
-            <Sidebar content={SidebarPage} background='#2b4e77' toggleIconColor='#cbcbcb' hoverhighlight='rgba(255,255,255,0.15)'>
+            <Sidebar content={SidebarPage} background='#2b4e77' toggleIconColor='#cbcbcb'>
               <Favicon url={img_logo}/>
-              <Route location={location}  path="/confirmation/:token" exact component={ConfirmationPage} />
-              <Route location={location}  path="/" exact component={HomePage} />
-              <Route location={location}  path="/ourgoalpage" exact component={OurGoalPage} />
-              <Route location={location}  path="/oursystempage" exact component={OurSystemPage} />
-              <Route location={location}  path="/aboutuspage" exact component={AboutUsPage} />
-              <Route path="/signup" exact component={SignupPage} />
-              <Route path="/login" exact component={LoginPage} />
-              <Route path="/dashboard" exact component={DashboardPage} />
+              <Route location={location}  path="/" exact component={split.HomePageMobile} />
+              <Route location={location}  path="/ourgoalpage" exact component={split.OurGoalPageMobile} />
+              <Route location={location}  path="/oursystempage" exact component={split.OurSystemPageMobile} />
+              <Route location={location}  path="/aboutuspage" exact component={split.AboutUsPageMobile} />
+              <Route path="/signup" exact component={split.SignupPageMobile} />
+              <Route path="/login" exact component={split.LoginPageMobile} />
+              <Route path="/dashboard" exact component={split.DashboardPageMobile} />
             </Sidebar>
         </MediaQuery>
     </div>

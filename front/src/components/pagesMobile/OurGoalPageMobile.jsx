@@ -16,7 +16,7 @@ const OurGoalPageMobile= () => (
                                What we want ?
                             </span>
                     </h1>
-                    <img class="ui medium centered rounded image" alt="doctor" src={img_logo_blanc}/>
+                    <img className="ui medium centered rounded image" alt="doctor" src={img_logo_blanc}/>
 
                     <h2 className="ui page-header">
                             <span className="homewhite">
