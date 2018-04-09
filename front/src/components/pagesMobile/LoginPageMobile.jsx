@@ -18,8 +18,6 @@ class LoginPageMobile extends React.Component {
                     },
                 }} />
                 <div className="ui hidden divider"></div>
-                <div className="ui hidden divider"></div>
-                <div className="ui hidden divider"></div>
 
                 <div className="ui middle aligned stackable grid container">
                     <div className="wide column">
@@ -32,6 +30,7 @@ class LoginPageMobile extends React.Component {
                                 </h1>
                             </div>
                         </h1>
+                        <div className="ui hidden divider"></div>
                         <img className="ui medium centered rounded image" alt="doctor together" src={img_logo}/>
                     </div>
                 </div>
@@ -39,19 +38,13 @@ class LoginPageMobile extends React.Component {
                 <div className="ui hidden divider"></div>
                 <div className="ui hidden divider"></div>
                 <div className="ui hidden divider"></div>
-                <div className="ui hidden divider"></div>
-                <div className="ui hidden divider"></div>
-                <div className="ui hidden divider"></div>
-                <div className="ui hidden divider"></div>
-                <div className="ui hidden divider"></div>
 
                 <div className="ui middle aligned centered grid container">
-                    <div className="ten wide column">
-                        <div className="LoginPage-column">
+                    <div className="wide column">
                             <h2 className="ui primary LoginPage-image header centered">
                                 <div className="content">
                                     <h2 className="ui image header centered">
-                                        <span className="homebeige centered">
+                                        <span className="homewhite centered">
                                             Sign in into your account
                                         </span>
                                     </h2>
@@ -63,7 +56,6 @@ class LoginPageMobile extends React.Component {
                                 New to us? <Link to="/signup" >Sign Up</Link>
                             </div>
                         </div>
-                    </div>
                 </div>
 
             </div>
