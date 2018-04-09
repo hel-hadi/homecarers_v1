@@ -1,6 +1,11 @@
-from api.models import User, PatientProfile, ProfessionalProfile, Report
+from api.models import LandingUser, User, PatientProfile, ProfessionalProfile, Report
 from rest_framework import serializers
 
+
+class LandingUserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = LandingUser
+        fields = ('email', 'code_postal', 'created_at')
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -10,7 +15,16 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
+        if validated_data['profile'] == 'Patient':
+            profile = PatientProfile.objects.create(user = user)
+        elif validated_data['profile'] == 'Pro':
+            profile = ProfessionalProfile.objects.create(user = user)            
+        elif validated_data['profile'] == 'Institution':
+            profile = InstitutionProfile.objects.create(user = user)
+        profile.save()            
         return user
+
+    
         
 class PatientProfileSerializer(serializers.HyperlinkedModelSerializer):
     user = serializers.HyperlinkedRelatedField(

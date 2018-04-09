@@ -7,6 +7,11 @@ from datetime import date
 
 from .managers import UserManager
 
+class LandingUser(models.Model):
+    email = models.EmailField(unique=True)
+    code_postal = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add = True)
+
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     created_at = models.DateTimeField(auto_now_add = True)
@@ -48,7 +53,7 @@ class PatientProfile(models.Model):
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=30, blank=True)
     birth_date = models.DateField(blank=True, null=True)
-    vital_card_number = models.BigIntegerField(blank=False, null=False, default=1)
+    vital_card_number = models.BigIntegerField()
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
