@@ -29,15 +29,15 @@ let config = {
         }
     },
     devServer: {
-        port: process.env.PORT,
+        port: process.env.PORT || 3000,
         inline: true,
         contentBase: path.join(__dirname, 'public'),
-        proxy: {
-            '/api': {
-                target: 'http://localhost:8081',
-                secure: false
-            }
-        },
+        // proxy: {
+        //     '/api': {
+        //         target: 'http://localhost:8081',
+        //         secure: false
+        //     }
+        // },
         compress: true, // enable gzip compression
         historyApiFallback: {
             disableDotRule: true

@@ -9,7 +9,7 @@ import Menu from '@temp/Menu.jsx'
 import img_boy from '@img/boy.svg'
 
 class LoginPage extends React.Component {
-    submit = data => this.props.login(data).then(() => this.props.history.push("/dashboard"));
+    submit = data => this.props.login(data).then(console.log(data),() => this.props.history.push("/dashboard"));
     render() {
         return (
             <div className="pusher">

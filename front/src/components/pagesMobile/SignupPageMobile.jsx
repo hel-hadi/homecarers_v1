@@ -15,11 +15,10 @@ class SignupPageMobile extends React.Component {
                 <br/><br/>
                 <div className="ui middle aligned stackable grid container">
                     <div className="wide column">
-                        <h2 className="ui header"> <span className="homebeige">Because monitoring is important for all of us</span> </h2>
                     </div>
                 </div>
                 <div className="ui middle aligned centered grid container">
-                    <div className="nine wide column">
+                    <div className="wide column">
                         <div className="LoginPage-column">
                             <h2 className="ui primary LoginPage-image header">
                                 <div className="content">
