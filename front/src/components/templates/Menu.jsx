@@ -1,9 +1,8 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
-import * as actions from '../../actions/auth.jsx'
-import { connect } from 'react-redux'
-import propTypes from 'prop-types'
 import { Link } from "react-router-dom";
+import { Dropdown } from 'semantic-ui-react'
+import img_logo from '@img/logo_blanc.png'
 import '@css/styles.css'
 import '@css/homepage.css'
 
@@ -16,43 +15,30 @@ class Menu extends React.Component {
             return 'className ' + ((value === this.props.active) ? 'active item' : 'item');
         }
     render() {
-        const {isAuthenticated, logout} = this.props;
+        const {} = this.props;
         return (
-            <div className="ui container">
-                <div className="ui large secondary inverted bash menu">
-                    <a className="toc item">
-                        <i className="sidebar icon"></i>
+            <div className="ui inverted secondary menu">
+                <div className="item">
+                    <img className="ui tiny image" alt="doctor together" src={img_logo}/>
+                </div>
+                <Dropdown className="ui dropdown homefont item" text="Qui sommes-nous ?" >
+                    <Dropdown.Menu>
+                        <Dropdown.Item as={Link} to='/' className="ui teal"> Accueil </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/ourgoalpage' className="ui teal"> Nos Objectifs </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/oursystempage'> Notre système </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/aboutuspage'> A propos de nous </Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                <div className="right menu">
+                    <a className="item">
+                        <i className="facebook inverted big icon"></i>
+                        <i className="linkedin inverted big icon"></i>
                     </a>
-                    <Link to='/' className={this.isActive("homepage")}><span className="homewhite">Home</span></Link>
-                    <Link to="/oursystempage" className={this.isActive("oursystempage")}><span className="homewhite">Our System</span></Link>
-                    <Link to="/ourgoalpage" className={this.isActive("ourgoalpage")}><span className="homewhite">Our Goal</span></Link>
-                    <Link to="/aboutuspage" className={this.isActive("aboutpage")}><span className="homewhite">About Us</span></Link>
-                    <div className="right item">
-                        {isAuthenticated ? <div>
-                                <Link to="/dashboard" className={this.isActive("dashboard")}> My Account</Link>
-                                <button className="ui inverted button" onClick={() => logout()}>logout</button>
-                            </div> :
-                            <div>
-                                <Link to='/login' className={this.isActive("loginpage")}>Log in</Link>
-                                <Link to='/signup' className={this.isActive("signupage")}>Sign Up</Link>
-                            </div>
-                        }
-                    </div>
                 </div>
             </div>
         );
     }
 }
 
-Menu.propTypes = {
-    isAuthenticated: propTypes.bool.isRequired,
-    logout: propTypes.func.isRequired
-};
 
-function mapStateToProps(state) {
-    return {
-        isAuthenticated: !!state.user.token
-    }
-}
-
-export default connect(mapStateToProps, { logout: actions.logout})(Menu)
+export default Menu

@@ -21,15 +21,4 @@ const MenuMobile = ({ isAuthenticated, logout }  ) => (
     </div>
 );
 
-MenuMobile.propTypes = {
-    isAuthenticated: propTypes.bool.isRequired,
-    logout: propTypes.func.isRequired
-};
-
-function mapStateToProps(state) {
-    return {
-        isAuthenticated: !!state.user.token
-    }
-}
-
-export default connect(mapStateToProps, { logout: actions.logout})(MenuMobile)
+export default MenuMobile

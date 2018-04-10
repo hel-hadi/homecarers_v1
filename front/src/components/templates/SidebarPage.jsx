@@ -55,9 +55,6 @@ const SidebarPage = [
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
     </div>,
-    <SidebarItem textAlign="center">
-        <MenuMobile />
-    </SidebarItem>,
     <div>
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
