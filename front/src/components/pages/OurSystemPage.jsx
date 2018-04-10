@@ -1,43 +1,28 @@
 import React from 'react'
 import Menu from '@temp/Menu.jsx'
 import Footer from '@temp/Footer.jsx'
-import img_doctor from '@img/doctorb.png'
-import img_logo_blanc from '@img/logo_blanc.png'
+import { Link } from 'react-router-dom'
 import img_device from '@img/devicechange.jpg'
 import img_secure from '@img/secure.jpg'
 
-
 const OurSystemPage = () => (
     <div>
-        <div className="ui vertical inverted masthead center aligned segment">
-            <Menu active="oursystempage"/>
-            <br/><br/><br/> <br/><br/><br/>
-            <div className="ui middle aligned stackable grid container">
-                <div className="eight wide column">
-                    <h1 className="ui page-header">
-                            <span className="homebeige">
-                               What we Do ?
-                            </span>
-                    </h1>
-                    <h2 className="ui page-header">
-                            <span className="homewhite">
-                               We develop a plateform avaible on site and mobile for all kind of homecarers : <br/><br/>
-                                Liberal, Public, Association, Private
-                            </span>
-                    </h2>
-                    <br/>
-                    <span className="homebeige">
-                      </span>
-                    <br/>
-
-                </div>
-
-                <div className="two wide right floated column">
-                    <img className="ui medium rounded image" alt="doctor together" src={img_doctor}/>
-                </div>
-
-                <div className="six wide right floated column">
-                    <img className="ui large rounded image" alt="doctor together" src={img_logo_blanc}/>
+        <Menu active="oursystempage" />
+        <div className="ui inverted masthead1 segment">
+            <div className="ui container grid">
+                <div className="row">
+                    <div className="nine wide column">
+                        <h1 className="ui header2">Notre système</h1>
+                        <h2 className="ui header2">
+                            Nous développons une plateforme disponible sur site web et mobile pour tous les types de soignants: <br/> <br/>
+                            Libéral, Public, Privé, Association
+                        </h2><br />
+                        <div className="ui hidden divider"></div>
+                        <Link to='/' class="ui huge teal button">
+                            Inscrivez-vous à la bêta<i class="right arrow icon"></i>
+                        </Link>
+                        <div className="ui hidden divider"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,10 +32,11 @@ const OurSystemPage = () => (
                     <div className="eight wide column">
                         <div className="ui text container">
 
-                            <h3 className="ui header">Communication and Following</h3>
-                            <p> To help you in your work and ameliorate following patient, we develop tools like liason
-                                book which will optimise the following of your patient. <br/><br/>
-                                Morehover, homecarers have communication, a chat system centered around patient, for each patient </p>
+                            <h3 className="ui header">Communication et Suivi</h3>
+
+                            <p> Pour vous aider dans votre travail et améliorer le suivi du patient, nous développons des outils tels que le carnet de
+                                liaison qui optimisera la vie medical du patient. <br/> <br/>
+                                Plus que ca, Homecarers fournit une communication instantané , un Chat centré sur le patient, unique a chaque patient </ p>
                         </div>
                     </div>
                     <div className="six wide right floated column">
@@ -58,7 +44,7 @@ const OurSystemPage = () => (
                     </div>
                 </div>
                 <h4 className="ui horizontal header divider">
-                    <a href="">Our Difference</a>
+                    <a href="">Notre différence</a>
                 </h4>
                 <div className="row">
                     <div className="seven wide right floated column">
@@ -66,13 +52,10 @@ const OurSystemPage = () => (
                     </div>
 
                     <div className="nine wide column">
-
-
-                        <h3 className="ui header">Are we talk about security?</h3>
-                        <p>Yes I know you probably have question about security, and you right. <br/>
-                            For information, all data we'll be stock and record in a secure server and none of
-                            this will stay in the device. <br/><br/>
-                            Homecarers will provide a secure system to have the best monitoring patient.
+                        <h3 className="ui header">Et la sécurité, on en parle ?</h3>
+                        <p> Les questions sur sécurité des données sont primordiales et Homecarers en fait un point d'honneur. <br/>
+                            Toutes les données que nous allons stocker et enregistrer sont protéger  <br/>
+                            Homecarers fournit un système sécurisé et assure ainsi un meilleur suivi, sécurisé, du patient.
                         </p>
                     </div>
                 </div>

@@ -6,3 +6,6 @@ export const signup = (data) => (dispatch) =>
         localStorage.homecareJWT = user.token;
         dispatch(userLoggedIn(user));
     })
+
+export const beta = (data) =>
+    api.user.beta(data);

@@ -1,89 +1,69 @@
 import React from 'react'
 import Menu from '@temp/Menu.jsx'
 import Footer from '@temp/Footer.jsx'
-import img_women from '@img/women.png'
-import img_logo_blanc from '@img/logo_blanc.png'
+import { Link } from 'react-router-dom'
 import img_prix from '@img/prix.jpg'
 import img_invie from '@img/invie1.png'
 import img_etonomy from '@img/etonomy.png'
 
 const AboutUsPage = () => (
     <div>
-                <div className="pusher">
-                    <div className="ui vertical inverted masthead center aligned segment">
-                        <Menu active="aboutpage"/>
-                        <br/><br/><br/><br/><br/><br/>
-
-                        <div className="ui middle aligned stackable grid container">
-                            <div className="eight wide column">
-                                <h1 className="ui page-header">
-                                    <span className="homebeige">
-                                       Who we Are ?
-                                    </span>
-                                </h1>
-                                <h2 className="ui page-header">
-                                    <span className="homewhite">
-                                       Student, Universitary, Patient .. <br/><br/>
-                                        A team with multiples skills and real home care experiences !
-                                    </span>
-                                </h2>
-                                <br/>
-                                <span className="homebeige">
-                              </span>
-                                <br/>
-
-                            </div>
-
-                            <div className="three wide right floated column">
-                                <img className="ui large rounded image" alt="doctor together" src={img_women}/>
-                            </div>
-
-                            <div className="five wide right floated column">
-                                <img className="ui large rounded image" alt="doctor together" src={img_logo_blanc}/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="ui vertical stripe segment">
-                        <div className="ui middle aligned stackable grid container">
-                            <div className="row">
-                                <div className="eight wide column">
-                                    <h3 className="ui header">Our team : Born in Etonomy Hackathon</h3>
-                                    <p>Our amazing team came from an event : Etonomy.<br/><br/>
-                                        During 52 hours without sleeping, we worked hard to find a solution for home care situation.
-                                        Skills and motivations is the reasons of our success... </p>
-                                    <p> And that is why we won this event, and why our product is usefull ! </p>
-                                    <h3 className="ui header">Here to improve things</h3>
-                                    <p>Yes that's right,our only goal is to help all kind of home carers, that is why you can send us your recommandation.</p>
-                                    <a className="ui large button">Advise Us</a>
-
-                                </div>
-                                <div className="six wide right floated column">
-                                    <img src={img_prix} alt="vainqueur" className="ui large rounded image" />
-                                </div>
-                            </div>
-                            <h4 className="ui horizontal header divider">
-                                <a href="">Our Partners</a>
-                            </h4>
-                            <div className="two column center aligned row">
-                                <div className="column">
-                                    <div className="ui hidden divider"></div>
-                                    <a href="http://cimap78.fr/">
-                                        <img className="ui centered small circular image" alt="chat" src={img_invie} />
-                                    </a>
-                                </div>
-                                <div className="column">
-                                    <div className="ui hidden divider"></div>
-                                    <a href="http://e-tonomy.fr/">
-                                        <img className="ui centered small circular image" alt="cahier" src={img_etonomy} />
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
+        <Menu active="aboutpage"/>
+        <div className="ui inverted masthead1 segment">
+            <div className="ui container grid">
+                <div className="row">
+                    <div className="nine wide column">
+                        <h1 className="ui header2">A propos de nous</h1>
+                        <h2 className="ui header2">
+                            Étudiant, Universitaire, Patient, Professionnel de Santé.. <br/> <br/>
+                            Une équipe complète avec de multiples compétences réunit
+                            pour améliorer la vie medical des patients et des professionnels                                         </h2><br />
+                        <div className="ui hidden divider"></div>
+                        <Link to='/' class="ui huge teal button">
+                            Inscrivez-vous à la bêta<i class="right arrow icon"></i>
+                        </Link>
+                        <div className="ui hidden divider"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div className="ui vertical stripe segment">
+            <div className="ui middle aligned stackable grid container">
+                <div className="row">
+                    <div className="eight wide column">
+                        <h3 className="ui header">Notre équipe : Née pendant le Hackathon Etonomy</h3>
+                        <p> Notre incroyable équipe est issue d'un événement: Etonomy. <br/> <br/>
+                            Durant 52 heures, nous avons travaillé sans relache afin de trouver une idée qui améliore le suivi du patient.
+                            Compétences et motivation sont les raisons de notre succès ... </ p>
+                        <p> Et c'est pourquoi nous avons gagné cet événement, que nous avons continuer cette aventure afin de vous proposer Homecarers </ p>
+                        <h3 className="ui header">Améliorer la vie medicale</h3>
+                        <p> Notre seul but est d'aider toutes sortes de soignants à domicile, c'est pourquoi nous vous invitons a nous envoyer votre suggestion. </ p>
+                        <Link to='/contact' className="ui large button">Contactez Nous</Link>
+                    </div>
+                    <div className="six wide right floated column">
+                        <img src={img_prix} alt="vainqueur" className="ui large rounded image" />
+                    </div>
+                </div>
+                <h4 className="ui horizontal header divider">
+                    <a href="">Nos Partenaires</a>
+                </h4>
+                <div className="two column center aligned row">
+                    <div className="column">
+                        <div className="ui hidden divider"></div>
+                        <a href="http://cimap78.fr/">
+                            <img className="ui centered small circular image" alt="chat" src={img_invie} />
+                        </a>
+                    </div>
+                    <div className="column">
+                        <div className="ui hidden divider"></div>
+                        <a href="http://e-tonomy.fr/">
+                            <img className="ui centered small circular image" alt="cahier" src={img_etonomy} />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <Footer />
     </div>
 
