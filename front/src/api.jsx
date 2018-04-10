@@ -2,6 +2,8 @@ import axios from 'axios'
 
 export default {
     user: {
+        beta: (data) =>
+            axios.post('http://localhost:8081', { data }, { headers: {'Content-Type': 'application/json',}}).then(res => res.data.user),
         login: (credentials) =>
             axios.post('https://frozen-bayou-97220.herokuapp.com/api/auth', { credentials },
                 { headers: {'Content-Type': 'application/json',}}).then(res => res.data.user),
@@ -11,5 +13,5 @@ export default {
         confirm: token =>
             axios.post('https://frozen-bayou-97220.herokuapp.com/api/auth/confirmation', { token },
                 { headers: {'Content-Type': 'application/json',}}).then(res => res.data.user)
-    }
+    },
 }

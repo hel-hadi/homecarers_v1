@@ -85,3 +85,18 @@ export const SignupForm = Loadable({
     loader: () => import('@form/SignupForm.jsx'),
     loading: Loading,
 })
+
+export const BetaPage = Loadable({
+    loader: () => import('@pages/BetaPage.jsx'),
+    loading: Loading,
+})
+
+export const BetaPageMobile = Loadable({
+    loader: () => import('@mpages/BetaPageMobile.jsx'),
+    loading: Loading,
+})
+
+export const BetaForm = Loadable({
+    loader: () => import('@form/BetaForm.jsx'),
+    loading: Loading,
+})

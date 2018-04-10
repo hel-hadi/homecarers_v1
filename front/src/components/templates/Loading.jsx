@@ -20,13 +20,13 @@ class Loading extends React.Component {
                     }
                 }} />
                 <div className="Loading loader">
-                    <div className="ui two row grid">
-                        <div className="ui centered row">
-                            <img className="ui  centered circular image" alt="logo" src={img_logo} />
+                    <div class="ui inverted">
+                        <div class="ui active inverted dimmer">
+                            <div class="ui large text loader">Chargement</div>
                         </div>
-                        <div className="ui centered row">
-                            <h2 className="homewhite"> Loading </h2>
-                        </div>
+                        <p></p>
+                        <p></p>
+                        <p></p>
                     </div>
                 </div>
             </div>

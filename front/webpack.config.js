@@ -21,6 +21,7 @@ let config = {
         alias: {
             '@img': path.resolve('src/img'),
             '@css': path.resolve('src/css'),
+            '@script': path.resolve('src/script'),
             '@temp': path.resolve('src/components/templates'),
             '@pages': path.resolve('src/components/pages'),
             '@form': path.resolve('src/components/forms'),
