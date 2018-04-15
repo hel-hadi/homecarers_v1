@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
+import Link from 'react-router-dom/Link'
 import Footer from '@temp/Footer.jsx'
 import Features from '@temp/Features.jsx'
 import img_nurse from '@img/nurse.jpg'

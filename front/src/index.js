@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Sidebar } from 'react-responsive-sidebar'
 import 'semantic-ui-css/semantic.min.css'
-import { BrowserRouter, Route, HashRouter } from 'react-router-dom'
+import BrowserRouter  from 'react-router-dom/BrowserRouter'
+import HashRouter  from 'react-router-dom/HashRouter'
+import Route  from 'react-router-dom/Route'
 import App from './App.jsx'
-
 
 ReactDOM.render(
   <BrowserRouter>

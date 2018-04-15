@@ -38,8 +38,8 @@
     min-height: 600px;
     padding: 1em 0em;
     margin-top: -1em!important;
-    /*background-color: #2b4e77!important;*/
     background-image: url("../img/docright.jpg")!important;
+    /*background-color: #2b4e77!important;*/
     background-repeat: no-repeat;
     background-size: cover!important;
 }

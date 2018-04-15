@@ -6,7 +6,7 @@ class BetaForm extends React.Component {
     state = {
         data: {
             email: '',
-            postalCode: ''
+            code_postal: ''
         },
         loading: 0,
         errors: {}
@@ -18,6 +18,7 @@ class BetaForm extends React.Component {
     onSubmit = () => {
         const errors = this.validate(this.state.data);
         this.setState({ errors });
+        console.log(errors);
         if (Object.keys(errors).length === 0) {
             this.setState({ loading: true });
             this.props
@@ -30,7 +31,7 @@ class BetaForm extends React.Component {
     validate = (data) => {
         const errors = {};
         if (!validator.isEmail(data.email)) errors.email = "cette adresse n'est pas valide";
-        if (!validator.isPostalCode(data.postalCode, 'FR')) errors.postalCode = "Le code postal est incorrect";
+        if (!validator.isPostalCode(data.code_postal, 'FR')) errors.code_postal = "Le code postal est incorrect";
         return errors;
     };
 
@@ -49,16 +50,16 @@ class BetaForm extends React.Component {
                     />
                     {errors.email && <span style={{ color: "#f9c500" }}> {errors.email}</span>}
                 </div>
-                <div className="ui input large focus" error={!!errors.postalCode}>
+                <div className="ui input large focus" error={!!errors.code_postal}>
                     <input
-                        type="postalCode"
-                        id="postalCode"
-                        name="postalCode"
+                        type="code_postal"
+                        id="code_postal"
+                        name="code_postal"
                         placeholder="Code Postal"
-                        value={data.postalCode}
+                        value={data.code_postal}
                         onChange={this.onChange}
                     />
-                    {errors.postalCode && <span style={{ color: "#f9c500" }}> {errors.postalCode}</span>}
+                    {errors.code_postal && <span style={{ color: "#f9c500" }}> {errors.code_postal}</span>}
                 </div>
                     <button className="ui medium large teal button">Inscrivez-vous à la bêta</button>
             </form>

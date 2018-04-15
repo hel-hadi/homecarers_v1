@@ -3,7 +3,8 @@ import axios from 'axios'
 export default {
     user: {
         beta: (data) =>
-            axios.post('http://localhost:8081', { data }, { headers: {'Content-Type': 'application/json',}}).then(res => res.data.user),
+            axios.post('http://localhost:8000/api/landing_users/', data,
+                { headers: {'Content-Type': 'application/json',}}).then(res => res.data),
         login: (credentials) =>
             axios.post('https://frozen-bayou-97220.herokuapp.com/api/auth', { credentials },
                 { headers: {'Content-Type': 'application/json',}}).then(res => res.data.user),

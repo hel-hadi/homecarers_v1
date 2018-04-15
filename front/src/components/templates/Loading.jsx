@@ -20,9 +20,9 @@ class Loading extends React.Component {
                     }
                 }} />
                 <div className="Loading loader">
-                    <div class="ui inverted">
-                        <div class="ui active inverted dimmer">
-                            <div class="ui large text loader">Chargement</div>
+                    <div className="ui inverted">
+                        <div className="ui active inverted dimmer">
+                            <div className="ui large text loader">Chargement</div>
                         </div>
                         <p></p>
                         <p></p>

@@ -1,10 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import Features from '@temp/Features.jsx'
-import BetaForm from '@form/BetaForm'
-import img_agenda from '@img/agenda.png'
-import img_book from '@img/book.png'
-import img_comm from '@img/comm.png'
+import { BetaForm } from '../../actions/routeSplit'
 import { beta } from "../../actions/users";
 
 class BetaPageMobile extends React.Component {
