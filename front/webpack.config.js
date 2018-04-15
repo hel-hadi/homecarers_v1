@@ -1,11 +1,14 @@
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin =  require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+
 const webpack = require('webpack');
 const dev = process.env.NODE_ENV === "dev";
 
@@ -76,7 +79,7 @@ let config = {
                 test: /\.(ttf|eot|woff|woff2)$/,
                 loader: "file-loader",
                 options: {
-                    name: "[name].[ext]",
+                    name: "[name].[hash:7].[ext]",
                     publicPath: ''
                 },
             },
@@ -102,6 +105,9 @@ let config = {
     ]
 };
 if (!dev) {
+    config.plugins.push(new ImageminPlugin({
+        test: /\.(jpe?g|png|gif|svg)$/i
+    }));
     config.plugins.push(new UglifyJSPlugin({
         sourceMap: false
     }));

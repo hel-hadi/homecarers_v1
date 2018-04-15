@@ -1,7 +1,6 @@
 import React from 'react'
-import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
-import MenuMobile from '@temp/MenuMobile.jsx'
-import { Link } from "react-router-dom"
+import { SidebarItem } from 'react-responsive-sidebar';
+import Link from "react-router-dom/Link"
 import img_logo from '@img/logohome.png'
 
 const SidebarPage = [

@@ -1,9 +1,6 @@
 import React from 'react'
-import 'semantic-ui-css/semantic.min.css'
-import { Link } from "react-router-dom";
-import { Dropdown } from 'semantic-ui-react'
+import Link from "react-router-dom/Link";
 import img_logo from '@img/logo_blanc.png'
-import '@css/styles.css'
 import '@css/homepage.css'
 
 class Menu extends React.Component {
@@ -14,31 +11,34 @@ class Menu extends React.Component {
         else
             return 'className ' + ((value === this.props.active) ? 'active item' : 'item');
         }
+
     render() {
         const {} = this.props;
         return (
-            <div className="ui inverted secondary menu">
+            <div className="ui inverted menu">
                 <div className="item">
                     <img className="ui tiny image" alt="doctor together" src={img_logo}/>
                 </div>
-                <Dropdown className="ui dropdown homefont item" text="Qui sommes-nous ?" >
-                    <Dropdown.Menu>
-                        <Dropdown.Item as={Link} to='/' className="ui teal"> Accueil </Dropdown.Item>
-                        <Dropdown.Item as={Link} to='/ourgoalpage' className="ui teal"> Nos Objectifs </Dropdown.Item>
-                        <Dropdown.Item as={Link} to='/oursystempage'> Notre système </Dropdown.Item>
-                        <Dropdown.Item as={Link} to='/aboutuspage'> A propos de nous </Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
+                <div class="ui simple dropdown item">
+                    Dropdown <i class="dropdown icon"></i>
+                    <div class="secondary menu">
+                        <Link to="/" class="item" href="#">Accueil</Link>
+                        <Link to="/ourgoalpage" class="item" href="#">Notre objectif</Link>
+                        <Link to="/oursystempage" class="item" href="#">Notre Outil</Link>
+                        <Link to="/aboutuspage" class="item" href="#">A propos de nous</Link>
+                    </div>
+                </div>
                 <div className="right menu">
                     <a className="item">
-                        <i className="facebook inverted big icon"></i>
-                        <i className="linkedin inverted big icon"></i>
+                        <a href="https://fr-fr.facebook.com/"><i className="facebook inverted big icon"></i></a>
+                    </a>
+                    <a className="item">
+                        <a href="https://fr.linkedin.com/"><i className="linkedin inverted big icon"></i></a>
                     </a>
                 </div>
             </div>
         );
     }
 }
-
 
 export default Menu

@@ -1,13 +1,11 @@
 import React from 'react'
-import Menu from '@temp/Menu.jsx'
 import Footer from '@temp/Footer.jsx'
-import { Link } from 'react-router-dom'
+import Link from 'react-router-dom/Link'
 import img_device from '@img/devicechange.jpg'
 import img_secure from '@img/secure.jpg'
 
 const OurSystemPage = () => (
     <div>
-        <Menu active="oursystempage" />
         <div className="ui inverted masthead1 segment">
             <div className="ui container grid">
                 <div className="row">

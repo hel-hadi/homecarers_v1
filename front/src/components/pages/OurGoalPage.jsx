@@ -1,14 +1,11 @@
 import React from 'react'
-import Menu from '@temp/Menu.jsx'
 import Footer from '@temp/Footer.jsx'
-import { Link } from 'react-router-dom'
-import img_logo from '@img/logo.png'
+import Link from 'react-router-dom/Link'
 import img_nurse from '@img/nurse1.jpg'
 import img_tablette from '@img/tablette.png'
 
 const OurGoalPage = () => (
     <div>
-        <Menu active="ourgoalpage" />
         <div className="ui inverted masthead1 segment">
             <div className="ui container grid">
                 <div className="row">

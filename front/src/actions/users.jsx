@@ -8,4 +8,6 @@ export const signup = (data) => (dispatch) =>
     })
 
 export const beta = (data) =>
-    api.user.beta(data);
+    api.user.beta(data).then(user => {
+
+    })

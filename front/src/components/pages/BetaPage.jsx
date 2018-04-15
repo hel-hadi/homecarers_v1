@@ -1,18 +1,16 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Menu from '@temp/Menu.jsx'
-import BetaForm from '@form/BetaForm'
+import { BetaForm } from '../../actions/routeSplit'
 import img_agenda from '@img/agenda.png'
 import img_book from '@img/book.png'
 import img_comm from '@img/comm.png'
-import { beta } from "../../actions/users";
+import beta  from "../../actions/users";
 
 class BetaPage extends React.Component {
-    submit = data => beta(data).then(() => this.props.history.push('/'));
+    submit = data => beta(data).then(() => this.props.history.push("/ourgoalpage"));
     render() {
         return (
             <div>
-                <Menu />
                 <div className="ui inverted masthead segment">
                     <div className="ui container">
                         <div className="row">
@@ -23,7 +21,6 @@ class BetaPage extends React.Component {
                                     ameliorer <br/>l'avenir des soins à domicile</h3><br/>
                                 <div className="ui hidden divider"></div>
                                 <BetaForm submit={this.submit}/>
-
                             </div>
                         </div>
                     </div>

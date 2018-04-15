@@ -1,14 +1,12 @@
 import React from 'react'
-import Menu from '@temp/Menu.jsx'
 import Footer from '@temp/Footer.jsx'
-import { Link } from 'react-router-dom'
+import Link from 'react-router-dom/Link'
 import img_prix from '@img/prix.jpg'
 import img_invie from '@img/invie1.png'
 import img_etonomy from '@img/etonomy.png'
 
 const AboutUsPage = () => (
     <div>
-        <Menu active="aboutpage"/>
         <div className="ui inverted masthead1 segment">
             <div className="ui container grid">
                 <div className="row">
