@@ -1,9 +1,6 @@
 import React from 'react'
-import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
-import propTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { Link } from "react-router-dom";
-import * as actions from "../../actions/auth.jsx";
+import { Sidebar, SidebarItem } from 'react-responsive-sidebar'
+import Link from "react-router-dom/Link"
 
 const MenuMobile = ({ isAuthenticated, logout }  ) => (
     <div>

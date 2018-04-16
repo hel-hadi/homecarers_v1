@@ -1,7 +1,5 @@
 import React from 'react'
 import { Style } from 'radium'
-import '@css/loading.css'
-import img_logo from '@img/logohome.png'
 
 class Loading extends React.Component {
     render() {

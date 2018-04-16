@@ -4,7 +4,7 @@ export default {
     user: {
         beta: (data) =>
             axios.post('http://localhost:8000/api/landing_users/', data,
-                { headers: {'Content-Type': 'application/json',}}).then(res => res.data),
+                { headers: {'Content-Type': 'application/json',}}).then(res => res.data.user),
         login: (credentials) =>
             axios.post('https://frozen-bayou-97220.herokuapp.com/api/auth', { credentials },
                 { headers: {'Content-Type': 'application/json',}}).then(res => res.data.user),

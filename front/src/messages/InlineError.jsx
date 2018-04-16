@@ -2,7 +2,20 @@ import React from 'react'
 import propTypes from 'prop-types'
 
 const InlineError = ({text}) => (
-    <span style={{ color: "f9c500"}}> {text} </span>
+    <div className="ui grid">
+        <div className="three column row">
+            <div className="column">
+                <div className="ui form error">
+                    <div className="ui error message">
+                        <div className="header">Saisie Incorrect</div>
+                        <p>{text}</p>
+                    </div>
+                </div>
+            </div>
+            <div className="column"></div>
+            <div className="column"></div>
+        </div>
+    </div>
 );
 
 InlineError.propTypes = {

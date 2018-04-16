@@ -1,13 +1,14 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { BetaForm } from '../../actions/routeSplit'
 import img_agenda from '@img/agenda.png'
 import img_book from '@img/book.png'
 import img_comm from '@img/comm.png'
-import beta  from "../../actions/users";
+import { beta } from '../../actions/users'
 
 class BetaPage extends React.Component {
-    submit = data => beta(data).then(() => this.props.history.push("/ourgoalpage"));
+    submit = data => this.props.beta(data).then(() => this.props.history.push("/ourgoalpage"));
     render() {
         return (
             <div>
@@ -67,6 +68,6 @@ BetaPage.propTypes = {
         push: propTypes.func.isRequired
     }).isRequired,
     beta: propTypes.func.isRequired
-}
+};
 
-export default BetaPage
+export default connect(null, { beta })(BetaPage);
