@@ -1,6 +1,4 @@
 import React from 'react'
-import '@css/homepage.css'
-import '@css/styles.css'
 import  img_agenda from '@img/agenda.png'
 import  img_book from '@img/book.png'
 import  img_comm from '@img/comm.png'

@@ -1,7 +1,9 @@
-import React from 'react';
-import propTypes from 'prop-types';
-import { connect } from "react-redux";
-import  { Route, Redirect } from "react-router-dom";
+import React from 'react'
+import propTypes from 'prop-types'
+import { connect } from "react-redux"
+import Route from "react-router-dom/Route"
+import Redirect from "react-router-dom/Redirect"
+
 
 const GuestRoute = ({ isAuthenticated, component: Component, ...rest}) => (
     <Route {...rest} render={props => !isAuthenticated ? <Component {...props} /> : <Redirect to='/dashboard' /> } />

@@ -4,7 +4,6 @@ import img_logo_blanc from '@img/logo_blanc.png'
 import img_nurse from '@img/nurse1.jpg'
 import img_tablette from '@img/tablette.png'
 
-
 const OurGoalPageMobile= () => (
     <div>
         <div className="ui vertical inverted masthead center aligned segment">

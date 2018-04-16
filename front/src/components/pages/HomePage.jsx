@@ -1,7 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import { Sidebar, SidebarItem } from 'react-responsive-sidebar'
-import { Link } from "react-router-dom";
+import Link from "react-router-dom/Link";
 import { Dropdown } from 'semantic-ui-react'
 import BetaForm from '@form/BetaForm'
 import img_agenda from '@img/agenda.png'
