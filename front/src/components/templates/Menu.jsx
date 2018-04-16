@@ -1,33 +1,44 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
 import { Link } from "react-router-dom";
+import { Dropdown } from 'semantic-ui-react'
+import img_logo from '@img/logo_blanc.png'
 import '@css/styles.css'
 import '@css/homepage.css'
 
-const Menu = (isAuthenticated) => (
-    <div className="ui container">
-        <div className="ui large secondary inverted bash menu">
-            <a className="toc item">
-                <i className="sidebar icon"></i>
-            </a>
-            <Link to='/' className="active item"><span className="homewhite">Home</span></Link>
-            <Link to="/oursystempage" className="item"><span className="homewhite">Our System</span></Link>
-            <Link to="/ourgoalpage" className="item"><span className="homewhite">Our Goal</span></Link>
-            <Link to="/aboutuspage" className="item"><span className="homewhite">About Us</span></Link>
-
-            <div className="right item">
-                {isAuthenticated ?<div>
-                        <Link to="/dashboard" className="ui active inverted button"> My Account</Link>
-                        <button className="ui inverted button" onClick={() => logout()}>logout </button>
-                    </div> :
-                    <div>
-                        <Link to='/loginpage' className="ui inverted button">Log in</Link>
-                        <Link to='/signup' className="ui inverted button">Sign Up</Link>
-                    </div>
-                }
+class Menu extends React.Component {
+    isActive(value){
+        if (value === 'loginpage' || value === 'signupage' || value === 'dashboard') {
+            return 'className ' + ((value === this.props.active) ? 'ui active inverted button' : 'ui inverted button');
+        }
+        else
+            return 'className ' + ((value === this.props.active) ? 'active item' : 'item');
+        }
+    render() {
+        const {} = this.props;
+        return (
+            <div className="ui inverted secondary menu">
+                <div className="item">
+                    <img className="ui tiny image" alt="doctor together" src={img_logo}/>
+                </div>
+                <Dropdown className="ui dropdown homefont item" text="Qui sommes-nous ?" >
+                    <Dropdown.Menu>
+                        <Dropdown.Item as={Link} to='/' className="ui teal"> Accueil </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/ourgoalpage' className="ui teal"> Nos Objectifs </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/oursystempage'> Notre système </Dropdown.Item>
+                        <Dropdown.Item as={Link} to='/aboutuspage'> A propos de nous </Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                <div className="right menu">
+                    <a className="item">
+                        <i className="facebook inverted big icon"></i>
+                        <i className="linkedin inverted big icon"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
-);
+        );
+    }
+}
+
 
 export default Menu
