@@ -63,7 +63,8 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
-    )
+    ),
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 
 LANGUAGE_CODE = "fr"
@@ -94,7 +95,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
 'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'homecarers',
     'USER': 'homecarers',
     'PASSWORD': '42',
