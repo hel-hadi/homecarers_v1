@@ -1,9 +1,14 @@
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin =  require('html-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+
 const webpack = require('webpack');
 const dev = process.env.NODE_ENV === "dev";
 
@@ -15,9 +20,11 @@ let config = {
         publicPath: ''
     },
     resolve: {
+        extensions: [".js", ".jsx"],
         alias: {
-            '@css': path.resolve('src/css'),
             '@img': path.resolve('src/img'),
+            '@css': path.resolve('src/css'),
+            '@script': path.resolve('src/script'),
             '@temp': path.resolve('src/components/templates'),
             '@pages': path.resolve('src/components/pages'),
             '@form': path.resolve('src/components/forms'),
@@ -26,8 +33,15 @@ let config = {
         }
     },
     devServer: {
-        port: 3000,
+        port: process.env.PORT || 3000,
+        inline: true,
         contentBase: path.join(__dirname, 'public'),
+        // proxy: {
+        //     '/api': {
+        //         target: 'http://localhost:8081',
+        //         secure: false
+        //     }
+        // },
         compress: true, // enable gzip compression
         historyApiFallback: {
             disableDotRule: true
@@ -65,7 +79,7 @@ let config = {
                 test: /\.(ttf|eot|woff|woff2)$/,
                 loader: "file-loader",
                 options: {
-                    name: "[name].[ext]",
+                    name: "[name].[hash:7].[ext]",
                     publicPath: ''
                 },
             },
@@ -82,22 +96,38 @@ let config = {
             },
         ]
     },
+    devtool:'cheap-module-source-map',
     plugins: [
         // new webpack.DefinePlugin({
-        //     PRODUCTION: JSON.stringify(true),
+        //     'process.env.NODE_ENV': '"production"'
         // }),
         new ExtractTextPlugin("styles.css"),
     ]
 };
-
 if (!dev) {
+    config.plugins.push(new ImageminPlugin({
+        test: /\.(jpe?g|png|gif|svg)$/i
+    }));
     config.plugins.push(new UglifyJSPlugin({
         sourceMap: false
+    }));
+    config.plugins.push(new webpack.DefinePlugin({
+        'process.env.NODE_ENV': '"production"'
+    }));
+    config.plugins.push(new webpack.optimize.AggressiveMergingPlugin({
     }));
     config.plugins.push(new HtmlWebpackPlugin({
         title: 'Homecarers',
         template: 'public/index.html'
     }));
+    config.plugins.push(new OptimizeCssAssetsPlugin());
+    config.plugins.push(new CompressionPlugin({
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.jsx$|\.css$|\.html$/,
+            threshold: 0,
+            minRatio: 0.8
+        }));
     config.plugins.push(new ManifestPlugin());
     config.plugins.push(new CleanWebpackPlugin(['dist'])), {
         root: path.resolve('./'),
