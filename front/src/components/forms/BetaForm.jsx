@@ -27,10 +27,6 @@ class BetaForm extends React.Component {
                 .submit(this.state.data)
                 .catch(err => this.setState({ errors: {global: err.response.data.email.toString() }, loading: false })
                 );
-            //     .catch((err) => {
-            //     console.log('catch response', {global: err.response.data.email.toString() })
-            // });
-
         }
     };
 
@@ -43,6 +39,7 @@ class BetaForm extends React.Component {
 
     render() {
         const { data, errors, loading } = this.state;
+
         return (
             <Form onSubmit={this.onSubmit} loading={loading} className="ui form">
                 <div className="ui input large focus" error={!!errors.email}>
@@ -50,7 +47,7 @@ class BetaForm extends React.Component {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Adresse email..."
+                        placeholder="Adresse email"
                         value={data.email}
                         onChange={this.onChange}
                     />
@@ -65,7 +62,7 @@ class BetaForm extends React.Component {
                         onChange={this.onChange}
                     />
                 </div>
-                    <button className="ui medium large teal button">Inscrivez-vous à la bêta</button>
+                    <button className="ui large teal button">Inscrivez-vous à la bêta</button>
                 {errors.email && <InlineError text={errors.email} />}
                 {errors.code_postal && <InlineError text={errors.code_postal} />}
                 {!!errors.global && <InlineError text={errors.global} />}

@@ -8,6 +8,7 @@ import * as split from './actions/routeSplit'
 import Favicon from 'react-favicon/dist/react-favicon'
 import img_logo from '@img/logohome.png'
 
+
 const App = ({ location }) => (
     <div>
         <Favicon url={img_logo}/>
@@ -19,7 +20,7 @@ const App = ({ location }) => (
                 <Route location={location}  path="/oursystempage" exact component={split.OurSystemPage} />
         </MediaQuery>
         <MediaQuery maxWidth={768}> {/* Mobile Responsive Page */}
-            <Sidebar content={SidebarPage} background='#2b4e77' toggleIconColor='#cbcbcb' hoverhighlight='rgba(255,255,255,0.15)'>
+            <Sidebar content={SidebarPage} background='#2b4e77' toggleIconColor='#dcaf8a' hoverhighlight='rgba(255,255,255,0.15)'>
               <Route location={location}  path="/" exact component={split.BetaPageMobile} />
               <Route location={location}  path="/aboutuspage" exact component={split.AboutUsPageMobile} />
               <Route location={location}  path="/ourgoalpage" exact component={split.OurGoalPageMobile} />

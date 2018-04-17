@@ -22,10 +22,10 @@
   "index.html": "index.html",
   "index.html.gz": "index.html.gz",
   "4.index.js.gz": "4.index.js.gz",
+  "2.index.js.gz": "2.index.js.gz",
   "0.index.js.gz": "0.index.js.gz",
   "3.index.js.gz": "3.index.js.gz",
   "1.index.js.gz": "1.index.js.gz",
-  "2.index.js.gz": "2.index.js.gz",
   "index.js.gz": "index.js.gz",
   "styles.css.gz": "styles.css.gz"
 }

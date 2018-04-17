@@ -11,17 +11,13 @@ const OurSystemPageMobile = () => (
             <div className="ui middle aligned stackable grid container">
                 <div className="wide column">
                     <h1 className="ui page-header">
-                            <span className="homebeige">
-                               What we Do ?
-                            </span>
+                        <h3 className="ui header1">Notre système</h3>
                     </h1>
                     <br/>
-                    <h2 className="ui page-header">
-                            <span className="homewhite">
-                               We develop a plateform avaible on site and mobile for all kind of homecarers : <br/><br/>
-                                Liberal, Public, Association, Private
-                            </span>
-                    </h2>
+                    <h2 className="ui header2">
+                        Nous développons une plateforme disponible sur site web et mobile pour tous les types de soignants: <br/> <br/>
+                        Libéral, Public, Privé, Association
+                    </h2><br />
                 </div>
             </div>
             <div className="ui middle aligned stackable grid container">
