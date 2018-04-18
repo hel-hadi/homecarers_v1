@@ -1,4 +1,4 @@
-from api.models import LandingUser, User, PatientProfile, ProfessionalProfile, Report
+from api.models import LandingUser, ContactMessage, User, PatientProfile, ProfessionalProfile, Report
 from rest_framework import serializers
 
 
@@ -6,6 +6,11 @@ class LandingUserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = LandingUser
         fields = ('email', 'code_postal', 'created_at')
+
+class ContactMessageSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ContactMessages
+        fields = ('email', 'message', 'created_at')
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
