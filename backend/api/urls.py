@@ -5,7 +5,7 @@ from api import views
 
 router = routers.DefaultRouter()
 router.register(r'landing_users', views.LandingUserViewSet)
-router.register(r'contact_messages', views.SendContactMessage)
+router.register(r'contact_messages', views.ContactMessage.as_view(), base_name='ContactMessage')
 router.register(r'users', views.UserViewSet)
 router.register(r'patients', views.PatientProfileViewSet)
 router.register(r'pros', views.ProfessionalProfileViewSet)

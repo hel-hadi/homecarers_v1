@@ -5,15 +5,16 @@ from api.serializers import LandingUserSerializer, ContactMessageSerializer, Use
 from django.core.mail import send_mail
 
 class ContactMessage(generics.CreateAPIView):
-    serializer_class = ContactMessageSerializer
-
-    send_mail(
-        'Nouveau contact sur Home Carers',
-        request.data['message'],
-        request.data['email'],
-        ['hel-hadi@student.42.fr'],
-        fail_silently=False,
-    )
+    def post(self, request, format=None):
+        print(request.data)
+        serializer_class = ContactMessageSerializer
+        send_mail(
+            'Nouveau contact sur Home Carers',
+            request.data['message'],
+            request.data['email'],
+            ['jdesmare@student.42.fr'],
+            fail_silently=False,
+        )
 
 
 class LandingUserViewSet(viewsets.ModelViewSet):

@@ -9,7 +9,7 @@ class LandingUserSerializer(serializers.HyperlinkedModelSerializer):
 
 class ContactMessageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = ContactMessages
+        model = ContactMessage
         fields = ('email', 'message', 'created_at')
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
