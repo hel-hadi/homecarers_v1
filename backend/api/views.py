@@ -2,19 +2,10 @@ from django.shortcuts import render
 from api.models import LandingUser, ContactMessage, User, PatientProfile, ProfessionalProfile, Report
 from rest_framework import viewsets, generics
 from api.serializers import LandingUserSerializer, ContactMessageSerializer, UserSerializer, PatientProfileSerializer, ProfessionalProfileSerializer, ReportSerializer
-from django.core.mail import send_mail
 
-class ContactMessage(generics.CreateAPIView):
-    def post(self, request, format=None):
-        print(request.data)
-        serializer_class = ContactMessageSerializer
-        send_mail(
-            'Nouveau contact sur Home Carers',
-            request.data['message'],
-            request.data['email'],
-            ['jdesmare@student.42.fr'],
-            fail_silently=False,
-        )
+class ContactMessageViewSet(viewsets.ModelViewSet):
+    queryset = ContactMessage.objects.all().order_by('-created_at')    
+    serializer_class = ContactMessageSerializer
 
 
 class LandingUserViewSet(viewsets.ModelViewSet):
