@@ -20,7 +20,7 @@ class ContactMessageSerializer(serializers.HyperlinkedModelSerializer):
             'Nouveau contact sur Home Carers',
             contactmessage.message,
             contactmessage.email,
-            ['jdesmare@student.42.fr'],
+            ['hel-hadi@student.42.fr'],
             fail_silently=False,
         )
         return message
