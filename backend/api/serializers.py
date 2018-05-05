@@ -1,6 +1,29 @@
-from api.models import User, PatientProfile, ProfessionalProfile, Report
+from api.models import LandingUser, ContactMessage, User, PatientProfile, ProfessionalProfile, Report
 from rest_framework import serializers
+from django.core.mail import send_mail
 
+
+class LandingUserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = LandingUser
+        fields = ('email', 'code_postal', 'created_at')
+
+class ContactMessageSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ContactMessage
+        fields = ('email', 'message', 'created_at')
+
+    def create(self, validated_data):
+        contact_message = ContactMessage.objects.create(**validated_data)
+        contact_message.save()
+        send_mail(
+            'Nouveau contact sur Home Carers',
+            contact_message.message,
+            contact_message.email,
+            ['hel-hadi@student.42.fr'],
+            fail_silently=False,
+        )
+        return contact_message
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -10,6 +33,13 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
+        if validated_data['profile'] == 'Patient':
+            profile = PatientProfile.objects.create(user = user)
+        elif validated_data['profile'] == 'Pro':
+            profile = ProfessionalProfile.objects.create(user = user)            
+        elif validated_data['profile'] == 'Institution':
+            profile = InstitutionProfile.objects.create(user = user)
+        profile.save()            
         return user
         
 class PatientProfileSerializer(serializers.HyperlinkedModelSerializer):

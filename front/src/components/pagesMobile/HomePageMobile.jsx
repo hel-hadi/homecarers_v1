@@ -1,13 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
-import MenuMobile from '@temp/MenuMobile.jsx'
+import Link from 'react-router-dom/Link'
 import Footer from '@temp/Footer.jsx'
 import Features from '@temp/Features.jsx'
-import '@css/homepage.css'
-import '@css/styles.css'
-import  img_nurse from '@img/nurse.jpg'
-import  img_logo from '@img/logo.png'
+import img_nurse from '@img/nurse.jpg'
+import img_logo from '@img/logo.png'
 
 const HomePageMobile = () => (
     <div>
@@ -30,7 +26,7 @@ const HomePageMobile = () => (
                     <img className="ui centered medium circular image" alt="chat" src={img_logo} />
                     <div className="ui hidden divider"></div>
 
-                    <Link to='/loginpage' className="ui huge blue button">
+                    <Link to='/login' className="ui huge blue button">
                         Join our Project<i className="right arrow icon"></i>
                     </Link>
                 </div>

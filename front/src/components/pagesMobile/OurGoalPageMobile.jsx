@@ -4,7 +4,6 @@ import img_logo_blanc from '@img/logo_blanc.png'
 import img_nurse from '@img/nurse1.jpg'
 import img_tablette from '@img/tablette.png'
 
-
 const OurGoalPageMobile= () => (
     <div>
         <div className="ui vertical inverted masthead center aligned segment">
@@ -16,7 +15,7 @@ const OurGoalPageMobile= () => (
                                What we want ?
                             </span>
                     </h1>
-                    <img class="ui medium centered rounded image" alt="doctor" src={img_logo_blanc}/>
+                    <img className="ui medium centered rounded image" alt="doctor" src={img_logo_blanc}/>
 
                     <h2 className="ui page-header">
                             <span className="homewhite">

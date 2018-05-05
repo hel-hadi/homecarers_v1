@@ -2,10 +2,19 @@ from django.db import models
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.conf import settings
-from django.core.mail import send_mail
 from datetime import date
 
 from .managers import UserManager
+
+class LandingUser(models.Model):
+    email = models.EmailField(unique=True)
+    code_postal = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add = True)
+
+class ContactMessage(models.Model):
+    email = models.EmailField(unique=True)
+    message = models.CharField(max_length=3000)
+    created_at = models.DateTimeField(auto_now_add = True)
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
@@ -48,7 +57,7 @@ class PatientProfile(models.Model):
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=30, blank=True)
     birth_date = models.DateField(blank=True, null=True)
-    vital_card_number = models.BigIntegerField(blank=False, null=False, default=1)
+    vital_card_number = models.BigIntegerField()
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
