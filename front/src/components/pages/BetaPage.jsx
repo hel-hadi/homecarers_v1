@@ -1,11 +1,11 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { BetaForm } from '../../actions/routeSplit'
-import img_agenda from '@img/agenda.png'
-import img_book from '@img/book.png'
-import img_comm from '@img/comm.png'
+import { BetaForm, FeaturesWeb} from '../../actions/routeSplit'
 import { beta } from '../../actions/users'
+import img_logo from '@img/logo_fond_bleu.png'
+import img_hero from '@img/Hero.png'
+import img_scroll from '@img/scrollwhite.png'
 
 class BetaPage extends React.Component {
     submit = data => this.props.beta(data).then(() => this.props.history.push("/ourgoalpage"));
@@ -13,51 +13,59 @@ class BetaPage extends React.Component {
         return (
             <div>
                 <div className="ui inverted masthead segment">
-                    <div className="ui container">
-                        <div className="row">
-                            <div className="eight wide column">
-                                <h1 className="ui header1">Homecarers <sup className="homefont2">Beta</sup></h1>
-                                <h2 className="ui homeblue header1">L’organe de liaison des intervenants à domicile</h2>
-                                <h3 className="ui homeblue header1"> Rejoignez notre bêta ouverte et aidez-nous à
-                                    ameliorer <br/>l'avenir des soins à domicile</h3><br/>
-                                <div className="ui hidden divider"></div>
-                                <BetaForm submit={this.submit}/>
-                            </div>
+                    <div class="ui large secondary inverted menu">
+                        <img className="ui image" alt="logo home carers" src={img_logo}/>
+                        <div class="right item">
+                            <a class="ui regular1 item">Accueil</a>
+                            <a class="regular1 item">Notre outil</a>
+                            <a class="regular1 item">Notre objectif</a>
+                            <a class="regular1 item">À propos</a>
+                            <a class="regular1 item">Nous contacter</a>
                         </div>
+                    </div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui centered container">
+                        <img className="ui smally centered image" alt="logo blanc home carers" src={img_hero}/>
+                        <h1 class="ui inverted centered header">
+                            <span className="regular1">HOME</span><span className="light1">CARERS</span>
+                        </h1>
+                        <h2 class="ui inverted centered header">
+                                <span className="regular1">
+                                La solution digital des intervenants a domicile
+                                </span>
+                        </h2>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui centered grid">
+                            <div class="ui huge icon input">
+                                <input className="beta" type="text" placeholder=" Example@email.com" />
+                            </div>
+                            <button class="ui large button betabutt">
+                                    <span className="light1">
+                                        Tester la beta
+                                    </span>
+                            </button>
+                        </div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <h2 className="ui centered grid">
+                                <span className="light1">
+                                    Scroller pour en savoir plus
+                                </span>
+                        </h2>
+                        <img className="ui tiny centered image" alt="scroll icon" src={img_scroll}/>
                     </div>
                 </div>
                 <h2 className="ui centered header3">Fonctionnalités</h2>
-                <div className="ui middle aligned stackable grid container">
-                    <div className="three column center aligned row">
-                        <div className="column">
-                            <div className="ui hidden divider"></div>
-                            <div className="ui hidden divider"></div>
-                            <img className="ui centered tiny circular image" alt="chat" src={img_comm}/>
-                            <div className="ui hidden divider"></div>
-                            <h3 className="ui homefont homeblue large">
-                                Chat Homecarers
-                            </h3>
-                        </div>
-                        <div className="column">
-                            <div className="ui hidden divider"></div>
-                            <div className="ui hidden divider"></div>
-                            <img className="ui centered tiny circular image" alt="cahier" src={img_book}/>
-                            <div className="ui hidden divider"></div>
-                            <h3 className="ui homefont homeblue large">
-                                Cahier de liaison
-                            </h3>
-                        </div>
-                        <div className="column">
-                            <div className="ui hidden divider"></div>
-                            <div className="ui hidden divider"></div>
-                            <img className="ui centered tiny circular image" alt="agenda" src={img_agenda}/>
-                            <div className="ui hidden divider"></div>
-                            <h3 className="ui homefont homeblue large ">
-                                Agenda collaboratif
-                            </h3>
-                        </div>
-                    </div>
-                </div>
             </div>
         );
     }
