@@ -41,8 +41,6 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
             profile = InstitutionProfile.objects.create(user = user)
         profile.save()            
         return user
-
-    
         
 class PatientProfileSerializer(serializers.HyperlinkedModelSerializer):
     user = serializers.HyperlinkedRelatedField(
