@@ -14,16 +14,16 @@ class ContactMessageSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('email', 'message', 'created_at')
 
     def create(self, validated_data):
-        message = ContactMessage.objects.create(**validated_data)
-        message.save()
+        contact_message = ContactMessage.objects.create(**validated_data)
+        contact_message.save()
         send_mail(
             'Nouveau contact sur Home Carers',
-            contactmessage.message,
-            contactmessage.email,
+            contact_message.message,
+            contact_message.email,
             ['hel-hadi@student.42.fr'],
             fail_silently=False,
         )
-        return message
+        return contact_message
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
