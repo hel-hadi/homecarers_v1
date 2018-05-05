@@ -1,11 +1,29 @@
-from api.models import LandingUser, User, PatientProfile, ProfessionalProfile, Report
+from api.models import LandingUser, ContactMessage, User, PatientProfile, ProfessionalProfile, Report
 from rest_framework import serializers
+from django.core.mail import send_mail
 
 
 class LandingUserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = LandingUser
         fields = ('email', 'code_postal', 'created_at')
+
+class ContactMessageSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ContactMessage
+        fields = ('email', 'message', 'created_at')
+
+    def create(self, validated_data):
+        message = ContactMessage.objects.create(**validated_data)
+        message.save()
+        send_mail(
+            'Nouveau contact sur Home Carers',
+            contactmessage.message,
+            contactmessage.email,
+            ['hel-hadi@student.42.fr'],
+            fail_silently=False,
+        )
+        return message
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

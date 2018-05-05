@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.conf import settings
-from django.core.mail import send_mail
 from datetime import date
 
 from .managers import UserManager
@@ -10,6 +9,11 @@ from .managers import UserManager
 class LandingUser(models.Model):
     email = models.EmailField(unique=True)
     code_postal = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add = True)
+
+class ContactMessage(models.Model):
+    email = models.EmailField(unique=True)
+    message = models.CharField(max_length=3000)
     created_at = models.DateTimeField(auto_now_add = True)
 
 class User(AbstractBaseUser, PermissionsMixin):
