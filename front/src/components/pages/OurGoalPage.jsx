@@ -6,28 +6,12 @@ import img_tablette from '@img/tablette.png'
 
 const OurGoalPage = () => (
     <div>
-        <div className="ui inverted masthead1 segment">
-            <div className="ui container grid">
-                <div className="row">
-                    <div className="nine wide column">
-                        <h1 className="ui header2">Notre but</h1>
-                        <h2 className="ui header2">
-                            Nous développons des outils pour les<br/>  professionnels
-                            afin d'améliorer le suivi des patients!
-                        </h2><br />
-
-                        <h3 className="ui header2"> L’organe de liaison des intervenants à domicile</h3><br/>
-                        <Link to='/' class="ui huge teal button">
-                            Inscrivez-vous à la bêta<i class="right arrow icon"></i>
-                        </Link>
-                        <div className="ui hidden divider"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div className="ui vertical stripe segment">
             <div className="ui middle aligned stackable grid container">
                 <div className="row">
+                    <h4 className="ui horizontal header divider">
+                        <a href="">Notre objectif</a>
+                    </h4>
                     <div className="eight wide column">
                         <div className="ui text container">
                             <h3 className="ui header">Faciliter le travail des soignants
@@ -46,7 +30,6 @@ const OurGoalPage = () => (
                     </div>
                 </div>
                 <h4 className="ui horizontal header divider">
-                    <a href="">The big plus</a>
                 </h4>
                 <div className="row">
                     <div className="seven wide right floated column">
@@ -64,7 +47,6 @@ const OurGoalPage = () => (
                 </div>
             </div>
         </div>
-        <Footer />
     </div>
 );
 

@@ -52,3 +52,18 @@ export const Menu = Loadable({
     loading: Loading,
 })
 
+export const App = Loadable({
+    loader: () => import('../App.jsx'),
+    loading: Loading,
+})
+
+export const ContactUsPage = Loadable({
+    loader: () => import('@pages/ContactUsPage.jsx'),
+    loading: Loading,
+})
+
+export const ContactUsForm = Loadable({
+    loader: () => import('@form/ContactUsForm.jsx'),
+    loading: Loading,
+})
+

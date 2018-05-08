@@ -22,6 +22,7 @@ let config = {
     resolve: {
         extensions: [".js", ".jsx"],
         alias: {
+
             '@img': path.resolve('src/img'),
             '@css': path.resolve('src/css'),
             '@script': path.resolve('src/script'),

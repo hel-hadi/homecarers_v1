@@ -76,7 +76,9 @@
     "webpack-manifest-plugin": "^2.0.0-rc.2"
   },
   "dependencies": {
+    "react-router-hash-link": "^1.2.0",
     "react-script": "^2.0.5",
+    "react-scrollchor": "^5.0.2",
     "semantic-ui-css": "^2.3.0"
   }
 }

@@ -6,27 +6,30 @@ import img_secure from '@img/secure.jpg'
 
 const OurSystemPage = () => (
     <div>
-        <div className="ui inverted masthead1 segment">
-            <div className="ui container grid">
-                <div className="row">
-                    <div className="nine wide column">
-                        <h1 className="ui header2">Notre système</h1>
-                        <h2 className="ui header2">
-                            Nous développons une plateforme disponible sur site web et mobile pour tous les types de soignants: <br/> <br/>
-                            Libéral, Public, Privé, Association
-                        </h2><br />
-                        <div className="ui hidden divider"></div>
-                        <Link to='/' class="ui huge teal button">
-                            Inscrivez-vous à la bêta<i class="right arrow icon"></i>
-                        </Link>
-                        <div className="ui hidden divider"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {/*<div className="ui inverted masthead1 segment">*/}
+            {/*<div className="ui container grid">*/}
+                {/*<div className="row">*/}
+                    {/*<div className="nine wide column">*/}
+                        {/*<h1 className="ui header2">Notre système</h1>*/}
+                        {/*<h2 className="ui header2">*/}
+                            {/*Nous développons une plateforme disponible sur site web et mobile pour tous les types de soignants: <br/> <br/>*/}
+                            {/*Libéral, Public, Privé, Association*/}
+                        {/*</h2><br />*/}
+                        {/*<div className="ui hidden divider"></div>*/}
+                        {/*<Link to='/' class="ui huge teal button">*/}
+                            {/*Inscrivez-vous à la bêta<i class="right arrow icon"></i>*/}
+                        {/*</Link>*/}
+                        {/*<div className="ui hidden divider"></div>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
+            {/*</div>*/}
+        {/*</div>*/}
         <div className="ui vertical stripe segment">
             <div className="ui middle aligned stackable grid container">
                 <div className="row">
+                    <h4 className="ui horizontal header divider">
+                        <a href="">Notre outil</a>
+                    </h4>
                     <div className="eight wide column">
                         <div className="ui text container">
 
@@ -42,7 +45,6 @@ const OurSystemPage = () => (
                     </div>
                 </div>
                 <h4 className="ui horizontal header divider">
-                    <a href="">Notre différence</a>
                 </h4>
                 <div className="row">
                     <div className="seven wide right floated column">
@@ -59,7 +61,6 @@ const OurSystemPage = () => (
                 </div>
             </div>
         </div>
-        <Footer />
     </div>
 );
 

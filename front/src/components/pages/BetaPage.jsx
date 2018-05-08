@@ -1,26 +1,32 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { BetaForm, FeaturesWeb} from '../../actions/routeSplit'
+import Footer from '@temp/Footer.jsx'
+import { connect } from 'react-redux/dist/react-redux.min'
+import { HashLink as Link } from 'react-router-hash-link';
+import Headroom from 'react-headroom';
+import { OurSystemPage, OurGoalPage, AboutUsPage, ContactUsPage} from '../../actions/routeSplit'
 import { beta } from '../../actions/users'
 import img_logo from '@img/logo_fond_bleu.png'
+import img_logo_blanc from '@img/logosurblanc.png'
+
 import img_hero from '@img/Hero.png'
 import img_scroll from '@img/scrollwhite.png'
 
 class BetaPage extends React.Component {
-    submit = data => this.props.beta(data).then(() => this.props.history.push("/ourgoalpage"));
     render() {
         return (
             <div>
-                <div className="ui inverted masthead segment">
-                    <div class="ui large secondary inverted menu">
+                <div className="ui inverted masthead segment" id="home">
+                    <div className="ui large secondary inverted menu">
                         <img className="ui image" alt="logo home carers" src={img_logo}/>
-                        <div class="right item">
-                            <a class="ui regular1 item">Accueil</a>
-                            <a class="regular1 item">Notre outil</a>
-                            <a class="regular1 item">Notre objectif</a>
-                            <a class="regular1 item">À propos</a>
-                            <a class="regular1 item">Nous contacter</a>
+                        <div className="right item">
+                            <Link smooth to='/#home' className="ui regular1 item">
+                                Accueil
+                            </Link>
+                            <Link smooth to='/#ourgoal'   className="regular1 item">Notre objectif</Link>
+                            <Link smooth to='/#oursystem' className="regular1 item">Notre outil</Link>
+                            <Link smooth to='/#aboutus'   className="regular1 item">À propos</Link>
+                            <Link smooth to='/#contactus' className="regular1 item">Nous contacter</Link>
                         </div>
                     </div>
                     <div className="ui hidden divider"></div>
@@ -33,7 +39,7 @@ class BetaPage extends React.Component {
                         <h1 class="ui inverted centered header">
                             <span className="regular1">HOME</span><span className="light1">CARERS</span>
                         </h1>
-                        <h2 class="ui inverted centered header">
+                        <h2 className="ui inverted centered header">
                                 <span className="regular1">
                                 La solution digital des intervenants a domicile
                                 </span>
@@ -43,10 +49,10 @@ class BetaPage extends React.Component {
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui centered grid">
-                            <div class="ui huge icon input">
+                            <div className="ui huge icon input">
                                 <input className="beta" type="text" placeholder=" Example@email.com" />
                             </div>
-                            <button class="ui large button betabutt">
+                            <button className="ui large button betabutt">
                                     <span className="light1">
                                         Tester la beta
                                     </span>
@@ -65,7 +71,35 @@ class BetaPage extends React.Component {
                         <img className="ui tiny centered image" alt="scroll icon" src={img_scroll}/>
                     </div>
                 </div>
-                <h2 className="ui centered header3">Fonctionnalités</h2>
+                <Headroom pinStart={950}>
+                <div className="ui large secondary inverted menu bool">
+                    <img className="ui image" alt="logo home carers" src={img_logo_blanc}/>
+                    <div className="right item">
+                        <Link smooth to='/#home' className="ui regular1 item">
+                            Accueil
+                        </Link>
+                        <Link smooth to='/#ourgoal'   className="regular1 item">Notre objectif</Link>
+                        <Link smooth to='/#oursystem' className="regular1 item">Notre outil</Link>
+                        <Link smooth to='/#aboutus'   className="regular1 item">À propos</Link>
+                        <Link smooth to='/#contactus' className="regular1 item">Nous contacter</Link>
+                    </div>
+                </div>
+                </Headroom>
+                <div className="back">
+                    <div id="ourgoal">
+                        <OurGoalPage />
+                    </div>
+                    <div id="oursystem">
+                        <OurSystemPage  />
+                    </div>
+                    <div id="aboutus">
+                        <AboutUsPage />
+                    </div>
+                    <div id="contactus">
+                         <ContactUsPage />
+                    </div>
+                    <Footer/>
+                </div>
             </div>
         );
     }
