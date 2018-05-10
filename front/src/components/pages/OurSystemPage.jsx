@@ -1,29 +1,13 @@
 import React from 'react'
-import Footer from '@temp/Footer.jsx'
-import Link from 'react-router-dom/Link'
 import img_device from '@img/devicechange.jpg'
 import img_secure from '@img/secure.jpg'
+import img_chat from '@img/chat1.png'
+import img_book from '@img/book1.png'
+import img_agenda from '@img/agenda1.png'
+import img_fiche from '@img/doctor-icon.png'
 
 const OurSystemPage = () => (
     <div>
-        {/*<div className="ui inverted masthead1 segment">*/}
-            {/*<div className="ui container grid">*/}
-                {/*<div className="row">*/}
-                    {/*<div className="nine wide column">*/}
-                        {/*<h1 className="ui header2">Notre système</h1>*/}
-                        {/*<h2 className="ui header2">*/}
-                            {/*Nous développons une plateforme disponible sur site web et mobile pour tous les types de soignants: <br/> <br/>*/}
-                            {/*Libéral, Public, Privé, Association*/}
-                        {/*</h2><br />*/}
-                        {/*<div className="ui hidden divider"></div>*/}
-                        {/*<Link to='/' class="ui huge teal button">*/}
-                            {/*Inscrivez-vous à la bêta<i class="right arrow icon"></i>*/}
-                        {/*</Link>*/}
-                        {/*<div className="ui hidden divider"></div>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
-            {/*</div>*/}
-        {/*</div>*/}
         <div className="ui vertical stripe segment">
             <div className="ui middle aligned stackable grid container">
                 <div className="row">
@@ -35,7 +19,7 @@ const OurSystemPage = () => (
 
                             <h3 className="ui header">Communication et Suivi</h3>
 
-                            <p> Pour vous aider dans votre travail et améliorer le suivi du patient, nous développons des outils tels que le carnet de
+                            <p className="textonepage"> Pour vous aider dans votre travail et améliorer le suivi du patient, nous développons des outils tels que le carnet de
                                 liaison qui optimisera la vie medical du patient. <br/> <br/>
                                 Plus que ca, Homecarers fournit une communication instantané , un Chat centré sur le patient, unique a chaque patient </ p>
                         </div>
@@ -52,11 +36,53 @@ const OurSystemPage = () => (
                     </div>
 
                     <div className="nine wide column">
-                        <h3 className="ui header">Et la sécurité, on en parle ?</h3>
-                        <p> Les questions sur sécurité des données sont primordiales et Homecarers en fait un point d'honneur. <br/>
+                        <h3 className="ui header petit">Et la sécurité, on en parle ?</h3>
+                        <p className="textonepage1"> Les questions sur sécurité des données sont primordiales et Homecarers en fait un point d'honneur. <br/>
                             Toutes les données que nous allons stocker et enregistrer sont protéger  <br/>
                             Homecarers fournit un système sécurisé et assure ainsi un meilleur suivi, sécurisé, du patient.
                         </p>
+                    </div>
+                </div>
+                <h4 className="ui horizontal header divider">
+                    <a href="">Fonctionnalitées</a>
+                </h4>
+                <div className="ui equal width stackable internally celled grid">
+                    <div className="ui four column grid">
+                        <div className="column center aligned row">
+                            <div className="column">
+                                <img className="ui centered tiny  image" alt="chat" src={img_chat} />
+                                <div className="ui hidden divider"></div>
+                                <div className="ui hidden divider"></div>
+                                <p className="gras"> Chat</p>
+                                <div className="ui hidden divider"></div>
+
+                                <p className="featurelight"> Un chat pour les profesionnels d'un même patient</p>
+                            </div>
+                            <div className="column">
+                                <img className="ui centered tiny  image" alt="chat" src={img_book} />
+                                <div className="ui hidden divider"></div>
+                                <div className="ui hidden divider"></div>
+                                <p className="gras"> Suivi medical et de soin</p>
+                                <div className="ui hidden divider"></div>
+                                <p className="featurelight"> Le cahier de liaison pour chaque patient </p>
+                            </div>
+                            <div className="column">
+                                <img className="ui centered tiny  image" alt="chat" src={img_agenda} />
+                                <div className="ui hidden divider"></div>
+                                <div className="ui hidden divider"></div>
+                                <p className="gras"> Agenda </p>
+                                <div className="ui hidden divider"></div>
+                                <p className="featurelight"> Gérer vos rendez-vous patient</p>
+                            </div>
+                            <div className="column">
+                                <img className="ui centered tiny  image" alt="chat" src={img_fiche} />
+                                <div className="ui hidden divider"></div>
+                                <div className="ui hidden divider"></div>
+                                <p className="gras"> Fiche pro </p>
+                                <div className="ui hidden divider"></div>
+                                <p className="featurelight"> Information sur les professionnels</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

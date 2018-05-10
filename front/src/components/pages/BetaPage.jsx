@@ -8,7 +8,6 @@ import { OurSystemPage, OurGoalPage, AboutUsPage, ContactUsPage} from '../../act
 import { beta } from '../../actions/users'
 import img_logo from '@img/logo_fond_bleu.png'
 import img_logo_blanc from '@img/logosurblanc.png'
-
 import img_hero from '@img/Hero.png'
 import img_scroll from '@img/scrollwhite.png'
 
@@ -25,7 +24,7 @@ class BetaPage extends React.Component {
                             </Link>
                             <Link smooth to='/#ourgoal'   className="regular1 item">Notre objectif</Link>
                             <Link smooth to='/#oursystem' className="regular1 item">Notre outil</Link>
-                            <Link smooth to='/#aboutus'   className="regular1 item">À propos</Link>
+                            <Link smooth to='/#aboutus'   className="regular1 item">À propos de nous</Link>
                             <Link smooth to='/#contactus' className="regular1 item">Nous contacter</Link>
                         </div>
                     </div>
@@ -80,7 +79,7 @@ class BetaPage extends React.Component {
                         </Link>
                         <Link smooth to='/#ourgoal'   className="regular1 item">Notre objectif</Link>
                         <Link smooth to='/#oursystem' className="regular1 item">Notre outil</Link>
-                        <Link smooth to='/#aboutus'   className="regular1 item">À propos</Link>
+                        <Link smooth to='/#aboutus'   className="regular1 item">À propos de nous</Link>
                         <Link smooth to='/#contactus' className="regular1 item">Nous contacter</Link>
                     </div>
                 </div>

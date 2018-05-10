@@ -43,7 +43,7 @@ class ContactUsForm extends React.Component {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Adresse Email"
+                        placeholder="Adresse E-mail"
                         value={data.email}
                         onChange={this.onChange}
                     />
@@ -61,7 +61,7 @@ class ContactUsForm extends React.Component {
                     </textarea>
                     {errors.message && <InlineError text={errors.message} />}
                 </div>
-                <button className="ui teal button" type="submit">Submit</button>
+                <button className="ui colorbutton button" type="submit">Envoyer</button>
             </Form>
         );
     }
