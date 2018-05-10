@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src:
+            local('Lato'),
+            local('Lato Regular'),
+            url(./Lato-Regular.ttf) format('ttf')
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    font-style: normal;
+    font-weight: 400;
+    src:
+            local('Lato Light'),
+            local('Lato Light'),
+            url(./Lato-Light.ttf) format('ttf')
+}
+
 .masthead.segment {
     min-height: 1000px;
     padding: 1em 0em;

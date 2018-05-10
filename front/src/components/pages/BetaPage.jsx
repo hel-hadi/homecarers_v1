@@ -71,7 +71,7 @@ class BetaPage extends React.Component {
                         <img className="ui tiny centered image" alt="scroll icon" src={img_scroll}/>
                     </div>
                 </div>
-                <Headroom pinStart={950}>
+                <Headroom pinStart={950} downTolerance={50}>
                 <div className="ui large secondary inverted menu bool">
                     <img className="ui image" alt="logo home carers" src={img_logo_blanc}/>
                     <div className="right item">
