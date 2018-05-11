@@ -2,7 +2,6 @@ import React from 'react'
 import img_prix from '@img/prix.jpg'
 import img_invie from '@img/invie1.png'
 import img_etonomy from '@img/etonomy.png'
-import img_croix from '@img/collaboration.jpg'
 
 const AboutUsPage = () => (
     <div>
@@ -13,11 +12,13 @@ const AboutUsPage = () => (
                         <a href="">À propos de nous</a>
                     </h4>
                     <div className="eight wide column">
-                        <h3 className="ui header petit">Vainqueur du hackathon E-tonomy</h3>
-                        <p className="textonepage1"> Notre incroyable équipe est issue d'un événement: Etonomy. <br/> <br/>
-                            Durant 52 heures, nous avons travaillé sans relache afin de trouver une idée qui améliore le suivi du patient.
-                            Compétences et motivation sont les raisons de notre succès ...
-                        <br /> Et c'est pourquoi nous avons gagné cet événement, que nous avons continuer cette aventure afin de vous proposer Homecarers
+                        <h3 className="ui header petit">Lauréat du hackathon E-tonomy</h3>
+                        <p className="textonepage1"> Notre  équipe est issue d'un événement: le Salon E-Tonomy. <br/> <br/>
+                            Étudiant, Universitaire, Patient, Professionnel de Santé..
+                            Notre equipe a travaillé afin de trouver une solution qui améliore le suivi du patient.
+                            <br/><br/>
+                            Notre implication, et nos diverses competences nous ont permit de creer la solution qui permet de mettre le patient au coeur du suivi
+                        <br />
                     </p>
                     </div>
                     <div className="six wide right floated column">

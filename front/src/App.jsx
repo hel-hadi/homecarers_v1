@@ -14,7 +14,7 @@ const App = ({ location }) => (
             <Route location={location} path="/" exact component={BetaPage} />
         </MediaQuery>
         <MediaQuery maxWidth={768}> {/* Mobile Responsive Page */}
-            <Sidebar content={SidebarPage} background='#2b4e77' toggleIconColor='#dcaf8a' hoverhighlight='rgba(255,255,255,0.15)'>
+            <Sidebar content={SidebarPage} background='#FFFFFF' toggleIconColor='#ffffff' hoverhighlight='rgba(255,255,255,0.15)'>
                 <Route location={location}  path="/" exact component={BetaPageMobile} />
             </Sidebar>
         </MediaQuery>

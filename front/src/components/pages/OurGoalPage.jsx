@@ -1,6 +1,4 @@
 import React from 'react'
-import Footer from '@temp/Footer.jsx'
-import Link from 'react-router-dom/Link'
 import img_nurse from '@img/nurse1.jpg'
 import img_tablette from '@img/tablette.png'
 
@@ -14,14 +12,13 @@ const OurGoalPage = () => (
                     </h4>
                     <div className="eight wide column">
                         <div className="ui text container">
-                            <h3 className="ui header">Faciliter le travail des soignants
+                            <h3 className="ui header">Faciliter le travail des professionels
                             </h3>
-                            <p className="textonepage"> Comment un soignant peut-il avoir toutes les informations sur son patient?
-                                Notre objectif est de d'aemliorer la vie medicale des patients, en facilitant la communication
-                                des intervenants a domicile !
+                            <p className="textonepage"> Homecarers est la plate-forme qui centralise les informations des patients et
+                                favorise leur transmission auprès des professionnels de la santé.
                                 <div className="ui hidden divider"></div>
-                                Bien que primordiale, avoir acces a l'information n'est pas facile pour l'intervenant,
-                                et c'est ce que nous voulons regler.
+                                Professionnels du privé, du public ou libéraux ont accès au suivi de leurs
+                                patients, dans le but d’assurer une continuité dans les soins de chaque personne.
                             </p>
                         </div>
                     </div>
@@ -37,11 +34,12 @@ const OurGoalPage = () => (
                     </div>
 
                     <div className="nine wide column">
-                        <h3 className="ui header petit">Améliorer le suivi du patient</h3>
-                        <p className="textonepage1">Parce qu'etre soigne à la maison ne veut pas dire qu'il n'est ne pouvons pas avoir de meilleurs soins
-                            Etre suivi comme dans un hôpital.
+                        <h3 className="ui header petit">Assurer la securite du patient</h3>
+                        <p className="textonepage1">
+                            La sécurité des patients est primordiale, et Homecarers permet d'éviter les imprévus qui peuvent
+                            nuire aux personnes pendant la prestation des services de santé ou de soins, et ainsi, réduire les dommages évitables aux patients
                             <div className="ui hidden divider"></div>
-                            Homecarers fournit un suivi des patients optimal, peu importe qui prend soin de vous.
+                            Homecarers fournit un suivi du patients optimal, peu importe qui prend soin de vous.
                         </p>
                     </div>
                 </div>

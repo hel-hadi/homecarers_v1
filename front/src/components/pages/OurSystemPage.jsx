@@ -16,9 +16,13 @@ const OurSystemPage = () => (
 
                             <h3 className="ui header">Communication et Suivi</h3>
 
-                            <p className="textonepage"> Pour vous aider dans votre travail et améliorer le suivi du patient, nous développons des outils tels que le carnet de
-                                liaison qui optimisera la vie medical du patient. <br/> <br/>
-                                Plus que ca, Homecarers fournit une communication instantané , un Chat centré sur le patient, unique a chaque patient </ p>
+                            <p className="textonepage"> Pour aider le professionnel de sante dans son travail et améliorer le suivi du patient, le carnet de
+                                liaison améliore les soins, quelques soient les différents milieux de soins concernes <br/>
+                                <br/><br/>L'autre atout d'Homecarers .. un Chat centré sur le patient et unique a chaque patient
+                                Homecarers fournit un suivi plus intelligente des patients ,continue et distant, en
+                                temps réel, pour améliorer le rétablissement des patients.
+                                <br />
+                            </ p>
                         </div>
                     </div>
                     <div className="six wide right floated column">
@@ -33,14 +37,13 @@ const OurSystemPage = () => (
                     </div>
 
                     <div className="nine wide column">
-                        <h3 className="ui header petit">Et la sécurité, on en parle ?</h3>
-                        <p className="textonepage1"> Les questions sur sécurité des données sont primordiales et Homecarers en fait un point d'honneur. <br/>
-                            Toutes les données que nous allons stocker et enregistrer sont protéger  <br/>
-                            Homecarers fournit un système sécurisé et assure ainsi un meilleur suivi, sécurisé, du patient.
+                        <h3 className="ui header petit">Un systeme de soins et de sante sécurise ?</h3>
+                        <p className="textonepage1"> Les questions sur sécurité des données sont primordiales et nous en faisons un point d'honneur. <br/>
+                            Toutes les données precieusement stocker et enregistrer sont protéger afin de respecter la vie du patient<br/>
+                            Homecarers fournit un système sécurisé et assure ainsi un meilleur suivi de chaque personne.
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

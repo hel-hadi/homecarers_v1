@@ -62,6 +62,11 @@ export const ContactUsPage = Loadable({
     loading: Loading,
 })
 
+export const ContactUsPageMobile = Loadable({
+    loader: () => import('@mpages/ContactUsPageMobile.jsx'),
+    loading: Loading,
+})
+
 export const ContactUsForm = Loadable({
     loader: () => import('@form/ContactUsForm.jsx'),
     loading: Loading,
@@ -69,5 +74,15 @@ export const ContactUsForm = Loadable({
 
 export const FeatureWeb = Loadable({
     loader: () => import('@temp/FeatureWeb.jsx'),
+    loading: Loading,
+})
+
+export const Features = Loadable({
+    loader: () => import('@temp/Features.jsx'),
+    loading: Loading,
+})
+
+export const Footer = Loadable({
+    loader: () => import('@temp/Footer.jsx'),
     loading: Loading,
 })

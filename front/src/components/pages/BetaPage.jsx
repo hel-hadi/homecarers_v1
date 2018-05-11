@@ -40,7 +40,7 @@ class BetaPage extends React.Component {
                         </h1>
                         <h2 className="ui inverted centered header">
                                 <span className="regular1">
-                                La solution digital des intervenants a domicile
+                                    L'organe de Liaison des professionnels de Santé.
                                 </span>
                         </h2>
                         <div className="ui hidden divider"></div>
@@ -53,7 +53,7 @@ class BetaPage extends React.Component {
                             </div>
                             <button className="ui large button betabutt">
                                     <span className="light1">
-                                        S'inscrire a la beta
+                                        S'inscrire à la beta
                                     </span>
                             </button>
                         </div>
