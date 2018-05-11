@@ -25,17 +25,6 @@ const AboutUsPage = () => (
                     </div>
                 </div>
                 <h4 className="ui horizontal header divider">
-                </h4>
-                <div className="row">
-                    <div className="seven wide right floated column">
-                        <img className="ui medium centered  image" alt="medecin together" src={img_croix} />
-                    </div>
-                    <div className="nine wide column">
-                      <h3 className="ui header petit">Améliorer la vie medicale</h3>
-                      <p className="textonepage1"> Notre seul but est d'aider toutes sortes de soignants à domicile, c'est pourquoi nous vous invitons a nous envoyer votre suggestion. </ p>
-                    </div>
-                </div>
-                <h4 className="ui horizontal header divider">
                     <a href="">Nos partenaires</a>
                 </h4>
                 <div className="two column center aligned row">

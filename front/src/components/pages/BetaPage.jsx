@@ -4,7 +4,7 @@ import Footer from '@temp/Footer.jsx'
 import { connect } from 'react-redux/dist/react-redux.min'
 import { HashLink as Link } from 'react-router-hash-link';
 import Headroom from 'react-headroom';
-import { OurSystemPage, OurGoalPage, AboutUsPage, ContactUsPage} from '../../actions/routeSplit'
+import { OurSystemPage, OurGoalPage, AboutUsPage, ContactUsPage, FeatureWeb} from '../../actions/routeSplit'
 import { beta } from '../../actions/users'
 import img_logo from '@img/logo_fond_bleu.png'
 import img_logo_blanc from '@img/logosurblanc.png'
@@ -53,7 +53,7 @@ class BetaPage extends React.Component {
                             </div>
                             <button className="ui large button betabutt">
                                     <span className="light1">
-                                        Tester la beta
+                                        S'inscrire a la beta
                                     </span>
                             </button>
                         </div>
@@ -84,6 +84,7 @@ class BetaPage extends React.Component {
                     </div>
                 </div>
                 </Headroom>
+                <FeatureWeb />
                 <div className="back">
                     <div id="ourgoal">
                         <OurGoalPage />

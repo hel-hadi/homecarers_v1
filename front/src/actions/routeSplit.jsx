@@ -67,3 +67,7 @@ export const ContactUsForm = Loadable({
     loading: Loading,
 })
 
+export const FeatureWeb = Loadable({
+    loader: () => import('@temp/FeatureWeb.jsx'),
+    loading: Loading,
+})
