@@ -12,14 +12,17 @@ const AboutUsPageMobile = () => (
                         <a href="">À propos de nous</a>
                     </h4>
                     <div className="eight wide column">
-                        <h3 className="ui header petit">Lauréat du hackathon E-tonomy</h3>
-                        <p className="ui centered textonepage1"> Notre  équipe est issue d'un événement: le Salon E-Tonomy. <br/> <br/>
+                        <div className="ui text container">
+
+                        <h3 className="ui header">Lauréat du hackathon E-tonomy</h3>
+                        <p className="ui centered textonepage"> Notre  équipe est issue d'un événement: le Salon E-Tonomy. <br/> <br/>
                             Étudiant, Universitaire, Patient, Professionnel de Santé..
                             Notre equipe a travaillé afin de trouver une solution qui améliore le suivi du patient.
                             <br/><br/>
                             Notre implication, et nos diverses competences nous ont permit de creer la solution qui permet de mettre le patient au coeur du suivi
                             <br />
                         </p>
+                        </div>
                     </div>
                     <div className="six wide right floated column">
                         <img src={img_prix} alt="vainqueur" className="ui large centered image" />

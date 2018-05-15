@@ -30,13 +30,15 @@ const OurGoalPageMobile= () => (
                 </h4>
                 <div className="row">
                     <div className="nine wide column">
-                        <h3 className="ui header petit">Assurer la securite du patient</h3>
-                        <p className="ui centered textonepage1">
+                        <div className="ui text container">
+                        <h3 className="ui header">Assurer la securite du patient</h3>
+                        <p className="ui centered textonepage">
                             La sécurité des patients est primordiale, et Homecarers permet d'éviter les imprévus qui peuvent
                             nuire aux personnes pendant la prestation des services de santé ou de soins, et ainsi, réduire les dommages évitables aux patients
                             <div className="ui hidden divider"></div>
                             Homecarers fournit un suivi du patients optimal, peu importe qui prend soin de vous.
                         </p>
+                        </div>
                     </div>
                     <div className="seven wide right floated column">
                         <img className="ui medium centered rounded image" alt="medecin together" src={img_tablette} />

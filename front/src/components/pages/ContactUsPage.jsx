@@ -1,11 +1,23 @@
 import React from 'react'
 import { ContactUsForm } from "../../actions/routeSplit"
 import img_med from '@img/boy.svg'
+import Alert from 'react-s-alert'
+import { beta } from '../../actions/users'
+
 
 
 class ContactUsPage extends React.Component {
-    // submit = data => this.props.contact(data).then(() => this.props.history.push("/"));
-    render() {
+    state = {
+        mail: 'C\'est fait ! Votre message a ete envoyee !'
+
+    };
+    handleTop(text)
+    {
+        Alert.success(text, {
+            position: 'top'
+        });
+    };
+    submit = data => this.props.contact(data).then(this.handleTop(this.state.mail)).then(this.setState({loader: false}));    render() {
         return (
             <div>
                 <div className="ui vertical stripe segment">

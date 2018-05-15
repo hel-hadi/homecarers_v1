@@ -1,7 +1,7 @@
 import React from 'react'
 import Form  from 'semantic-ui-react/dist/commonjs/collections/Form/Form'
 import validator from 'validator'
-import InlineError from '../../messages/InlineError'
+import { InlineError } from '../../actions/routeSplit'
 
 class ContactUsForm extends React.Component {
     state = {
@@ -38,7 +38,7 @@ class ContactUsForm extends React.Component {
         const {data, errors, loading} = this.state;
         return (
             <Form onSubmit={this.onSubmit} loading={loading} className="ui form">
-                <div className="field"  error={!!errors.email}>
+                <div className="field">
                     <input
                         type="email"
                         id="email"
@@ -49,7 +49,7 @@ class ContactUsForm extends React.Component {
                     />
                     {errors.email && <InlineError text={errors.email} />}
                 </div>
-                <div className="field" error={!!errors.message}>
+                <div className="field">
                     <textarea
                         placeholder="votre message"
                         id="message"

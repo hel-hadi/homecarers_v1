@@ -1,7 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import { OurSystemPageMobile, OurGoalPageMobile, AboutUsPageMobile, ContactUsPageMobile, Features, Footer} from '../../actions/routeSplit'
-import { BetaForm } from '../../actions/routeSplit'
+import { OurSystemPageMobile, OurGoalPageMobile,
+    AboutUsPageMobile, ContactUsPageMobile, Features, Footer, BetaForm} from '../../actions/routeSplit'
 import { beta } from "../../actions/users";
 import img_hero from '@img/Hero.png'
 import img_scroll from '@img/scrollwhite.png'
@@ -10,11 +10,10 @@ import img_scroll from '@img/scrollwhite.png'
 class BetaPageMobile extends React.Component {
     submit = data => beta(data).then(() => this.props.history.push('/'));
     render() {
+        let active = true;
         return (
             <div>
-                <div className="ui vertical inverted masthead center aligned segment">
-                    <div className="ui hidden divider"></div>
-                    <div className="ui hidden divider"></div>
+                <div className="ui vertical inverted masthead center aligned  segment">
                     <div className="ui hidden divider"></div>
                     <div className="ui hidden divider"></div>
                     <div className="ui hidden divider"></div>
@@ -30,31 +29,20 @@ class BetaPageMobile extends React.Component {
                         </h1>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
-                        <div className="ui hidden divider"></div>
-                        <div className="ui hidden divider"></div>
-                        <div className="ui centered container">
-                            <div className="ui huge icon input">
-                                <input className="beta" type="text" placeholder=" Example@email.com" />
-                            </div>
-                            <button className="ui large button betabutt">
-                                    <span className="light1">
-                                        S'inscrire à la beta
-                                    </span>
-                            </button>
-                        </div>
+                        <BetaForm active={true}/>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
-                        <h2 className="ui centered grid">
-                                <span className="light1">
-                                    Scroller pour en savoir plus
-                                </span>
-                        </h2>
-                        <img className="ui tiny centered image" alt="scroll icon" src={img_scroll}/>
                     </div>
-                    {/*<BetaForm submit={this.submit}/>*/}
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
                 </div>
                 <Features/>
                 <div className="ui centered back">

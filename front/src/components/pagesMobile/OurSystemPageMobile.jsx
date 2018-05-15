@@ -32,11 +32,14 @@ const OurSystemPageMobile = () => (
                 </h4>
                 <div className="row">
                     <div className="nine wide column">
-                        <h3 className="ui header petit">Un systeme de soins et de sante sécurise </h3>
-                        <p className="textonepage1"> Les questions sur sécurité des données sont primordiales et nous en faisons un point d'honneur. <br/> <br/>
+                        <div className="ui text container">
+
+                        <h3 className="ui header">Un systeme de soins et de sante sécurise </h3>
+                        <p className="textonepage"> Les questions sur sécurité des données sont primordiales et nous en faisons un point d'honneur. <br/> <br/>
                             Toutes les données precieusement stocker et enregistrer sont protéger afin de respecter la vie du patient<br/>
                             Homecarers fournit un système sécurisé et assure ainsi un meilleur suivi de chaque personne.
                         </p>
+                        </div>
                     </div>
                     <div className="seven wide right floated column">
                         <img className="ui medium centered rounded image" alt="mimage securite" src={img_secure} />

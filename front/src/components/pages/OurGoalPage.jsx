@@ -16,7 +16,7 @@ const OurGoalPage = () => (
                             </h3>
                             <p className="textonepage"> Homecarers est la plate-forme qui centralise les informations des patients et
                                 favorise leur transmission auprès des professionnels de la santé.
-                                <div className="ui hidden divider"></div>
+                                <br/>
                                 Professionnels du privé, du public ou libéraux ont accès au suivi de leurs
                                 patients, dans le but d’assurer une continuité dans les soins de chaque personne.
                             </p>
@@ -38,7 +38,7 @@ const OurGoalPage = () => (
                         <p className="textonepage1">
                             La sécurité des patients est primordiale, et Homecarers permet d'éviter les imprévus qui peuvent
                             nuire aux personnes pendant la prestation des services de santé ou de soins, et ainsi, réduire les dommages évitables aux patients
-                            <div className="ui hidden divider"></div>
+                            <br/>
                             Homecarers fournit un suivi du patients optimal, peu importe qui prend soin de vous.
                         </p>
                     </div>

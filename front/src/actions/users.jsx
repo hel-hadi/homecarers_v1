@@ -1,3 +1,4 @@
+import React from 'react'
 import api from '../api.jsx'
 import { userLoggedIn } from "./auth.jsx"
 
@@ -9,4 +10,8 @@ export const signup = (data) => (dispatch) =>
 
 export const beta = (data) => (dispatch) =>
     api.user.beta(data).then(user => {
+    });
+
+export const contact = (data) => (dispatch) =>
+    api.user.contact(data).then(user => {
     });

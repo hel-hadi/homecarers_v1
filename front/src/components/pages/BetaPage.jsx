@@ -4,20 +4,37 @@ import Footer from '@temp/Footer.jsx'
 import { connect } from 'react-redux/dist/react-redux.min'
 import { HashLink as Link } from 'react-router-hash-link';
 import Headroom from 'react-headroom';
-import { OurSystemPage, OurGoalPage, AboutUsPage, ContactUsPage, FeatureWeb} from '../../actions/routeSplit'
+import { OurSystemPage,
+         OurGoalPage,
+         AboutUsPage,
+         ContactUsPage,
+         FeatureWeb,
+         BetaForm, InlineSuccess} from '../../actions/routeSplit'
 import { beta } from '../../actions/users'
 import img_logo from '@img/logo_fond_bleu.png'
 import img_logo_blanc from '@img/logosurblanc.png'
 import img_hero from '@img/Hero.png'
 import img_scroll from '@img/scrollwhite.png'
+import Alert from 'react-s-alert'
 
 class BetaPage extends React.Component {
+    state = {
+        register1: 'C\'est fait ! vous etes inscrit pour participer a notre version Beta'
+
+    };
+    handleTop(text)
+    {
+            Alert.success(text, {
+                position: 'top'
+            });
+    };
+    submit = data => this.props.beta(data).then(this.handleTop(this.state.register1)).then(this.setState({loader: false}));
     render() {
         return (
             <div>
                 <div className="ui inverted masthead segment" id="home">
                     <div className="ui large secondary inverted menu">
-                        <img className="ui image" alt="logo home carers" src={img_logo}/>
+                        <img className="i image" alt="logo home carers" src={img_logo}/>
                         <div className="right item">
                             <Link smooth to='/#home' className="ui regular1 item">
                                 Accueil
@@ -35,7 +52,7 @@ class BetaPage extends React.Component {
                     <div className="ui hidden divider"></div>
                     <div className="ui centered container">
                         <img className="ui smally centered image" alt="logo blanc home carers" src={img_hero}/>
-                        <h1 class="ui inverted centered header">
+                        <h1 className="ui inverted centered header">
                             <span className="regular1">HOME</span><span className="light1">CARERS</span>
                         </h1>
                         <h2 className="ui inverted centered header">
@@ -47,16 +64,7 @@ class BetaPage extends React.Component {
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
-                        <div className="ui centered grid">
-                            <div className="ui huge icon input">
-                                <input className="beta" type="text" placeholder=" Example@email.com" />
-                            </div>
-                            <button className="ui large button betabutt">
-                                    <span className="light1">
-                                        S'inscrire à la beta
-                                    </span>
-                            </button>
-                        </div>
+                        <BetaForm submit={this.submit} />
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
@@ -99,6 +107,9 @@ class BetaPage extends React.Component {
                          <ContactUsPage />
                     </div>
                     <Footer/>
+                </div>
+                <div>
+                    <Alert stack={{limit: 3}} timeout={3000}/>
                 </div>
             </div>
         );

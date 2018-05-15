@@ -86,3 +86,13 @@ export const Footer = Loadable({
     loader: () => import('@temp/Footer.jsx'),
     loading: Loading,
 })
+
+export const InlineError = Loadable({
+    loader: () => import('@msg/InlineError.jsx'),
+    loading: Loading,
+})
+
+export const InlineSuccess = Loadable({
+    loader: () => import('@msg/InlineSuccess.jsx'),
+    loading: Loading,
+})
