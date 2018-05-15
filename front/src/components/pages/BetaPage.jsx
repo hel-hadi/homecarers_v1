@@ -18,17 +18,24 @@ import img_scroll from '@img/scrollwhite.png'
 import Alert from 'react-s-alert'
 
 class BetaPage extends React.Component {
-    state = {
-        register1: 'C\'est fait ! vous etes inscrit pour participer a notre version Beta'
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            loader: false,
+            message: 'C\'est fait ! vous etes inscrit pour participer a notre version Beta',
+            validate: false
+        };
     };
+
     handleTop(text)
     {
             Alert.success(text, {
                 position: 'top'
             });
     };
-    submit = data => this.props.beta(data).then(this.handleTop(this.state.register1)).then(this.setState({loader: false}));
+    submit = data => this.props.beta(data)
+        .then(() => (this.handleTop(this.state.message)))
+        .then(this.setState({loader: false}));
     render() {
         return (
             <div>
@@ -64,7 +71,7 @@ class BetaPage extends React.Component {
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
-                        <BetaForm submit={this.submit} />
+                        <BetaForm submit={this.submit} loader={this.state.loader}/>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>

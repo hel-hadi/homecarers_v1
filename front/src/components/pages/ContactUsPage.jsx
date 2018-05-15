@@ -2,22 +2,23 @@ import React from 'react'
 import { ContactUsForm } from "../../actions/routeSplit"
 import img_med from '@img/boy.svg'
 import Alert from 'react-s-alert'
-import { beta } from '../../actions/users'
-
-
+import {beta, contact} from '../../actions/users'
+import {connect} from "react-redux/dist/react-redux.min";
 
 class ContactUsPage extends React.Component {
     state = {
         mail: 'C\'est fait ! Votre message a ete envoyee !'
 
     };
+
     handleTop(text)
     {
         Alert.success(text, {
             position: 'top'
         });
     };
-    submit = data => this.props.contact(data).then(this.handleTop(this.state.mail)).then(this.setState({loader: false}));    render() {
+    submit = data => this.props.contact(data).then(this.handleTop(this.state.mail));
+    render() {
         return (
             <div>
                 <div className="ui vertical stripe segment">
@@ -41,4 +42,4 @@ class ContactUsPage extends React.Component {
     }
 }
 
-export default ContactUsPage
+export default connect(null, { contact })(ContactUsPage);

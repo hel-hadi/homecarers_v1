@@ -4,7 +4,9 @@ import Alert from 'react-s-alert'
 
 class InlineError extends React.Component {
     componentDidMount() {
-        this.handleTop(this.props.text)
+        Alert;
+        this.handleTop(this.props.text);
+
     }
     handleTop(text)
     {

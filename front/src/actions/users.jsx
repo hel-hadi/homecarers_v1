@@ -15,3 +15,10 @@ export const beta = (data) => (dispatch) =>
 export const contact = (data) => (dispatch) =>
     api.user.contact(data).then(user => {
     });
+
+// export const contact = (data) => {
+//     console.log("onCOntact yeah");
+//     api.user.contact(data).then(user => {
+//     });
+// }
+

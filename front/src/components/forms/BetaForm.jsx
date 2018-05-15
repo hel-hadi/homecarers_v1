@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import Form  from 'semantic-ui-react/dist/commonjs/collections/Form/Form'
 import 'semantic-ui-css/semantic.min.css'
 import PropTypes from 'prop-types';
@@ -6,31 +7,44 @@ import validator from 'validator';
 import { InlineError } from '../../actions/routeSplit'
 
 class BetaForm extends React.Component {
-    state = {
-        data: {
-            email: '',
-            code_postal: '78520'
-        },
-        loading: false,
-        errors: {},
-    };
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {
+            form1: '',
+            data: {
+                email: '',
+                code_postal: '78520'
+            },
+            loading: this.props.loader,
+            errors: {},
+        }
+    }
 
-    onChange = e => this.setState({
-        data: { ...this.state.data, [e.target.name]: e.target.value}
-    });
+    handleSubmit(e) {
+        alert('A name was submitted: ' + this.input.value);
+        this.input.value = '';
+        e.preventDefault();
+    }
+
+    onChange = e =>
+        this.setState({
+            data: {...this.state.data, [e.target.name]: e.target.value}
+        });
 
 
     onSubmit = () => {
         const errors = this.validate(this.state.data);
         this.setState({ errors });
         if (Object.keys(errors).length === 0) {
+            this.setState({loading: true});
             this.props
-                .submit(this.state.data)
+                .submit(this.state.data).then(this.setState({email: ''}), this.setState({loading: this.props.loader, email: ''}))
                 .catch(err => this.setState({ errors: {global: err.response.data.email.toString() }, loading: false })
                 )
         }
+        this.handleSubmit();
     };
-
 
     validate = (data) => {
         const errors = {};
@@ -44,10 +58,11 @@ class BetaForm extends React.Component {
         return (
             <div>
                 {!this.props.active ?
-                    <Form onSubmit={this.onSubmit} loading={loading} className="ui form ">
+                    <Form onSubmit={this.onSubmit} loading={loading} className="ui form">
                         <div className="ui centered grid">
                             <div className="ui huge icon input">
                                 <input className="beta"
+                                       ref={(input) => this.input = input}
                                        placeholder=" Example@email.com"
                                        type="email"
                                        id="email"
@@ -56,7 +71,7 @@ class BetaForm extends React.Component {
                                        onChange={this.onChange}
                                 />
                             </div>
-                            <button className="ui large button betabutt">
+                            <button className="ui large button clear betabutt">
                                     <span className="light1">
                                         S'inscrire à la beta
                                     </span>
