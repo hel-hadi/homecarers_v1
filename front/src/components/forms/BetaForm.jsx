@@ -40,6 +40,10 @@ class BetaForm extends React.Component {
         }
     };
 
+    onLoader() {
+        this.state.errors.email = '';
+        this.state.errors.global = null ;
+    }
 
     validate = (data) => {
         const errors = {};
@@ -51,6 +55,7 @@ class BetaForm extends React.Component {
 
     render() {
         const {data, errors, loading, count_global} = this.state;
+
         return (
             <div>
                 {!this.props.active ?
@@ -58,7 +63,7 @@ class BetaForm extends React.Component {
                         <div className="ui centered grid">
                             <div className="ui huge icon input">
                                 <input className="beta"
-                                       placeholder=" Example@email.com"
+                                       placeholder="Example@email.com"
                                        type="email"
                                        id="email"
                                        name="email"
@@ -83,11 +88,14 @@ class BetaForm extends React.Component {
                         {/*/>*/}
                         {/*</div>*/}
                         {/*{errors.code_postal && <InlineError text={errors.code_postal} />}*/}
+
                         {(count_global === 1 && errors.email) && <InlineError text={errors.email}/>}
                         {(count_global === 1 && errors.global) && <InlineError text={errors.global} />}
+                        {(errors.email || errors.global) && this.onLoader()}
+
                     </Form>
                     :
-                    <Form onSubmit={this.onSubmit} loading={loading} className="ui centered form ">
+                    <Form onSubmit={this.onSubmit} loading={loading} className="ui centered form">
                         <div className="ui centered grid">
                             <div className="ui huge icon input">
                                 <input className="ui centered beta1"
@@ -107,9 +115,10 @@ class BetaForm extends React.Component {
                                     </span>
                             </button>
                             </div>
-
                         {(count_global === 1 && errors.email) && <InlineError text={errors.email}/>}
                         {(count_global === 1 && errors.global) && <InlineError text={errors.global} />}
+                        {(errors.email || errors.global) && this.onLoader()}
+
                     </Form>
                 }
             </div>

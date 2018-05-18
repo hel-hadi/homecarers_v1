@@ -22,7 +22,7 @@ class BetaPage extends React.Component {
         super(props);
         this.state = {
             loader: false,
-            message: 'C\'est fait ! vous etes inscrit pour participer a notre version Beta',
+            message: 'C\'est fait ! vous etes inscrit pour participer à notre version Beta',
             validate: false
         };
     };

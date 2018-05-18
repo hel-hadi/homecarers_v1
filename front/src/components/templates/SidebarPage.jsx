@@ -5,7 +5,6 @@ import img_logo from '@img/logosurblanc.png'
 
 const SidebarPage = [
     <div className="ui centered center">
-
             <div className="ui hidden divider"></div>
             <div className="ui hidden divider"></div>
                 <img className="ui centered medium2 circular image" alt="chat" src={img_logo} />
