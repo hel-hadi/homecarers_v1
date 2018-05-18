@@ -21,11 +21,17 @@ class Loading extends React.Component {
                 <div className="">
                     <div className="ui inverted">
                         <div className="ui active inverted dimmer content">
-                            <img className="ui image" alt="logo home carers" src={img_logo_blanc}/>
+                            <img className="ui mediun2 image" alt="logo home carers" src={img_logo_blanc}/>
                             <br/>
                             <br/>
                             <br/>
-                            <div className="ui large text loader">Chargement</div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div className="ui large text loader"></div>
                         </div>
                     </div>
                 </div>

@@ -99,13 +99,15 @@ class BetaForm extends React.Component {
                                        onChange={this.onChange}
                                 />
                             </div>
-
+                        </div>
+                            <div className="ui centered grid">
                             <button className="ui large button centered betabutt1">
                                     <span className="light1">
                                         S'inscrire à la bêta
                                     </span>
                             </button>
-                        </div>
+                            </div>
+
                         {(count_global === 1 && errors.email) && <InlineError text={errors.email}/>}
                         {(count_global === 1 && errors.global) && <InlineError text={errors.global} />}
                     </Form>
