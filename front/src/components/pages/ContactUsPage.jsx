@@ -2,14 +2,18 @@ import React from 'react'
 import { ContactUsForm } from "../../actions/routeSplit"
 import img_med from '@img/boy.svg'
 import Alert from 'react-s-alert'
-import {beta, contact} from '../../actions/users'
+import { contact } from '../../actions/users'
 import {connect} from "react-redux/dist/react-redux.min";
 
 class ContactUsPage extends React.Component {
     state = {
-        mail: 'C\'est fait ! Votre message a ete envoyee !'
-
+        mail: 'C\'est fait ! Votre message a été envoyé avec succès !'
     };
+    componentDidMount() {
+        Alert.success('', {
+            position: 'none'
+        });
+    }
 
     handleTop(text)
     {
@@ -29,6 +33,9 @@ class ContactUsPage extends React.Component {
                     </h3>
                     <div className="row">
                         <div className="seven wide centered column">
+                            <p className="ui centered textonepage">
+                                Une question ? Une suggestion ?
+                            </p>
                             <ContactUsForm submit={this.submit}/>
                         </div>
                         <div className="seven wide column">

@@ -1,4 +1,5 @@
 import React from 'react'
+import img_logo_blanc from '@img/logosurblanc.png'
 import { Style } from 'radium'
 
 class Loading extends React.Component {
@@ -10,21 +11,22 @@ class Loading extends React.Component {
                         margin: 0,
                         padding: 0,
                         fontFamily: 'Helvetica, Arial, sans-serif',
-                        opacity: 0.5
+                        opacity: 0.7
                 },
                     h2 : {
                         textTransform: 'uppercase',
                         animation: 'pulse 0.5s linear 0s infinite alternate'
                     }
                 }} />
-                <div className="Loading loader">
+                <div className="">
                     <div className="ui inverted">
-                        <div className="ui active inverted dimmer">
+                        <div className="ui active inverted dimmer content">
+                            <img className="ui image" alt="logo home carers" src={img_logo_blanc}/>
+                            <br/>
+                            <br/>
+                            <br/>
                             <div className="ui large text loader">Chargement</div>
                         </div>
-                        <p></p>
-                        <p></p>
-                        <p></p>
                     </div>
                 </div>
             </div>

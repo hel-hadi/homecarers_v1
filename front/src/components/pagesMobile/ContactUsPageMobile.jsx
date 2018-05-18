@@ -1,11 +1,21 @@
 import React from 'react'
 import { ContactUsForm } from "../../actions/routeSplit"
-import img_med from '@img/boy.svg'
+import Alert from "react-s-alert";
+import {contact} from "../../actions/users";
+import {connect} from "react-redux/dist/react-redux.min";
 
 
 class ContactUsPageMobile extends React.Component {
-    // submit = data => this.props.contact(data).then(() => this.props.history.push("/"));
-    render() {
+    state = {
+        mail: 'C\'est fait ! Votre message a été envoyé avec succès !'
+    };
+    handleTop(text)
+    {
+        Alert.success(text, {
+            position: 'top'
+        });
+    };
+    submit = data => this.props.contact(data).then(this.handleTop(this.state.mail));    render() {
         return (
             <div>
                 <div className="ui vertical stripe segment">
@@ -16,6 +26,9 @@ class ContactUsPageMobile extends React.Component {
                         </h3>
                         <div className="row">
                             <div className="seven wide centered column">
+                                <p className="ui centered textonepage">
+                                    Une question ? Une suggestion ?
+                                </p>
                                 <ContactUsForm submit={this.submit}/>
                             </div>
                         </div>
@@ -26,4 +39,4 @@ class ContactUsPageMobile extends React.Component {
     }
 }
 
-export default ContactUsPageMobile
+export default connect(null, { contact })(ContactUsPageMobile);

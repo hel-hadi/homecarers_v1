@@ -4,19 +4,22 @@ import Alert from 'react-s-alert'
 
 class InlineError extends React.Component {
     componentDidMount() {
-        Alert;
-        this.handleTop(this.props.text);
-
-    }
-    handleTop(text)
-    {
-        Alert.error(text, {
-            position: 'top'
+        Alert.error('', {
+            position: 'none'
         });
+    }
+
+    handleTop(text) {
+            Alert.error(text, {
+                position: 'top'
+            });
     };
     render() {
+        this.handleTop(this.props.text);
         return (
-                <Alert stack={{limit: 4}}/>
+            <div>
+                <Alert stack={{limit: 2}}/>
+            </div>
         )
     }
 }

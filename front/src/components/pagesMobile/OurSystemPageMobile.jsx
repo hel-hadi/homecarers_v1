@@ -1,5 +1,5 @@
 import React from 'react'
-import img_device from '@img/devicechange.jpg'
+import img_device from '@img/device12.png'
 import img_secure from '@img/secure.jpg'
 
 const OurSystemPageMobile = () => (
@@ -8,19 +8,19 @@ const OurSystemPageMobile = () => (
             <div className="ui middle aligned stackable grid container">
                 <div className="row">
                     <h4 className="ui horizontal header divider">
-                        <a href="">Notre outil</a>
+                        <a>Notre outil</a>
                     </h4>
                     <div className="eight wide column">
                         <div className="ui text container">
-
                             <h3 className="ui header">Communication et Suivi</h3>
-
-                            <p className="ui centered textonepage"> Pour aider le professionnel de sante dans son travail et améliorer le suivi du patient, le carnet de
-                                liaison améliore les soins, quelques soient les différents milieux de soins concernes <br/>
-                                <br/><br/>L'autre atout d'Homecarers .. un Chat centré sur le patient et unique a chaque patient
-                                Homecarers fournit un suivi plus intelligente des patients ,continue et distant, en
-                                temps réel, pour améliorer le rétablissement des patients.
-                                <br />
+                            <p className="ui centered textonepage"> Homecarers est un logiciel en ligne qui connecte les patients et les professionnels
+                                de santé via un outil principale :
+                                <br/><br/>
+                                Le carnet de liaison.
+                                qui améliore les soins et le suivi médical, quelque soit le milieux de santé concerné.
+                                <br /><br/>
+                                L‘autre atout de Homecarers est de mettre en relation tous les professionnels
+                                de santé qui collabore autour d’un même patient.
                             </ p>
                         </div>
                     </div>
@@ -34,11 +34,10 @@ const OurSystemPageMobile = () => (
                     <div className="nine wide column">
                         <div className="ui text container">
 
-                        <h3 className="ui header">Un systeme de soins et de sante sécurise </h3>
-                        <p className="textonepage"> Les questions sur sécurité des données sont primordiales et nous en faisons un point d'honneur. <br/> <br/>
-                            Toutes les données precieusement stocker et enregistrer sont protéger afin de respecter la vie du patient<br/>
-                            Homecarers fournit un système sécurisé et assure ainsi un meilleur suivi de chaque personne.
-                        </p>
+                        <h3 className="ui header">Un outil de santé sécurisé</h3>
+                            <p className="ui centered textonepage">Toutes les informations sont stockées chez un hébergeur de données de santé
+                                agréé et a été conçu en conformité avec la Réglementation Générale sur la Protection des Données (RGPD).
+                            </p>
                         </div>
                     </div>
                     <div className="seven wide right floated column">

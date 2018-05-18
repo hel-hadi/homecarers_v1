@@ -21,7 +21,7 @@ ReactDOM.render(
   <BrowserRouter>
           <HashRouter>
               <Provider store={store}>
-                <Route component={App} />
+                <Route component ={App} />
               </Provider>
           </HashRouter>
   </BrowserRouter>,

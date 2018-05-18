@@ -8,15 +8,15 @@ const OurGoalPageMobile= () => (
             <div className="ui middle aligned stackable grid container">
                 <div className="row">
                     <h4 className="ui horizontal header divider">
-                        <a href="">Notre objectif</a>
+                        <a>Notre objectif</a>
                     </h4>
                     <div className="eight wide column">
                         <div className="ui text container">
                             <h3 className="ui header">Faciliter le travail des professionels
                             </h3>
-                            <p className="textonepage"> Homecarers est la plate-forme qui centralise les informations des patients et
+                            <p className="ui centered textonepage"> Homecarers est la plate-forme qui centralise les informations du patient et
                                 favorise leur transmission auprès des professionnels de la santé.
-                                <div className="ui hidden divider"></div>
+                                <br/>
                                 Professionnels du privé, du public ou libéraux ont accès au suivi de leurs
                                 patients, dans le but d’assurer une continuité dans les soins de chaque personne.
                             </p>
@@ -31,13 +31,13 @@ const OurGoalPageMobile= () => (
                 <div className="row">
                     <div className="nine wide column">
                         <div className="ui text container">
-                        <h3 className="ui header">Assurer la securite du patient</h3>
-                        <p className="ui centered textonepage">
-                            La sécurité des patients est primordiale, et Homecarers permet d'éviter les imprévus qui peuvent
-                            nuire aux personnes pendant la prestation des services de santé ou de soins, et ainsi, réduire les dommages évitables aux patients
-                            <div className="ui hidden divider"></div>
-                            Homecarers fournit un suivi du patients optimal, peu importe qui prend soin de vous.
-                        </p>
+                        <h3 className="ui header">Améliorer la qualité du suivi médical et de soin</h3>
+                            <p className="ui centered textonepage">
+                                Homecarers permet d’améliorer le suivi du patient, grâce à l’accès aux informations pertinentes,
+                                ce qui donne aux professionnels de santé, un atout majeur dans la construction de leurs diagnostiques.
+                                <br/>
+                                Homecarers permet un suivi optimal du patient.
+                            </p>
                         </div>
                     </div>
                     <div className="seven wide right floated column">

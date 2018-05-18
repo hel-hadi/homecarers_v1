@@ -9,7 +9,7 @@ import { OurSystemPage,
          AboutUsPage,
          ContactUsPage,
          FeatureWeb,
-         BetaForm, InlineSuccess} from '../../actions/routeSplit'
+         BetaForm } from '../../actions/routeSplit'
 import { beta } from '../../actions/users'
 import img_logo from '@img/logo_fond_bleu.png'
 import img_logo_blanc from '@img/logosurblanc.png'
@@ -46,10 +46,10 @@ class BetaPage extends React.Component {
                             <Link smooth to='/#home' className="ui regular1 item">
                                 Accueil
                             </Link>
-                            <Link smooth to='/#ourgoal'   className="regular1 item">Notre objectif</Link>
-                            <Link smooth to='/#oursystem' className="regular1 item">Notre outil</Link>
-                            <Link smooth to='/#aboutus'   className="regular1 item">À propos de nous</Link>
-                            <Link smooth to='/#contactus' className="regular1 item">Nous contacter</Link>
+                            <Link smooth to='#ourgoal'   className="regular1 item">Notre objectif</Link>
+                            <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
+                            <Link smooth to='#aboutus'   className="regular1 item">À propos de nous</Link>
+                            <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
                         </div>
                     </div>
                     <div className="ui hidden divider"></div>
@@ -64,7 +64,7 @@ class BetaPage extends React.Component {
                         </h1>
                         <h2 className="ui inverted centered header">
                                 <span className="regular1">
-                                    L'organe de Liaison des professionnels de Santé.
+                                    L’outil de liaison, avec les professionnels de santé !
                                 </span>
                         </h2>
                         <div className="ui hidden divider"></div>
@@ -92,10 +92,10 @@ class BetaPage extends React.Component {
                         <Link smooth to='/#home' className="ui regular1 item">
                             Accueil
                         </Link>
-                        <Link smooth to='/#ourgoal'   className="regular1 item">Notre objectif</Link>
-                        <Link smooth to='/#oursystem' className="regular1 item">Notre outil</Link>
-                        <Link smooth to='/#aboutus'   className="regular1 item">À propos de nous</Link>
-                        <Link smooth to='/#contactus' className="regular1 item">Nous contacter</Link>
+                        <Link smooth to='#ourgoal'   className="regular1 item">Notre objectif</Link>
+                        <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
+                        <Link smooth to='#aboutus'   className="regular1 item">À propos de nous</Link>
+                        <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
                     </div>
                 </div>
                 </Headroom>
@@ -116,7 +116,7 @@ class BetaPage extends React.Component {
                     <Footer/>
                 </div>
                 <div>
-                    <Alert stack={{limit: 3}} timeout={3000}/>
+                    <Alert stack={{limit: 4}} timeout={3000}/>
                 </div>
             </div>
         );

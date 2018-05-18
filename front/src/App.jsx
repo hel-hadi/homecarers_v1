@@ -15,15 +15,15 @@ import 'react-s-alert/dist/s-alert-css-effects/stackslide.css'
 import 'react-s-alert/dist/s-alert-css-effects/genie.css'
 import 'react-s-alert/dist/s-alert-css-effects/bouncyflip.css'
 
-const App = ({ location }) => (
+const App = () => (
     <div>
         <Favicon url={img_logo}/>
         <MediaQuery minWidth={768}> {/* Web Page */}
-            <Route location={location} path="/" exact component={BetaPage} />
+            <Route path="/" exact component={BetaPage} />
         </MediaQuery>
         <MediaQuery maxWidth={768}> {/* Mobile Responsive Page */}
-            <Sidebar content={SidebarPage} background='#e6e6e6' toggleIconColor='#ffffff' hoverhighlight='rgba(255,255,255,0.15)'>
-                <Route location={location}  path="/" exact component={BetaPageMobile} />
+            <Sidebar content={SidebarPage} background='#ffffff' toggleIconColor='#ffffff' hoverhighlight='rgba(255,255,255,0.15)'>
+                <Route path="/" exact component={BetaPageMobile} />
             </Sidebar>
         </MediaQuery>
     </div>
