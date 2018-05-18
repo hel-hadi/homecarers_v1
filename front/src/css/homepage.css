@@ -82,6 +82,13 @@
     width: 180px!important;
 }
 
+
+.homeblue {
+    font-weight: 300!important;
+    font-family: 'Lato'!important;
+    color: #467dbe!important;
+}
+
 .light1 {
     font-weight: 300!important;
     font-family: 'Lato'!important;}
@@ -294,10 +301,5 @@
 .column .gras {
     font-size: 1.5em!important;
     font-weight: bold!important;
-}
-
-.homeblue {
-    font-family: 'Lato Light'!important;
-    color: #467dbe;
 }
 
