@@ -29,13 +29,13 @@ const Features = () => (
                         <img className="ui centered mini image" alt="chat" src={img_chat} />
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
-                        <p className="featurelight"> Soyez en relation avec les acteurs du dossier médical de votre patient </p>
+                        <p className="featurelight"> Soyez en relation avec les acteurs du dossier médical de votre patient</p>
                     </div>
                     <div className="column">
                         <img className="ui centered mini  image" alt="chat" src={img_fiche} />
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
-                        <p className="featurelight"> Accès aux informations pertinente selon votre profession </p>
+                        <p className="featurelight"> Accès aux informations pertinentes selon votre profession </p>
                     </div>
                     <div className="column">
                         <div className="ui hidden divider"></div>
@@ -44,7 +44,7 @@ const Features = () => (
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
-                        <p className="featurelight"> Dégrée d’accréditation et d'accès aux informations médicales </p>
+                        <p className="featurelight"> Dégréé d’accréditation et d'accès aux informations médicales </p>
                     </div>
                 </div>
             </div>

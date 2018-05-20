@@ -12,10 +12,10 @@ const OurGoalPage = () => (
                     </h4>
                     <div className="eight wide column">
                         <div className="ui text container">
-                            <h3 className="ui header">Faciliter le travail des professionels
+                            <h3 className="ui header">Faciliter le travail des professionnels
                             </h3>
-                            <p className="textonepage"> Homecarers est la plate-forme qui centralise les informations du patient et
-                                favorise leur transmission auprès des professionnels de la santé.
+                            <p className="textonepage"> Homecarers est la plate-forme qui centralise les informations du patient
+                                et favorise leurs transmissions auprès des professionnels de santé.
                                 <br/>
                                 Professionnels du privé, du public ou libéraux ont accès au suivi de leurs
                                 patients, dans le but d’assurer une continuité dans les soins de chaque personne.
@@ -36,8 +36,8 @@ const OurGoalPage = () => (
                     <div className="nine wide column">
                         <h3 className="ui header petit">Améliorer la qualité du suivi médical et de soin</h3>
                         <p className="textonepage1">
-                            Homecarers permet d’améliorer le suivi du patient, grâce à l’accès aux informations pertinentes,
-                            ce qui donne aux professionnels de santé, un atout majeur dans la construction de leurs diagnostiques.
+                            Homecarers permet d’améliorer le suivi du patient grâce à l’accès aux informations pertinentes,
+                            ce qui donne aux professionnels de santé un atout majeur dans la construction de leurs diagnostiques.
                             <br/>
                             Homecarers permet un suivi optimal du patient.
                         </p>

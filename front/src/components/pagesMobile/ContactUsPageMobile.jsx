@@ -22,7 +22,7 @@ class ContactUsPageMobile extends React.Component {
 
                     <div className="ui middle aligned stackable grid container">
                         <h3 className="ui horizontal header divider">
-                            <a href="">Contactez nous</a>
+                            <a href="">Nous contacter</a>
                         </h3>
                         <div className="row">
                             <div className="seven wide centered column">

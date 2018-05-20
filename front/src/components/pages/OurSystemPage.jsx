@@ -17,13 +17,12 @@ const OurSystemPage = () => (
                             <h3 className="ui header">Communication et Suivi</h3>
 
                             <p className="textonepage"> Homecarers est un logiciel en ligne qui connecte les patients et les professionnels
-                                de santé via un outil principale :
-                                <br/><br/>
-                                Le carnet de liaison.
-                                qui améliore les soins et le suivi médical, quelque soit le milieux de santé concerné.
+                                de santé via un outil principal :
+                                le carnet de liaison.<br/>
+                                Celui-ci améliore les soins et le suivi médical, quel que soit le milieu de santé concerné.
                                 <br /><br/>
-                                L‘autre atout de Homecarers est de mettre en relation tous les professionnels
-                                de santé qui collabore autour d’un même patient.
+                                Un des autres atouts de Homecarers est de mettre en relation tous les professionnels de santé
+                                qui collaborent autour d’un même patient.
                             </ p>
                         </div>
                     </div>
@@ -40,8 +39,8 @@ const OurSystemPage = () => (
 
                     <div className="nine wide column">
                         <h3 className="ui header petit">Un outil de santé sécurisé </h3>
-                        <p className="textonepage1">Toutes les informations sont stockées chez un hébergeur de données de santé
-                            agréé et a été conçu en conformité avec la Réglementation Générale sur la Protection des Données (RGPD).
+                        <p className="textonepage1">Toutes les informations sont stockées chez un hébergeur de données de santé agréé et
+                            l'outil a été conçu en conformité avec la Réglementation Générale sur la Protection des Données (RGPD).
                         </p>
                     </div>
                 </div>

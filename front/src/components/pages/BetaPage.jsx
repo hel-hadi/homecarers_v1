@@ -22,7 +22,7 @@ class BetaPage extends React.Component {
         super(props);
         this.state = {
             loader: false,
-            message: 'C\'est fait ! vous etes inscrit pour participer à notre version Beta',
+            message: 'C\'est fait ! Vous êtes inscrit pour participer à la version bêta de Homecarers',
             validate: false
         };
     };
@@ -50,9 +50,9 @@ class BetaPage extends React.Component {
                             <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
                             <Link smooth to='#aboutus'   className="regular1 item">À propos de nous</Link>
                             <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
+
                         </div>
                     </div>
-                    <div className="ui hidden divider"></div>
                     <div className="ui hidden divider"></div>
                     <div className="ui hidden divider"></div>
                     <div className="ui hidden divider"></div>
@@ -70,10 +70,7 @@ class BetaPage extends React.Component {
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
-                        <div className="ui hidden divider"></div>
                         <BetaForm submit={this.submit} loader={this.state.loader}/>
-                        <div className="ui hidden divider"></div>
-                        <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>

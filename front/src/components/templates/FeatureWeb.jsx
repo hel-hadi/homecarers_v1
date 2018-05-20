@@ -7,11 +7,13 @@ import img_fiche from '@img/doctor-icon.png'
 
 const FeaturesWeb = () => (
     <div>
+
         <div className="ui vertical stripe segment">
             <div className="ui container">
         <h4 className="ui horizontal header divider">
             <a>Fonctionnalités</a>
         </h4>
+
         <div className="ui equal width stackable internally celled grid">
             <div className="ui one column grid">
                 <div className="column center aligned row">
@@ -21,7 +23,7 @@ const FeaturesWeb = () => (
                         <div className="ui hidden divider"></div>
                         <p className="gras"> Suivi médical et de soin</p>
                         <div className="ui hidden divider"></div>
-                        <p className="featurelight"> Le cahier de liaison pour chaque patient </p>
+                        <p className="featurelight">Le cahier de liaison pour chaque patient</p>
                     </div>
                 </div>
             </div>
@@ -38,14 +40,14 @@ const FeaturesWeb = () => (
                             <img className="ui centered mini1 image" alt="chat" src={img_blason} />
                             <div className="ui hidden divider"></div>
                             <div className="ui hidden divider"></div>
-                            <p className="featurelight"> Dégrée d’accréditation et d'accès aux informations médicales </p>
+                            <p className="featurelight"> Dégréé d’accréditation et d'accès aux informations médicales </p>
                         </div>
 
                         <div className="column">
                             <img className="ui centered mini1  image" alt="chat" src={img_fiche} />
                             <div className="ui hidden divider"></div>
                             <div className="ui hidden divider"></div>
-                            <p className="featurelight"> Accès aux informations pertinente selon votre profession </p>
+                            <p className="featurelight"> Accès aux informations pertinentes selon votre profession </p>
                         </div>
                     </div>
                 </div>
