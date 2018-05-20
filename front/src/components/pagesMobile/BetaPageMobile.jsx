@@ -1,30 +1,93 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Features from '@temp/Features.jsx'
-import { BetaForm } from '../../actions/routeSplit'
-import { beta } from "../../actions/users";
+import { OurSystemPageMobile, OurGoalPageMobile,
+         AboutUsPageMobile, ContactUsPageMobile, Features, Footer, BetaForm} from '../../actions/routeSplit'
+import { beta } from '../../actions/users'
+import img_hero from '@img/Hero.png'
+import Alert from "react-s-alert";
+import {connect} from "react-redux/dist/react-redux.min";
 
 class BetaPageMobile extends React.Component {
-    submit = data => beta(data).then(() => this.props.history.push('/'));
-    render() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loader: false,
+            message: 'C\'est fait ! Vous êtes inscrit pour participer à la version bêta de Homecarers',
+            validate: false
+        };
+    };
+
+    componentDidMount() {
+        Alert.success('', {
+            position: 'none'
+        });
+    }
+
+
+    handleTop(text)
+    {
+        Alert.success(text, {
+            position: 'top'
+        });
+    };
+    submit = data => this.props.beta(data)
+        .then(() => (this.handleTop(this.state.message)))
+        .then(this.setState({loader: false}));    render() {
+        let active = true;
         return (
             <div>
-                <div className="ui vertical inverted masthead center aligned segment">
-                    <br/><br/>
-                    <div className="ui middle aligned stackable grid container">
-                        <div className="wide column">
-                            <h1 className="ui page-header">
-                                <h3 className="ui header1">Homecarers <sup className="homefont2">Beta</sup></h3>
-                            </h1>
-                            <div className="ui hidden divider"></div>
-                            <h2 className="ui homeblue header1">L’organe de liaison des intervenants à domicile</h2>
-                            <h3 className="ui homeblue header1"> Rejoignez notre bêta</h3><br/>
-                         </div>
+                <div className="ui vertical inverted masthead1 center aligned  segment">
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui centered container">
+                        <img className="ui tiny centered image" alt="logo blanc home carers" src={img_hero}/>
+                        <h1 className="ui inverted centered header">
+                            <span className="regularMobile">HOME</span><span className="light1">CARERS</span>
+                        </h1>
+                        <h1 className="ui inverted centered header">
+                                <span className="regular1">
+                                    L’outil de liaison, avec les professionnels de santé !
+                                </span>
+                        </h1>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <BetaForm submit={this.submit} active={true}/>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
+                        <div className="ui hidden divider"></div>
                     </div>
-                    <BetaForm submit={this.submit}/>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
                 </div>
-                <h2 className="ui centered header3">Fonctionnalités</h2>
                 <Features/>
+                <div className="ui centered back">
+                    <div id="ourgoal">
+                        <OurGoalPageMobile />
+                    </div>
+                    <div id="oursystem">
+                        <OurSystemPageMobile  />
+                    </div>
+                    <div id="aboutus">
+                        <AboutUsPageMobile />
+                    </div>
+                    <div id="contactus">
+                        <ContactUsPageMobile />
+                    </div>
+                    <Footer/>
+                </div>
+                <div>
+                    <Alert stack={{limit: 2}} timeout={3000}/>
+                </div>
             </div>
         );
     }
@@ -35,6 +98,6 @@ BetaPageMobile.propTypes = {
         push: propTypes.func.isRequired
     }).isRequired,
     beta: propTypes.func.isRequired
-}
+};
 
-export default BetaPageMobile
+export default connect(null, { beta })(BetaPageMobile);

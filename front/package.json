@@ -23,6 +23,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.26.0",
     "bootstrap": "^4.0.0",
     "clean-webpack-plugin": "^0.1.19",
     "compression-webpack-plugin": "^1.1.11",
@@ -55,6 +56,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-favicon": "0.0.13",
+    "react-headroom": "^2.2.2",
     "react-hot-loader": "^4.0.0",
     "react-i18next": "^7.5.1",
     "react-loadable": "^5.3.1",
@@ -62,6 +64,7 @@
     "react-responsive": "^4.0.5",
     "react-responsive-sidebar": "^0.1.16",
     "react-router-dom": "^4.2.2",
+    "react-s-alert": "^1.4.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "semantic-ui-css": "^2.3.0",
@@ -76,7 +79,10 @@
     "webpack-manifest-plugin": "^2.0.0-rc.2"
   },
   "dependencies": {
+    "react-headroom": "^2.2.2",
+    "react-router-hash-link": "^1.2.0",
     "react-script": "^2.0.5",
+    "react-scrollchor": "^5.0.2",
     "semantic-ui-css": "^2.3.0"
   }
 }

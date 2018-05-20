@@ -1,76 +1,54 @@
 import React from 'react'
-import Footer from '@temp/Footer.jsx'
-import img_logo_blanc from '@img/logo_blanc.png'
 import img_prix from '@img/prix.jpg'
 import img_invie from '@img/invie1.png'
 import img_etonomy from '@img/etonomy.png'
 
 const AboutUsPageMobile = () => (
     <div>
-        <div className="pusher">
-                    <div className="ui vertical inverted masthead center aligned segment">
-                        <br/><br/><br/>
-                        <div className="ui middle aligned stackable grid container">
-                            <div className="wide column">
-                                <h1 className="ui page-header">
-                                    <span className="homebeige">
-                                       Who we Are ?
-                                    </span>
-                                </h1>
-                                <h2 className="ui page-header">
-                                    <span className="homewhite">
-                                       Student, Universitary, Patient .. <br/><br/>
-                                        A team with multiples skills and real home care experiences !
-                                    </span>
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="ui middle aligned stackable grid container">
+        <div className="ui vertical stripe segment">
+            <div className="ui middle aligned stackable grid container">
+                <div className="row">
+                    <h4 className="ui horizontal header divider">
+                        <a>À propos de nous</a>
+                    </h4>
+                    <div className="eight wide column">
+                        <div className="ui text container">
 
-                        <div className="wide column">
-                            <img className="ui medium centered rounded image" alt="doctor together" src={img_logo_blanc}/>
-                        </div>
+                        <h3 className="ui header">Lauréat du hackathon E-tonomy</h3>
+                            <p className="ui centered textonepage"> Notre équipe est issue d'un événement : le Salon E-Tonomy. <br/> <br/>
+                                Étudiant, Universitaire, Patient, Professionnel de Santé..
+                                Notre équipe a travaillé afin de trouver une solution qui améliore le suivi du patient.
+                                <br/><br/>
+                                Notre implication, et nos diverses compétences nous ont permis de créer la solution qui met le patient au cœur du suivi.                                <br />
+                            </p>
                         </div>
                     </div>
-
-                    <div className="ui vertical stripe segment">
-                        <div className="ui middle aligned stackable grid container">
-                            <div className="row">
-                                <div className="eight wide column">
-                                    <h3 className="ui header centered">Our team : Born in Etonomy Hackathon</h3>
-                                    <p>Our amazing team came from an event : Etonomy.<br/><br/>
-                                        During 52 hours without sleeping, we worked hard to find a solution for home care situation.
-                                        Skills and motivations is the reasons of our success... </p>
-                                    <p> And that is why we won this event, and why our product is usefull ! </p>
-                                </div>
-                                <div className="six wide right floated column">
-                                    <img src={img_prix} alt="vainqueur" className="ui large centered rounded image" />
-                                </div>
-                            </div>
-                            <h4 className="ui horizontal header divider">
-                                <a href="">Our Partners</a>
-                            </h4>
-                            <div className="column">
-                                <div className="ui two column grid">
-                                    <div className="column center aligned row">
-                                        <div className="column">
-                                            <a href="http://cimap78.fr/">
-                                                <img className="ui centered small circular image" alt="chat" src={img_invie} />
-                                            </a>
-                                        </div>
-                                        <div className="wide column">
-                                            <a href="http://e-tonomy.fr/">
-                                                <img className="ui centered small circular image" alt="cahier" src={img_etonomy} />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                    <div className="six wide right floated column">
+                        <img src={img_prix} alt="vainqueur" className="ui large centered image" />
                     </div>
                 </div>
-                <Footer />
+                <h4 className="ui horizontal header divider">
+                    <a href="">Nos partenaires</a>
+                </h4>
+                <div className="ui two column grid">
+
+                <div className="two column center aligned row">
+                    <div className="column">
+                        <div className="ui hidden divider"></div>
+                        <a href="http://cimap78.fr/">
+                            <img className="ui centered small circular image" alt="chat" src={img_invie} />
+                        </a>
+                    </div>
+                    <div className="column">
+                        <div className="ui hidden divider"></div>
+                        <a href="http://e-tonomy.fr/">
+                            <img className="ui centered small circular image" alt="cahier" src={img_etonomy} />
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 );

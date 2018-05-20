@@ -1,22 +1,28 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import Alert from 'react-s-alert'
 
-const InlineError = ({text}) => (
-    <div className="ui grid">
-        <div className="three column row">
-            <div className="column">
-                <div className="ui form error">
-                    <div className="ui error message">
-                        <div className="header">Saisie Incorrect</div>
-                        <p>{text}</p>
-                    </div>
-                </div>
+class InlineError extends React.Component {
+    componentDidMount() {
+        Alert.error('', {
+            position: 'none'
+        });
+    }
+
+    handleTop(text) {
+            Alert.error(text, {
+                position: 'top'
+            });
+    };
+    render() {
+        this.handleTop(this.props.text);
+        return (
+            <div>
+                <Alert stack={{limit: 2}}/>
             </div>
-            <div className="column"></div>
-            <div className="column"></div>
-        </div>
-    </div>
-);
+        )
+    }
+}
 
 InlineError.propTypes = {
     text: propTypes.string.isRequired
