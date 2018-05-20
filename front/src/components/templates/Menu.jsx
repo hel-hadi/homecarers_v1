@@ -10,7 +10,6 @@ class Menu extends React.Component {
         else
             return 'className ' + ((value === this.props.active) ? 'active item' : 'item');
         }
-
     render() {
         const {} = this.props;
         return (
