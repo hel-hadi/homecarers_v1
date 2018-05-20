@@ -24,6 +24,7 @@ let config = {
         alias: {
             '@img': path.resolve('src/img'),
             '@css': path.resolve('src/css'),
+            '@msg': path.resolve('src/messages'),
             '@script': path.resolve('src/script'),
             '@temp': path.resolve('src/components/templates'),
             '@pages': path.resolve('src/components/pages'),
@@ -36,12 +37,6 @@ let config = {
         port: process.env.PORT || 3000,
         inline: true,
         contentBase: path.join(__dirname, 'public'),
-        // proxy: {
-        //     '/api': {
-        //         target: 'http://localhost:8081',
-        //         secure: false
-        //     }
-        // },
         compress: true, // enable gzip compression
         historyApiFallback: {
             disableDotRule: true

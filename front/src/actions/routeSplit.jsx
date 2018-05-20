@@ -52,3 +52,47 @@ export const Menu = Loadable({
     loading: Loading,
 })
 
+export const App = Loadable({
+    loader: () => import('../App.jsx'),
+    loading: Loading,
+})
+
+export const ContactUsPage = Loadable({
+    loader: () => import('@pages/ContactUsPage.jsx'),
+    loading: Loading,
+})
+
+export const ContactUsPageMobile = Loadable({
+    loader: () => import('@mpages/ContactUsPageMobile.jsx'),
+    loading: Loading,
+})
+
+export const ContactUsForm = Loadable({
+    loader: () => import('@form/ContactUsForm.jsx'),
+    loading: Loading,
+})
+
+export const FeatureWeb = Loadable({
+    loader: () => import('@temp/FeatureWeb.jsx'),
+    loading: Loading,
+})
+
+export const Features = Loadable({
+    loader: () => import('@temp/Features.jsx'),
+    loading: Loading,
+})
+
+export const Footer = Loadable({
+    loader: () => import('@temp/Footer.jsx'),
+    loading: Loading,
+})
+
+export const InlineError = Loadable({
+    loader: () => import('@msg/InlineError.jsx'),
+    loading: Loading,
+})
+
+export const InlineSuccess = Loadable({
+    loader: () => import('@msg/InlineSuccess.jsx'),
+    loading: Loading,
+})

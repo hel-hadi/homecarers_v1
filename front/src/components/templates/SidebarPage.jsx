@@ -1,51 +1,41 @@
 import React from 'react'
 import { SidebarItem } from 'react-responsive-sidebar';
 import Link from "react-router-dom/Link"
-import img_logo from '@img/logohome.png'
+import img_logo from '@img/logosurblanc.png'
 
 const SidebarPage = [
-    <div className="center ui grid">
-        <div className="center ui grid">
+    <div className="ui centered center">
             <div className="ui hidden divider"></div>
             <div className="ui hidden divider"></div>
-            <div className="ui hidden divider"></div>
-            <h1 className="ui page-header">
-                            <span className="">
-                                HomeCarers
-                            </span>
-            </h1>
-        </div>
+                <img className="ui centered medium2 circular image" alt="chat" src={img_logo} />
     </div>,
     <SidebarItem textAlign="center">
         <div className="ui hidden divider"></div>
-        <img className="ui centered tiny circular image" alt="chat" src={img_logo} />
     </SidebarItem>,
-    <Link className="homewhite" to='/'>
+    <Link className="homeblue" to='/#home'>
         <SidebarItem textAlign="left">
             <br />
             <i className="home icon"></i>
-            Home
+             Accueil
         </SidebarItem>
-
     </Link>,
-    <Link className="homewhite" to='/oursystempage'>
+    <Link className="homeblue" to='/#oursystem'>
         <SidebarItem textAlign="left">
-            <i className="cogs icon"></i>
-            Our System
-        </SidebarItem>
-
-    </Link>,
-    <Link className="homewhite" to='/ourgoalpage'>
-        <SidebarItem textAlign="">
             <i className="clipboard icon"></i>
-            Our Goal
+                Notre objectif
         </SidebarItem>
 
     </Link>,
-    <Link className="homewhite" to='/aboutuspage'>
+    <Link className="homeblue" to='/#ourgoal'>
+        <SidebarItem textAlign="">
+            <i className="cogs icon"></i>
+                Notre outil
+        </SidebarItem>
+    </Link>,
+    <Link className="homeblue" to='/#aboutus'>
         <SidebarItem textAlign="">
             <i className="address card icon"></i>
-            About Us
+              À propos de nous
         </SidebarItem>
         <div className="ui section divider"></div>
 
@@ -60,13 +50,13 @@ const SidebarPage = [
         <div className="ui hidden divider"></div>
     </div>,
     <SidebarItem textAlign="center">
-        <a href="https://fr-fr.facebook.com/"><i className="facebook inverted big icon"></i></a>
-        <a href="https://fr.linkedin.com/"><i className="linkedin inverted big icon"></i></a>
+        <a href="https://www.facebook.com/HomecarersFrance/"><i className="facebook blue big icon"></i></a>
+        <a href="https://www.linkedin.com/company/28624734/"><i className="linkedin blue big icon"></i></a>
     </SidebarItem>,
     <div className="ui hidden divider"></div>,
     <div className="ui hidden divider"></div>,
     <SidebarItem textAlign="center">
-        <Link className="homewhite" to='/'>Contact Us</Link>
+        <Link className="homeblue" to='/#contactus'>Nous contacter</Link>
     </SidebarItem>
 ];
 

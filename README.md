@@ -20,3 +20,8 @@
 + ```pip3 install -r requirements.txt``` to install python dependencies
 + ```python3 manage.py runserver``` to start the server
 
+### Running Tests
+
++ Make sure your test file match ```test*.py```
++ Make sure your methods start with ```test_```
++ run ```python3 manage.py test```

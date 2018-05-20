@@ -1,148 +1,235 @@
-@font-face {
-    font-family: 'ebrima';
-    src: local('ebrima'), url("ebrima.ttf") format('ttf');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+/*web header */
+
+.masthead.segment {
+    min-height: 1010px!important;
+    padding: 1em 0em;
+    margin: -0.1em;
+    background: url("../img/back13.png")!important;
+    -webkit-background-size: cover!important;
+    -moz-background-size: cover!important;
+    -o-background-size: cover!important;
+    background-size: cover!important;
+}
+
+
+/*mobile header */
+.masthead1.segment {
+    padding: 1em 0em;
+    margin: -0.1em;
+    -webkit-background-size: 100%!important;
+    background-image: url("../img/backmobile2.png")!important;
+}
+
+
+
+/*mes propres css */
+
+
+.header.divider {
+    color: red!important;
+    font-family: 'Lato'!important;
+    font-size: 1.2em!important;
+}
+
+.column .header {
+    font-weight: 400!important;
+    font-family: 'Lato'!important;
+    font-size: 1.8em!important;
+}
+
+.column .header.petit {
+    font-weight: 400!important;
+    font-family: 'Lato'!important;
+    font-size: 2em!important;
+}
+
+.textonepage {
+    font-weight: 400!important;
+    font-family: 'Lato'!important;
+    font-size: 1.3em!important;
+}
+
+.textonepage1 {
+    font-weight: 400!important;
+    font-family: 'Lato'!important;
+    font-size: 1.5em!important;
+}
+
+.fixed.menu {
+    background-image: linear-gradient(#00B7E3, #467DBE)!important;
+    font-size: 1.12em!important;
+}
+
+.regular1 {
+    font-weight: 400!important;
+    font-family: 'Lato'!important;
+    color: white!important;
+}
+
+.smally {
+    width: 128px!important;
+}
+
+.mini1 {
+    width: 50px!important;
+}
+
+.medium1 {
+    width: 160px!important;
+}
+
+.medium2 {
+    width: 180px!important;
+}
+
+.pos {
+    padding-right: 2.5em!important;
+}
+
+.big1{
+    width: 1800px!important;
+}
+
+.homeblue {
+    font-weight: 300!important;
+    font-family: 'Lato'!important;
+    color: #467dbe!important;
+}
+
+.blue1 {
+    color: #467dbe!important;
+}
+
+.light1 {
+    font-weight: 300!important;
+    font-family: 'Lato'!important;}
+
+.featurelight {
+    font-weight: 300!important;
+    font-family: 'Lato'!important;
+    font-size: 1.4em!important;
+}
+
+.inverted.menu .image {
+    width: 14.5em;
+    height: 4.5em;
+}
+
+.inverted.menu.bool .image {
+    width: 13em;
+    height: 4em;
 }
 
 .hidden.menu {
     display: none;
 }
 
-.header3 {
-    text-align: center;
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 1.8em;
-    color: #2b4e77;
-    font-weight: normal;
+.ui.grid .button.betabutt  {
+    position: relative;
+    left: -5em;
+    -webkit-border-radius: 3em!important;
+    -moz-border-radius: 3em!important;
+    border-radius: 3em!important;
+    width: 10.2em!important;
+    background-color: #454d68;
+    color: #ffffff;
+    height: 3.8em;
 }
 
-.masthead.segment {
-    min-height: 550px;
-    padding: 1em 0em;
-    margin-top: -1em!important;
-    /*background-color: #2b4e77!important;*/
-    background-image: url("../img/stethban2.jpg")!important;
-    background-repeat: no-repeat;
-    background-size: cover!important;
+.ui.grid .button.betabutt1 {
+    left: -5em;
+    -webkit-border-radius: 3em!important;
+    -moz-border-radius: 3em!important;
+    border-radius: 3em!important;
+    background-color: #454d68;
+    color: #ffffff;
+    margin-top: 1.0em;
+    height: 3.0em;
+}
+
+.ui.grid .input .beta  {
+    position: relative;
+    -webkit-border-radius: 3em!important;
+    -moz-border-radius: 3em!important;
+    border-radius: 3em!important;
+    width: 23em!important;
+}
+
+.ui.grid .input .beta1  {
+    -webkit-border-radius: 3em!important;
+    -moz-border-radius: 3em!important;
+    border-radius: 3em!important;
+    height: 2.5em;
+
+}
+
+
+/*.ui.menu .item {*/
+/*padding: 0.8em 0.95em!important;*/
+/*color: red !important;*/
+/*}*/
+
+.ui.inverted.menu .right.item .item{
+    font-size: 1.1em;
+    font-weight: 900;
+    color: #ffffff!important;
+    padding-left: 1.5em!important;
+}
+
+.ui.inverted.menu.bool .right.item .item{
+    font-size: 1.1em;
+    font-weight: 900;
+    color: #454d68!important;
+    padding-left: 1.5em!important;
 }
 
 .inverted.segment {
-    background-color: #2b4e77!important;
+    background-color: transparent!important;
 }
+
 
 .inverted.menu {
-    background-color: #2b4e77!important;
+    padding-top: 10px;
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 1.12em!important;
+    margin-top: 1.5em!important;;
+
+    background-color: transparent!important;
 }
 
-.masthead1.segment {
-    min-height: 600px;
-    padding: 1em 0em;
-    margin-top: -1em!important;
-    background-image: url("../img/docright.jpg")!important;
-    /*background-color: #2b4e77!important;*/
-    background-repeat: no-repeat;
-    background-size: cover!important;
+.inverted.menu.bool {
+    padding-top: 25px!important;
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 1.12em!important;
+    margin-top: -0.9em!important;
+    background-color: white!important;
 }
 
-
-/* masthead1 */
-
-.masthead1 h1.ui.header1 {
-    margin-top: 1em;
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 5em;
-    color: #2b4e77;
-    font-weight: normal;
-}
-
-.masthead1 h1.ui.header2 {
-    margin-top: 1.5em;
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 4em;
-    color: #2b4e77;
-    font-weight: normal;
-}
-
-.masthead1 h2.ui.header1 {
-    margin-top: em;
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 2.5em;
-    color: #2b4e77;
-    font-weight: normal;
-}
-
-.masthead1 h2.ui.header2 {
-    margin-top: em;
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 2em;
-    color: #2b4e77;
-    font-weight: normal;
-}
-
-.masthead1 h3.ui.header1 {
-    margin-top: em;
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 1.5em;
-    color: #2b4e77;
-    font-weight: normal;
-}
-
-.masthead1 h3.ui.header2 {
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 2em;
-    color: #2b4e77;
-    font-weight: normal;
-}
-
-.masthead h1.ui.header1 {
-    margin-top: 1em;
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 5em;
-    color: #2b4e77;
-    font-weight: normal;
-
-}
-
-/* Masthead 0 */
 .masthead .logo.item img {
     margin-right: 1em;
 }
+
 .masthead .ui.menu .ui.button {
     margin-left: 0.5em;
     /*color: #848592!important;*/
 }
+
 .masthead h1.ui.header {
-    margin-top: 2em;
-    margin-bottom: 0em;
-    font-size: 4em;
-    font-weight: normal;
-
-}
-
-.masthead h2.ui.header1 {
-    margin-top: em;
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 2.5em;
-    color: #2b4e77;
+    /*margin-top: 2em;*/
+    /*margin-bottom: 0em;*/
+    font-size: 3.8em;
     font-weight: normal;
 }
 
-.masthead h3.ui.header1 {
-    margin-top: em;
-    margin-bottom: 0em;
-    font-family: ebrima;
-    font-size: 1.5em;
-    color: #2b4e77;
+.masthead h2.ui.header {
+    margin-top: 0.8em;
+    /*margin-bottom: 0em;*/
+    font-size: 3.1em;
     font-weight: normal;
-
 }
 
 .masthead h2 {
@@ -172,13 +259,11 @@
 
 .quote.stripe.segment {
     padding: 0em;
-    background-color: #f7f7f7;
 
 }
 
 .quote.stripe {
     padding: 0em;
-    background-color: #f7f7f7;
 
 }
 .quote.stripe.segment .grid .column {
@@ -187,41 +272,9 @@
 }
 
 .footer.segment {
-    padding: 5em 0em;
-    background-color: #2b4e77!important;
+    padding: 1.8em 0em;
+    background-image: linear-gradient(#00B7E3, #467DBE)!important;
 }
-
-.footer1.segment {
-    padding: 1em 0em;
-    background-color: #f4f3f3 !important;
-}
-
-.footer5.segment {
-    padding: 1em 0em;
-    background-color: #ffffff !important;
-}
-
-.footer3.segment {
-    padding: 1em 0em;
-    background-color: #f7f7f7!important;
-}
-
-.footer4.segment {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1em 0em;
-    background-color: #f7f7f7!important;
-}
-
-.footer2.segment {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1em 0em;
-    background-color: #2c4f77!important;
-}
-
 
 .secondary.bash.menu .toc.item {
     display: none;
@@ -245,28 +298,21 @@
         font-size: 2em;
         margin-top: 1.5em;
     }
+
     .masthead h2 {
         margin-top: 0.5em;
         font-size: 1.5em;
     }
 }
 
-.homewhite {
-    color: #ffffff;
+.colorbutton {
+    font-family: 'Lato Light'!important;
+    color: white!important;
+    background-color: #454d68!important;
 }
 
-.backblue {
-    background-color: #2b4e77;
+.column .gras {
+    font-size: 1.5em!important;
+    font-weight: bold!important;
 }
 
-.homeblue {
-    color: #2b4e77;
-}
-
-.homebeige {
-    color: #dcaf8a;
-}
-
-.homefont {
-    font-size: 1.2em;
-}

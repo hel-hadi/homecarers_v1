@@ -1,40 +1,29 @@
 import React from 'react'
-import Footer from '@temp/Footer.jsx'
-import Link from 'react-router-dom/Link'
-import img_device from '@img/devicechange.jpg'
+import img_device from '@img/device12.png'
 import img_secure from '@img/secure.jpg'
 
 const OurSystemPage = () => (
     <div>
-        <div className="ui inverted masthead1 segment">
-            <div className="ui container grid">
-                <div className="row">
-                    <div className="nine wide column">
-                        <h1 className="ui header2">Notre système</h1>
-                        <h2 className="ui header2">
-                            Nous développons une plateforme disponible sur site web et mobile pour tous les types de soignants: <br/> <br/>
-                            Libéral, Public, Privé, Association
-                        </h2><br />
-                        <div className="ui hidden divider"></div>
-                        <Link to='/' class="ui huge teal button">
-                            Inscrivez-vous à la bêta<i class="right arrow icon"></i>
-                        </Link>
-                        <div className="ui hidden divider"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div className="ui vertical stripe segment">
             <div className="ui middle aligned stackable grid container">
+
                 <div className="row">
+                    <h4 className="ui horizontal header divider">
+                        <a> Notre outil</a>
+                    </h4>
                     <div className="eight wide column">
                         <div className="ui text container">
 
                             <h3 className="ui header">Communication et Suivi</h3>
 
-                            <p> Pour vous aider dans votre travail et améliorer le suivi du patient, nous développons des outils tels que le carnet de
-                                liaison qui optimisera la vie medical du patient. <br/> <br/>
-                                Plus que ca, Homecarers fournit une communication instantané , un Chat centré sur le patient, unique a chaque patient </ p>
+                            <p className="textonepage"> Homecarers est un logiciel en ligne qui connecte les patients et les professionnels
+                                de santé via un outil principal :
+                                le carnet de liaison.<br/>
+                                Celui-ci améliore les soins et le suivi médical, quel que soit le milieu de santé concerné.
+                                <br /><br/>
+                                Un des autres atouts de Homecarers est de mettre en relation tous les professionnels de santé
+                                qui collaborent autour d’un même patient.
+                            </ p>
                         </div>
                     </div>
                     <div className="six wide right floated column">
@@ -42,7 +31,6 @@ const OurSystemPage = () => (
                     </div>
                 </div>
                 <h4 className="ui horizontal header divider">
-                    <a href="">Notre différence</a>
                 </h4>
                 <div className="row">
                     <div className="seven wide right floated column">
@@ -50,16 +38,14 @@ const OurSystemPage = () => (
                     </div>
 
                     <div className="nine wide column">
-                        <h3 className="ui header">Et la sécurité, on en parle ?</h3>
-                        <p> Les questions sur sécurité des données sont primordiales et Homecarers en fait un point d'honneur. <br/>
-                            Toutes les données que nous allons stocker et enregistrer sont protéger  <br/>
-                            Homecarers fournit un système sécurisé et assure ainsi un meilleur suivi, sécurisé, du patient.
+                        <h3 className="ui header petit">Un outil de santé sécurisé </h3>
+                        <p className="textonepage1">Toutes les informations sont stockées chez un hébergeur de données de santé agréé et
+                            l'outil a été conçu en conformité avec la Réglementation Générale sur la Protection des Données (RGPD).
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <Footer />
     </div>
 );
 
