@@ -3,7 +3,7 @@
 /*web header */
 
 .masthead.segment {
-    min-height: 1010px!important;
+    height: 102vh;
     padding: 1em 0em;
     margin: -0.1em;
     background: url("../img/back13.png")!important;
@@ -13,13 +13,12 @@
     background-size: cover!important;
 }
 
-
 /*mobile header */
 .masthead1.segment {
     padding: 1em 0em;
     margin: -0.1em;
-    -webkit-background-size: 100%!important;
-    background-image: url("../img/backmobile2.png")!important;
+    -webkit-background-size: cover!important;
+    background-image: url("../img/back13.png")!important;
 }
 
 
@@ -156,6 +155,22 @@
     border-radius: 3em!important;
     width: 23em!important;
 }
+
+.beta {
+    -webkit-border-radius: 3em!important;
+    -moz-border-radius: 3em!important;
+    border-radius: 3em!important;
+    height: 3em!important;
+    }
+
+.beta2 {
+    -webkit-border-radius: 3em!important;
+    -moz-border-radius: 3em!important;
+    border-radius: 3em!important;
+    height: 2em!important;
+}
+
+
 
 .ui.grid .input .beta1  {
     -webkit-border-radius: 3em!important;
