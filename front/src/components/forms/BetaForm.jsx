@@ -95,9 +95,9 @@ class BetaForm extends React.Component {
                                             <br/>
                                             Nous utiliserons votre adresse e-mail pour vous envoyer occasionnellement
                                             des informations concernant le développement et le déroulement
-                                            de la bêta de homecarers.
+                                            de la bêta de Homecarers.
                                             <br/><br/>
-                                            Votre code postal sera utilisé uniquement à des fins statistiques par homecarers et
+                                            Votre code postal sera utilisé uniquement à des fins statistiques par Homecarers et
                                             ne sera pas transmis à des tiers.
                                             <br /><br />
                                         </div>
@@ -162,9 +162,9 @@ class BetaForm extends React.Component {
                                                 <br/>
                                                 Nous utiliserons votre adresse e-mail pour vous envoyer occasionnellement
                                                 des informations concernant le développement et le déroulement
-                                                de la bêta de homecarers.
+                                                de la bêta de Homecarers.
                                                 <br/><br/>
-                                                Votre code postal sera utilisé uniquement à des fins statistiques par homecarers et
+                                                Votre code postal sera utilisé uniquement à des fins statistiques par Homecarers et
                                                 ne sera pas transmis à des tiers.
                                                 <br /><br />
                                             </div>
