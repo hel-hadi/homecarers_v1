@@ -21,10 +21,10 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'jz90(o1&dku$@fx1yl#&vbd=c#(vm!*(lo*zc*p44k##%$6sn!'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'jz90(o1&dku$@fx1yl#&vbd=c#(vm!*(lo*zc*p44k##%$6sn!')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = []
 
@@ -164,3 +164,7 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+import dj_database_url
+db_from_env = dj_database_url.config(default=os.getenv('DATABASE_URL'), conn_max_age=500)
+DATABASES['default'].update(db_from_env)
