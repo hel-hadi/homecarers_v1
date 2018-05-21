@@ -1,5 +1,5 @@
 import React from 'react'
-import img_nurse from '@img/nurse1.jpg'
+import img_nurse from '@img/nurse1.png'
 import img_tablette from '@img/tablette.png'
 
 const OurGoalPageMobile= () => (

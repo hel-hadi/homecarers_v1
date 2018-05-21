@@ -1,5 +1,5 @@
 import React from 'react'
-import img_prix from '@img/prix.jpg'
+import img_prix from '@img/prix.png'
 import img_invie from '@img/invie1.png'
 import img_etonomy from '@img/etonomy.png'
 
