@@ -7,7 +7,7 @@ import {connect} from "react-redux/dist/react-redux.min";
 
 class ContactUsPage extends React.Component {
     state = {
-        mail: 'C\'est fait ! Votre message a été envoyé avec succès !'
+        mail: 'Votre message a été envoyé avec succès !'
     };
     componentDidMount() {
         Alert.success('', {
