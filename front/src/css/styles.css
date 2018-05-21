@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+.modal {
+}
+.modal > .header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    padding: 5px;
+    font-weight: 400!important;
+    font-family: 'Lato'!important;
+    color: #467dbe!important;
+    font-size: 1.6em!important;
+
+}
+.modal > .content1 {
+    width: 100%;
+    padding: 10px 5px;
+    font-weight: 300!important;
+    font-family: 'Lato'!important;
+    color: black!important;
+    font-size: 1.2em!important;
+}
+
+.modal .regular2 {
+    font-size: 1.2em;
+    font-weight: 400!important;
+    font-family: 'Lato'!important;
+}
+
+.modal .light2 {
+    font-size: 1.2em;
+    font-weight: 300!important;
+    font-family: 'Lato'!important;
+}
+
+
+.modal > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+}

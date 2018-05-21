@@ -1,0 +1,1 @@
+web: gunicorn lelocal.wsgi:application --log-file -

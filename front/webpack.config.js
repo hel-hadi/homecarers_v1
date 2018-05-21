@@ -79,15 +79,34 @@ let config = {
                 },
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(gif|png|jpe?g|svg)$/i,
                 use: [
+                    'file-loader',
                     {
-                        loader: 'url-loader',
+                        loader: 'image-webpack-loader',
                         options: {
-                            name: '[name].[hash:7].[ext]',
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65
+                            },
+                            // optipng.enabled: false will disable optipng
+                            optipng: {
+                                enabled: false,
+                            },
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            // the webp option will enable WEBP
+                            webp: {
+                                quality: 75
+                            }
                         }
-                    }
-                ]
+                    },
+                ],
             },
         ]
     },
