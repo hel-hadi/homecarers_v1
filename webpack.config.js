@@ -13,30 +13,30 @@ const webpack = require('webpack');
 const dev = process.env.NODE_ENV === "dev";
 
 let config = {
-    entry: path.resolve('src/index.js'),
+    entry: path.resolve('front/src/index.js'),
     output: {
-        path: path.resolve('dist'),
+        path: path.resolve('front/dist'),
         filename: dev ? 'index.js' : 'index.js',
         publicPath: ''
     },
     resolve: {
         extensions: [".js", ".jsx"],
         alias: {
-            '@img': path.resolve('src/img'),
-            '@css': path.resolve('src/css'),
-            '@msg': path.resolve('src/messages'),
-            '@script': path.resolve('src/script'),
-            '@temp': path.resolve('src/components/templates'),
-            '@pages': path.resolve('src/components/pages'),
-            '@form': path.resolve('src/components/forms'),
-            '@mpages': path.resolve('src/components/pagesMobile'),
-            '@': path.resolve('src')
+            '@img': path.resolve('front/src/img'),
+            '@css': path.resolve('front/src/css'),
+            '@msg': path.resolve('front/src/messages'),
+            '@script': path.resolve('front/src/script'),
+            '@temp': path.resolve('front/src/components/templates'),
+            '@pages': path.resolve('front/src/components/pages'),
+            '@form': path.resolve('front/src/components/forms'),
+            '@mpages': path.resolve('front/src/components/pagesMobile'),
+            '@': path.resolve('front/src')
         }
     },
     devServer: {
         port: process.env.PORT || 3000,
         inline: true,
-        contentBase: path.join(__dirname, 'public'),
+        contentBase: path.join(__dirname, 'front/public'),
         compress: true, // enable gzip compression
         historyApiFallback: {
             disableDotRule: true
@@ -132,7 +132,7 @@ if (!dev) {
     }));
     config.plugins.push(new HtmlWebpackPlugin({
         title: 'Homecarers',
-        template: 'public/index.html'
+        template: 'front/public/index.html'
     }));
     config.plugins.push(new OptimizeCssAssetsPlugin());
     config.plugins.push(new CompressionPlugin({
