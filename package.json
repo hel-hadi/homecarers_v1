@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node front/server.js",
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --hot",
     "postinstall": "npm run build && echo 'Client built' && npm run start",
     "build": "cross-env NODE_ENV=production webpack",
