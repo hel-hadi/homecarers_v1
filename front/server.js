@@ -2,9 +2,9 @@ var path = require('path');
 var express = require('express');
 
 var app = express();
+var port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'dist')));
-app.set('port', process.env.PORT || 1337);
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -12,6 +12,6 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
-var server = app.listen(app.get('port'), function() {
-    console.log('listening on port ', server.address().port);
+app.listen(port, "0.0.0.0", function() {
+    console.log("Listening on Port 3000");
 });

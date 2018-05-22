@@ -12,6 +12,10 @@
   },
   "keywords": [],
   "author": "",
+  "engines": {
+    "node": "5.0.0",
+    "npm": "4.6.1"
+  },
   "license": "ISC",
   "devDependencies": {
     "axios": "^0.18.0",
