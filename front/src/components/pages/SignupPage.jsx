@@ -109,7 +109,7 @@ class SignupPage extends React.Component {
                                     "A real patient experience serving patient and homecarers."
                                 </h3>
                                 <p>
-                                    <img className="ui avatar image" alt="CEO" src="../../static/images/avatar/photo_profil.jpg" /><b>Hamza</b> Chief Executive Officer of Homecarers
+                                    <img className="ui avatar image" alt="CEO" src="../../static/images/avatar/photo_profil.png" /><b>Hamza</b> Chief Executive Officer of Homecarers
                                 </p>
                             </div>
                         </div>
