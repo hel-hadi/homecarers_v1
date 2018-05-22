@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'react-router-dom/Link'
 import Footer from '@temp/Footer.jsx'
 import Features from '@temp/Features.jsx'
-import img_nurse from '@img/nurse.jpg'
+import img_nurse from '@img/nurse.png'
 import img_logo from '@img/logo.png'
 
 const HomePageMobile = () => (

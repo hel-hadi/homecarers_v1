@@ -1,6 +1,6 @@
 import React from 'react'
 import img_device from '@img/device12.png'
-import img_secure from '@img/secure.jpg'
+import img_secure from '@img/secure.png'
 
 const OurSystemPage = () => (
     <div>
