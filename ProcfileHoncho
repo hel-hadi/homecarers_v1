@@ -1,2 +1,2 @@
-python: cd backend && pip3 install -r requirements.txt &&  python3 manage.py migrate && gunicorn backend.wsgi:application --log-file - -b -b 0.0.0.0:5000
-node: npm install && npm start
+python: cd backend && pip3 install -r requirements.txt &&  python3 manage.py migrate && gunicorn backend.wsgi:application --log-file - -b 0.0.0.0:8000
+node: npm install && npm run build && npm start
