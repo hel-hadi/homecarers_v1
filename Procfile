@@ -1,1 +1,1 @@
-web: cd backend && gunicorn backend.wsgi:application --log-file -
+web: honcho -f ProcfileHoncho start
