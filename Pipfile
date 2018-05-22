@@ -40,6 +40,7 @@ wcwidth = "==0.1.7"
 whitenoise = "==3.3.1"
 dj-database-url = "*"
 django-heroku = "*"
+honcho = "*"
 
 
 [dev-packages]
