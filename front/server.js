@@ -12,6 +12,6 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
-app.listen(port, function() {
+app.listen(port, '0.0.0.0', function() {
     console.log("Listening on Port %d", port);
 });
