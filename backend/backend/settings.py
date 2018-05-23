@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'jz90(o1&dku$@fx1yl#&vbd=c#(vm!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['.herokuapp.com', '.homecarers.co', '127.0.0.1']
+ALLOWED_HOSTS = ['.herokuapp.com', '.homecarers.co', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
