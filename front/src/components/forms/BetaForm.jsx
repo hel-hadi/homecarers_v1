@@ -124,8 +124,8 @@ class BetaForm extends React.Component {
                         </div>
 
                         {(count_global === 1 && errors.email) && <InlineError text={errors.email}/>}
-
-                        {(count_global === 1 && errors.global) && <InlineError text={errors.global} />}
+                        {(count_global === 1 && errors.global) && <InlineError
+                            text="Cette adresse mail est déjà utilisée !" />}
                         {(errors.email || errors.global) && this.onLoader()}
 
                     </Form>
@@ -188,10 +188,10 @@ class BetaForm extends React.Component {
                                         </div>
                                     )}
                                 </Popup>
-
                             </div>
                         {(count_global === 1 && errors.email) && <InlineError text={errors.email}/>}
-                        {(count_global === 1 && errors.global) && <InlineError text={errors.global} />}
+                        {(count_global === 1 && errors.global) && <InlineError
+                        text="Saisie incorrect ! Cette adresse mail est déjà utilisée !" />}
                         {(errors.email || errors.global) && this.onLoader()}
 
                     </Form>
