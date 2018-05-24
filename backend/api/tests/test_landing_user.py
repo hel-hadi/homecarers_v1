@@ -6,7 +6,7 @@ from api.models import LandingUser, ContactMessage
 class LandingUserTests(APITestCase):
     def test_register_mail(self):
         url = '/api/landing_users/'
-        data = {'email': 'lolilol@gmail.com', 'code_postal': '75000' }
+        data = {'email': 'lolilol@gmail.com', 'postal_code': '75000' }
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(LandingUser.objects.count(), 1)

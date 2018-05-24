@@ -8,7 +8,7 @@ from .managers import UserManager
 
 class LandingUser(models.Model):
     email = models.EmailField(unique=True)
-    code_postal = models.IntegerField(blank=True, null=True)
+    postal_code = models.IntegerField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add = True)
 
 class ContactMessage(models.Model):
