@@ -59,14 +59,14 @@ class BetaPage extends React.Component {
                     <div className="ui hidden divider"></div>
                     <div className="ui centered container">
                         <img className="ui smally centered image" alt="logo blanc home carers" src={img_hero}/>
-                        <h1 className="ui inverted centered header">
-                            <span className="regular1">HOME</span><span className="light1">CARERS</span>
-                        </h1>
                         <h2 className="ui inverted centered header">
+                            <span className="regular1">HOME</span><span className="light1">CARERS</span>
+                        </h2>
+                        <h3 className="ui inverted centered header">
                                 <span className="regular1">
                                     L’outil de liaison, avec les professionnels de santé !
                                 </span>
-                        </h2>
+                        </h3>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
                         <div className="ui hidden divider"></div>
