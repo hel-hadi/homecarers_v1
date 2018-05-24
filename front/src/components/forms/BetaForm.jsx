@@ -14,7 +14,7 @@ class BetaForm extends React.Component {
             count_global: 1,
             data: {
                 email: '',
-                postal_code: ''
+                code_postal: ''
             },
             loading: this.props.loader,
             errors: {},
@@ -32,8 +32,8 @@ class BetaForm extends React.Component {
         this.setState({ count_global: 1 });
         const errors = this.validate(this.state.data);
         this.setState({ errors });
-        if (!this.state.data.postal_code){
-            this.setState({ postal_code: '78000' });
+        if (!this.state.data.code_postal){
+            this.setState({ code_postal: '78000' });
         }
         if (Object.keys(errors).length === 0) {
             this.setState({loading: true});
@@ -47,14 +47,14 @@ class BetaForm extends React.Component {
 
     onLoader() {
         this.state.errors.email = '';
-        this.state.errors.postal_code = '';
+        this.state.errors.code_postal = '';
         this.state.errors.global = null ;
     }
 
     validate = (data) => {
         const errors = {};
         if (!validator.isEmail(data.email)) errors.email = "Vous devez renseigner votre adresse mail !";
-        // if (!validator.isPostalCode(data.postal_code, 'FR')) errors.postal_code = "Le code postal est incorrect";
+        // if (!validator.isPostalCode(data.code_postal, 'FR')) errors.code_postal = "Le code postal est incorrect";
         return errors;
     };
 
@@ -103,11 +103,11 @@ class BetaForm extends React.Component {
                                         </div>
                                         <input
                                             className="beta"
-                                            type="postal_code"
-                                            id="postal_code"
-                                            name="postal_code"
+                                            type="code_postal"
+                                            id="code_postal"
+                                            name="code_postal"
                                             placeholder="Code postal"
-                                            value={data.postal_code}
+                                            value={data.code_postal}
                                             onChange={this.onChange}
                                         />
                                         <br/>
@@ -124,8 +124,8 @@ class BetaForm extends React.Component {
                         </div>
 
                         {(count_global === 1 && errors.email) && <InlineError text={errors.email}/>}
-
-                        {(count_global === 1 && errors.global) && <InlineError text={errors.global} />}
+                        {(count_global === 1 && errors.global) && <InlineError
+                            text="Cette adresse mail est déjà utilisée !" />}
                         {(errors.email || errors.global) && this.onLoader()}
 
                     </Form>
@@ -170,11 +170,11 @@ class BetaForm extends React.Component {
                                             </div>
                                             <input
                                                 className="beta2"
-                                                type="postal_code"
-                                                id="postal_code"
-                                                name="postal_code"
+                                                type="code_postal"
+                                                id="code_postal"
+                                                name="code_postal"
                                                 placeholder="Code postal"
-                                                value={data.postal_code}
+                                                value={data.code_postal}
                                                 onChange={this.onChange}
                                             />
                                             <br/>
@@ -188,10 +188,10 @@ class BetaForm extends React.Component {
                                         </div>
                                     )}
                                 </Popup>
-
                             </div>
                         {(count_global === 1 && errors.email) && <InlineError text={errors.email}/>}
-                        {(count_global === 1 && errors.global) && <InlineError text={errors.global} />}
+                        {(count_global === 1 && errors.global) && <InlineError
+                        text="Saisie incorrect ! Cette adresse mail est déjà utilisée !" />}
                         {(errors.email || errors.global) && this.onLoader()}
 
                     </Form>
