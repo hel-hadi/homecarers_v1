@@ -57,6 +57,11 @@ export const App = Loadable({
     loading: Loading,
 })
 
+export const PatientPro = Loadable({
+    loader: () => import('@pages/PatientPro.jsx'),
+    loading: Loading,
+})
+
 export const ContactUsPage = Loadable({
     loader: () => import('@pages/ContactUsPage.jsx'),
     loading: Loading,
