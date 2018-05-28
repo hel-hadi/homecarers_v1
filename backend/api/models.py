@@ -9,6 +9,11 @@ from .managers import UserManager
 class LandingUser(models.Model):
     email = models.EmailField(unique=True)
     postal_code = models.IntegerField(blank=True, null=True)
+    PROFILE_CHOICES = (
+        ('Patient', 'Patient'),
+        ('Pro', 'Professionnel de la santé')
+    )
+    profile = models.CharField(choices=PROFILE_CHOICES, default='Patient', max_length=64, blank=True)
     created_at = models.DateTimeField(auto_now_add = True)
 
 class ContactMessage(models.Model):
