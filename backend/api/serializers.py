@@ -6,7 +6,7 @@ from django.core.mail import send_mail
 class LandingUserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = LandingUser
-        fields = ('email', 'postal_code', 'created_at')
+        fields = ('email', 'postal_code', 'profile', 'created_at')
 
 class ContactMessageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

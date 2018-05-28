@@ -4,9 +4,9 @@ from rest_framework.test import APITestCase, APIClient
 from api.models import LandingUser, ContactMessage
 
 class LandingUserTests(APITestCase):
-    def test_register_mail(self):
+    def test_landing_user(self):
         url = '/api/landing_users/'
-        data = {'email': 'lolilol@gmail.com', 'postal_code': '75000' }
+        data = {'email': 'lolilol@gmail.com', 'postal_code': '75000', 'profile': 'Pro' }
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(LandingUser.objects.count(), 1)
