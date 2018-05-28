@@ -4,7 +4,8 @@ import Footer from '@temp/Footer.jsx'
 import { connect } from 'react-redux/dist/react-redux.min'
 import { HashLink as Link } from 'react-router-hash-link';
 import Headroom from 'react-headroom';
-import { OurSystemPage,
+import { PatientPro,
+         OurSystemPage,
          OurGoalPage,
          AboutUsPage,
          ContactUsPage,
@@ -21,11 +22,20 @@ class BetaPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            height: 0,
             loader: false,
             message: 'C\'est fait ! Vous êtes inscrit pour participer à la version bêta de Homecarers',
             validate: false
         };
+
     };
+
+    componentDidMount() {
+        document.addEventListener('scroll', () => {
+            const height = window.scrollY;
+            this.setState({ height});
+        });
+    }
 
     handleTop(text)
     {
@@ -33,6 +43,7 @@ class BetaPage extends React.Component {
                 position: 'top'
             });
     };
+
     submit = data => this.props.beta(data)
         .then(() => (this.handleTop(this.state.message)))
         .then(this.setState({loader: false}));
@@ -40,19 +51,33 @@ class BetaPage extends React.Component {
         return (
             <div>
                 <div className="ui inverted masthead segment" id="home">
-                    <div className="ui large secondary inverted menu">
-                        <img className="i image" alt="logo home carers" src={img_logo}/>
-                        <div className="right item">
-                            <Link smooth to='/#home' className="ui regular1 item">
-                                Accueil
-                            </Link>
-                            <Link smooth to='#ourgoal'   className="regular1 item">Notre objectif</Link>
-                            <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
-                            <Link smooth to='#aboutus'   className="regular1 item">À propos de nous</Link>
-                            <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
-
-                        </div>
-                    </div>
+                        { this.state.height < 950 ?
+                                <div className="ui large secondary inverted menu">
+                                    <img className="ui image" alt="logo home carers" src={img_logo}/>
+                                    <div className="right item">
+                                        <Link smooth to='/#home' className="ui regular1 item">Accueil</Link>
+                                        <Link smooth to='#ourgoal' className="regular1 item">Notre objectif</Link>
+                                        <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
+                                        <Link smooth to='#aboutus' className="regular1 item">À propos de nous</Link>
+                                        <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
+                                    </div>
+                                </div>
+                            :
+                            <Headroom pinStart={950} downTolerance={50}>
+                                <div className="ui large secondary inverted menu bool">
+                                    <img className="ui image" alt="logo home carers" src={img_logo_blanc}/>
+                                       <div className="right item">
+                                        <Link smooth to='/#home' className="ui regular1 item">
+                                        Accueil
+                                        </Link>
+                                        <Link smooth to='#ourgoal'   className="regular1 item">Notre objectif</Link>
+                                        <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
+                                        <Link smooth to='#aboutus'   className="regular1 item">À propos de nous</Link>
+                                        <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
+                                    </div>
+                                </div>
+                            </Headroom>
+                        }
                     <div className="ui hidden divider"></div>
                     <div className="ui hidden divider"></div>
                     <div className="ui hidden divider"></div>
@@ -64,7 +89,7 @@ class BetaPage extends React.Component {
                         </h2>
                         <h3 className="ui inverted centered header">
                                 <span className="regular1">
-                                    L’outil de liaison, avec les professionnels de santé !
+                                    L’outil pour le patient, avec les professionnels de santé !
                                 </span>
                         </h3>
                         <div className="ui hidden divider"></div>
@@ -82,20 +107,21 @@ class BetaPage extends React.Component {
                         <img className="ui tiny centered image" alt="scroll icon" src={img_scroll}/>
                     </div>
                 </div>
-                <Headroom pinStart={950} downTolerance={50}>
-                <div className="ui large secondary inverted menu bool">
-                    <img className="ui image" alt="logo home carers" src={img_logo_blanc}/>
-                    <div className="right item">
-                        <Link smooth to='/#home' className="ui regular1 item">
-                            Accueil
-                        </Link>
-                        <Link smooth to='#ourgoal'   className="regular1 item">Notre objectif</Link>
-                        <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
-                        <Link smooth to='#aboutus'   className="regular1 item">À propos de nous</Link>
-                        <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
-                    </div>
-                </div>
-                </Headroom>
+
+                {/*<Headroom pinStart={950} downTolerance={50}>*/}
+                {/*<div className="ui large secondary inverted menu bool">*/}
+                    {/*<img className="ui image" alt="logo home carers" src={img_logo_blanc}/>*/}
+                    {/*<div className="right item">*/}
+                        {/*<Link smooth to='/#home' className="ui regular1 item">*/}
+                            {/*Accueil*/}
+                        {/*</Link>*/}
+                        {/*<Link smooth to='#ourgoal'   className="regular1 item">Notre objectif</Link>*/}
+                        {/*<Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>*/}
+                        {/*<Link smooth to='#aboutus'   className="regular1 item">À propos de nous</Link>*/}
+                        {/*<Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
+                {/*</Headroom>*/}
                 <FeatureWeb />
                 <div className="back">
                     <div id="ourgoal">
