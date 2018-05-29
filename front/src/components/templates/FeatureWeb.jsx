@@ -44,6 +44,8 @@ const FeaturesWeb = () => (
                             </span>
                             <div className="ui hidden divider"></div>
                             <div className="ui hidden divider"></div>
+                            <div className="ui hidden divider"></div>
+                            <div className="ui hidden divider"></div>
                             <div className="ui three column grid">
                                 <div className="column center aligned row">
                                     <div className="column">
@@ -76,6 +78,8 @@ const FeaturesWeb = () => (
                             <span className="gras">
                                 Professionnel
                             </span>
+                            <div className="ui hidden divider"></div>
+                            <div className="ui hidden divider"></div>
                             <div className="ui hidden divider"></div>
                             <div className="ui hidden divider"></div>
                             <div className="ui three column grid">
