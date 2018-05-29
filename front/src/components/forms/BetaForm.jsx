@@ -69,7 +69,7 @@ class BetaForm extends React.Component {
                         <div className="ui centered grid">
                             <div className="ui huge icon input">
                                 <input className="beta"
-                                       placeholder="Example@email.com"
+                                       placeholder="Exemple@email.com"
                                        type="email"
                                        id="email"
                                        name="email"
