@@ -14,14 +14,12 @@ const PatientPro = () => (
                         <div className="ui text container">
                             <h3 className="ui header">Patient
                             </h3>
-                            <p className="textonepage"> Homecarers est fait pour tout type de patient.
-                                Patient soigne occasionnellement par un medecin, malade chronique, ou ayant ete hospitalise,
-                                tout le monde peut s'y inscrire et avoir un suivi medical constant
-                                <br/>
-                                Homecarers donne la possibilite au patient d'autoriser, a ses professionnels de sante,
-                                l'acces a son suivi medical.
-                                Il permet au patient de notifier ses symptomes, afin que les soignants aient acces au plus
-                                d'information possible dans le cadre de l'elaboration d'un diagnostique.
+                            <p className="textonepage">
+                                Homecarers donne la possibilité au patient d'être informé sur les professionnels de santé qui ont accès à son suivi médical.
+                                Le patient peut également noter ces symptômes, consultables par les soignants, afin d'aider au diagnostic.
+                                <br/><br/>
+                                Soigné occasionnellement par un médecin, malade chronique, ou ayant été hospitalisé, Homecarers est fait pour tous.
+                              <br/>  Inscrivez-vous et bénéficiez d'un suivi médical complet.
                             </p>
                         </div>
                     </div>
