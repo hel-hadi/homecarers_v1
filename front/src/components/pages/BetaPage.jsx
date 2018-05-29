@@ -50,22 +50,41 @@ class BetaPage extends React.Component {
     render() {
         return (
             <div className="pusher">
-                <div className="ui inverted vertical masthead center aligned segment">
-                    <div className="ui container diff2">
-                        <div className="ui large secondary inverted menu">
-                            <div className="left item">
-                                <img className="ui image" alt="logo home carers" src={img_logo}/>
-                            </div>
-                            <div className="right item">
-                            <Link smooth to='/#home' className="ui regular1 item">Accueil</Link>
-                            <Link smooth to='#ourgoal' className="regular1 item">Notre objectif</Link>
-                            <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
-                            <Link smooth to='#aboutus' className="regular1 item">À propos de nous</Link>
-                            <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
+                <div className="ui inverted vertical masthead center aligned segment" id="home">
+                    {this.state.height < 950 ?
+                        <div className="ui container diff2">
+                            <div className="ui large secondary inverted menu">
+                                <div className="left item">
+                                    <img className="ui small image" alt="logo home carers" src={img_logo}/>
+                                </div>
+                                <div className="right item">
+                                    <Link smooth to='/#home' className="ui regular1 item">Accueil</Link>
+                                    <Link smooth to='#ourgoal' className="regular1 item">Notre objectif</Link>
+                                    <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
+                                    <Link smooth to='#aboutus' className="regular1 item">À propos de nous</Link>
+                                    <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="ui hidden divider"></div>
+                        :
+                        <Headroom pinStart={950} downTolerance={50}>
+                        <div className="ui container diff2">
+                            <div className="ui large secondary inverted menu bool">
+                                <div className="left item">
+                                    <img className="ui small image" alt="logo home carers" src={img_logo_blanc}/>
+                                </div>
+                                <div className="right item">
+                                    <Link smooth to='/#home' className="ui regular1 item">Accueil</Link>
+                                    <Link smooth to='#ourgoal' className="regular1 item">Notre objectif</Link>
+                                    <Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>
+                                    <Link smooth to='#aboutus' className="regular1 item">À propos de nous</Link>
+                                    <Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>
+                                </div>
+                            </div>
+                        </div>
+                        </Headroom>
+                    }
+                        <div className="ui hidden divider"></div>
                     <div className="ui text">
                         <div className="ui hidden divider"></div>
                         <h1 className="ui inverted header">
@@ -76,7 +95,7 @@ class BetaPage extends React.Component {
                         </h2>
                         <h2>
                             <span className="regular1">
-                            L’outil pour le patient, avec les professionnels de santé !
+                            L’outil pour le patient avec les professionnels de santé !
                             </span>
                         </h2>
                         <div className="ui hidden divider"></div>
@@ -93,84 +112,6 @@ class BetaPage extends React.Component {
                         <img className="ui tiny centered image" alt="scroll icon" src={img_scroll}/>
                     </div>
                 </div>
-                {/*<div className="ui inverted vertical masthead center aligned segment" id="home">*/}
-                        {/*{ this.state.height < 950 ?*/}
-                            {/*<div class="ui container">*/}
-                            {/*<div className="ui large secondary inverted menu">*/}
-                                    {/*<img className="ui image" alt="logo home carers" src={img_logo}/>*/}
-                                    {/*<div className="right item">*/}
-                                        {/*<Link smooth to='/#home' className="ui regular1 item">Accueil</Link>*/}
-                                        {/*<Link smooth to='#ourgoal' className="regular1 item">Notre objectif</Link>*/}
-                                        {/*<Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>*/}
-                                        {/*<Link smooth to='#aboutus' className="regular1 item">À propos de nous</Link>*/}
-                                        {/*<Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>*/}
-                                    {/*</div>*/}
-                                {/*</div>*/}
-                            {/*</div>*/}
-                            {/*:*/}
-                            {/*<Headroom pinStart={950} downTolerance={50}>*/}
-                                {/*<div class="ui container">*/}
-
-                                {/*<div className="ui large secondary inverted menu bool">*/}
-                                    {/*<img className="ui image" alt="logo home carers" src={img_logo_blanc}/>*/}
-                                       {/*<div className="right item">*/}
-                                        {/*<Link smooth to='/#home' className="ui regular1 item">*/}
-                                        {/*Accueil*/}
-                                        {/*</Link>*/}
-                                        {/*<Link smooth to='#ourgoal'   className="regular1 item">Notre objectif</Link>*/}
-                                        {/*<Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>*/}
-                                        {/*<Link smooth to='#aboutus'   className="regular1 item">À propos de nous</Link>*/}
-                                        {/*<Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>*/}
-                                    {/*</div>*/}
-                                {/*</div>*/}
-                                {/*</div>*/}
-                            {/*</Headroom>*/}
-                        {/*}*/}
-                    {/*<div className="ui hidden divider"></div>*/}
-                    {/*<div className="ui hidden divider"></div>*/}
-                    {/*<div className="ui hidden divider"></div>*/}
-                    {/*<div className="ui hidden divider"></div>*/}
-                    {/*<div className="ui centered container">*/}
-                        {/*<img className="ui smally centered image" alt="logo blanc home carers" src={img_hero}/>*/}
-                        {/*<h2 className="ui inverted centered header">*/}
-                            {/*<span className="regular1">HOME</span><span className="light1">CARERS</span>*/}
-                        {/*</h2>*/}
-                        {/*<h3 className="ui inverted centered header">*/}
-                                {/*<span className="regular1">*/}
-                                    {/*L’outil de liaison pour le patient, avec les professionnels de santé !*/}
-                                {/*</span>*/}
-                        {/*</h3>*/}
-                        {/*<div className="ui hidden divider"></div>*/}
-                        {/*<div className="ui hidden divider"></div>*/}
-                        {/*<div className="ui hidden divider"></div>*/}
-                        {/*<BetaForm submit={this.submit} loader={this.state.loader}/>*/}
-                        {/*<div className="ui hidden divider"></div>*/}
-                        {/*<div className="ui hidden divider"></div>*/}
-                        {/*<div className="ui hidden divider"></div>*/}
-                        {/*<h2 className="ui centered grid">*/}
-                                {/*<span className="light1">*/}
-                                    {/*Scroller pour en savoir plus*/}
-                                {/*</span>*/}
-                        {/*</h2>*/}
-                        {/*<img className="ui tiny centered image" alt="scroll icon" src={img_scroll}/>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
-
-                {/*<Headroom pinStart={950} downTolerance={50}>*/}
-                {/*<div className="ui large secondary inverted menu bool">*/}
-                    {/*<img className="ui image" alt="logo home carers" src={img_logo_blanc}/>*/}
-                    {/*<div className="right item">*/}
-                        {/*<Link smooth to='/#home' className="ui regular1 item">*/}
-                            {/*Accueil*/}
-                        {/*</Link>*/}
-                        {/*<Link smooth to='#ourgoal'   className="regular1 item">Notre objectif</Link>*/}
-                        {/*<Link smooth to='#oursystem' className="regular1 item">Notre outil</Link>*/}
-                        {/*<Link smooth to='#aboutus'   className="regular1 item">À propos de nous</Link>*/}
-                        {/*<Link smooth to='#contactus' className="regular1 item">Nous contacter</Link>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
-                {/*</Headroom>*/}
-
                 <FeatureWeb />
                 <div className="back">
                     <div id="ourgoal">

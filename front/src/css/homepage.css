@@ -74,6 +74,13 @@ h2 .regular1.phrase {
 .mini1 {
     width: 50px!important;
 }
+.ecart {
+    padding-right: 6em!important;
+}
+.ecart2 {
+    padding-left: 6em!important;
+}
+
 
 .medium1 {
     width: 160px!important;
@@ -216,8 +223,6 @@ h3 .light1 {
 
 .inverted.menu.bool {
     padding-top: 25px!important;
-    padding-left: 120px;
-    padding-right: 120px;
     font-size: 1.12em!important;
     margin-top: -0.9em!important;
     background-color: white!important;
@@ -254,7 +259,7 @@ h3 .light1 {
 }
 
 .masthead h2 {
-    font-size: 2.5em;
+    font-size: 2.4em; /* phrase de liaison */
     font-weight: normal;
 }
 
