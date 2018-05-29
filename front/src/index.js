@@ -9,7 +9,6 @@ import Route  from 'react-router-dom/Route'
 import {App } from './actions/routeSplit'
 import rootReducer from "./rootReducer";
 import '@css/homepage.css'
-import '@css/loading.css'
 
 const store = createStore(
     rootReducer,
