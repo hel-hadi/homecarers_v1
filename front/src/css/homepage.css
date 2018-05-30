@@ -76,11 +76,12 @@ h2 .regular1.phrase {
 }
 .column.ecart {
     padding-right: 6em!important;
-    }
-.column.ecart2 {
-    padding-left: 6em!important;
 }
 
+.column.ecart2 {
+
+    padding-left: 6em!important;
+}
 
 .medium1 {
     width: 160px!important;

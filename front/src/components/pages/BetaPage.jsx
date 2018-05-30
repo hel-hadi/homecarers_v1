@@ -85,8 +85,7 @@ class BetaPage extends React.Component {
                         </Headroom>
                     }
                         <div className="ui hidden divider"></div>
-                    <div className="ui hidden divider"></div>
-                    <div className="ui hidden divider"></div>
+
                     <div className="ui text">
                         <div className="ui hidden divider"></div>
                         <h1 className="ui inverted header">
