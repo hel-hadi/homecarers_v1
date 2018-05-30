@@ -16,6 +16,7 @@ class BetaForm extends React.Component {
                 email: '',
                 postal_code: '',
                 profile: ''
+
             },
             loading: this.props.loader,
             errors: {},
@@ -48,14 +49,14 @@ class BetaForm extends React.Component {
 
     onLoader() {
         this.state.errors.email = '';
-        this.state.errors.postal_code = '';
+        this.state.errors.code_postal = '';
         this.state.errors.global = null ;
     }
 
     validate = (data) => {
         const errors = {};
         if (!validator.isEmail(data.email)) errors.email = "Vous devez renseigner votre adresse mail !";
-        // if (!validator.isPostalCode(data.postal_code, 'FR')) errors.postal_code = "Le code postal est incorrect";
+        // if (!validator.isPostalCode(data.code_postal, 'FR')) errors.code_postal = "Le code postal est incorrect";
         return errors;
     };
 
