@@ -85,6 +85,8 @@ class BetaPage extends React.Component {
                         </Headroom>
                     }
                         <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
                     <div className="ui text">
                         <div className="ui hidden divider"></div>
                         <h1 className="ui inverted header">
@@ -95,7 +97,7 @@ class BetaPage extends React.Component {
                         </h2>
                         <h2>
                             <span className="regular1">
-                            L’outil pour le patient avec les professionnels de santé !
+                            L'outil de liaison avec les professionnels de santé
                             </span>
                         </h2>
                         <div className="ui hidden divider"></div>
