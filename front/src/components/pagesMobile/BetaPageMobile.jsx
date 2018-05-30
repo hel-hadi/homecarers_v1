@@ -49,7 +49,7 @@ class BetaPageMobile extends React.Component {
                         </h1>
                         <h1 className="ui inverted centered header">
                                 <span className="regular1">
-                                    L’outil de liaison, avec les professionnels de santé !
+                                   L'outil de liaison avec les professionnels de santé
                                 </span>
                         </h1>
                         <div className="ui hidden divider"></div>
