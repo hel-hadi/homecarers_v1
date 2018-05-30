@@ -14,7 +14,8 @@ class BetaForm extends React.Component {
             count_global: 1,
             data: {
                 email: '',
-                postal_code: ''
+                postal_code: '',
+                profile: ''
             },
             loading: this.props.loader,
             errors: {},
@@ -33,7 +34,7 @@ class BetaForm extends React.Component {
         const errors = this.validate(this.state.data);
         this.setState({ errors });
         if (!this.state.data.postal_code){
-            this.setState({ postal_code: '78000' });
+            this.state.data.postal_code = '00000';
         }
         if (Object.keys(errors).length === 0) {
             this.setState({loading: true});
@@ -95,22 +96,42 @@ class BetaForm extends React.Component {
                                             <br/>
                                             Nous utiliserons votre adresse e-mail pour vous envoyer occasionnellement
                                             des informations concernant le développement et le déroulement
-                                            de la bêta de Homecarers.
+                                            de la phase de test de Homecarers.
                                             <br/><br/>
-                                            Votre code postal sera utilisé uniquement à des fins statistiques par Homecarers et
+                                            Votre code postal et votre catégorie seront utilisés uniquement à des fins statistiques par Homecarers et
                                             ne sera pas transmis à des tiers.
                                             <br /><br />
                                         </div>
-                                        <input
-                                            className="beta"
-                                            type="postal_code"
-                                            id="postal_code"
-                                            name="postal_code"
-                                            placeholder="Code postal"
-                                            value={data.postal_code}
-                                            onChange={this.onChange}
-                                        />
-                                        <br/>
+                                        <div className="ui centered grid">
+                                        <div className="two fields">
+                                            <div className="field">
+                                                <input
+                                                    className="betaSelect"
+                                                    type="postal_code"
+                                                    id="postal_code"
+                                                    name="postal_code"
+                                                    placeholder="Code postal"
+                                                    value={data.postal_code}
+                                                    onChange={this.onChange}
+                                                />
+                                            </div>
+                                            <div className="field">
+                                                <select
+                                                    className="betaSelect"
+                                                    type="profile"
+                                                    id="profile"
+                                                    name="profile"
+                                                    placeholder="profile"
+                                                    value={data.profile}
+                                                    onChange={this.onChange}>
+                                                    <option value="">------</option>
+                                                    <option value="Patient">Patient</option>
+                                                    <option value="Pro">Professionnel de la sante</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div className="ui hidden divider"></div>
                                         <div className="actions">
                                             <button  className="positive ui button"
                                                      onClick={() => {this.onSubmit(); close()}}>Soumettre</button>
@@ -134,7 +155,7 @@ class BetaForm extends React.Component {
                         <div className="ui centered grid">
                             <div className="ui huge icon input">
                                 <input className="ui centered beta1"
-                                       placeholder=" Example@email.com"
+                                       placeholder=" Exemple@email.com"
                                        type="email"
                                        id="email"
                                        name="email"
@@ -162,26 +183,45 @@ class BetaForm extends React.Component {
                                                 <br/>
                                                 Nous utiliserons votre adresse e-mail pour vous envoyer occasionnellement
                                                 des informations concernant le développement et le déroulement
-                                                de la bêta de Homecarers.
+                                                de la phase de test de Homecarers.
                                                 <br/><br/>
-                                                Votre code postal sera utilisé uniquement à des fins statistiques par Homecarers et
+                                                Votre code postal et votre catégorie seront utilisés uniquement à des fins statistiques par Homecarers et
                                                 ne sera pas transmis à des tiers.
                                                 <br /><br />
                                             </div>
-                                            <input
-                                                className="beta2"
-                                                type="postal_code"
-                                                id="postal_code"
-                                                name="postal_code"
-                                                placeholder="Code postal"
-                                                value={data.postal_code}
-                                                onChange={this.onChange}
-                                            />
-                                            <br/>
+                                            <div className="ui centered grid">
+                                                <div className="two fields">
+                                                    <div className="field">
+                                                        <input
+                                                            className=""
+                                                            type="text"
+                                                            id="postal_code"
+                                                            name="postal_code"
+                                                            placeholder="Code postal"
+                                                            value={data.postal_code}
+                                                            onChange={this.onChange}
+                                                        />
+                                                    </div>
+                                                    <div className="field">
+                                                        <select
+                                                            className=""
+                                                            type="text"
+                                                            id="profile"
+                                                            name="profile"
+                                                            value={data.profile}
+                                                            onChange={this.onChange}>
+                                                            <option value="Patient"> ------ </option>
+                                                            <option value="Patient">Patient</option>
+                                                            <option value="Pro">Professionnel de la sante</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div className="actions">
                                                 <button  className="positive ui button"
                                                          onClick={() => {this.onSubmit(); close()}}>Soumettre</button>
-                                                <button className="ui button" onClick={() => {close() }}>
+                                                <br/>
+                                                <button className="ui  button" onClick={() => {close() }}>
                                                     Fermer
                                                 </button>
                                             </div>

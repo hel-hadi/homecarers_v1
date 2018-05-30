@@ -35,7 +35,7 @@ const OurGoalPageMobile= () => (
                         <h3 className="ui header">Améliorer la qualité du suivi médical et de soin</h3>
                             <p className="ui centered textonepage">
                                 Homecarers permet d’améliorer le suivi du patient grâce à l’accès aux informations pertinentes,
-                                ce qui donne aux professionnels de santé un atout majeur dans la construction de leurs diagnostiques.
+                                ce qui donne aux professionnels de santé un atout majeur dans la construction de leurs diagnostics.
                                 <br/>
                                 Homecarers permet un suivi optimal du patient.
                             </p>

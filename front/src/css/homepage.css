@@ -74,14 +74,14 @@ h2 .regular1.phrase {
 .mini1 {
     width: 50px!important;
 }
-.ecart {
+.column.ecart {
     padding-right: 6em!important;
 }
-.ecart2 {
+
+.column.ecart2 {
 
     padding-left: 6em!important;
 }
-
 
 .medium1 {
     width: 160px!important;
@@ -168,6 +168,14 @@ h2 .regular1.phrase {
     border-radius: 3em!important;
     height: 3em!important;
     }
+
+.betaSelect {
+    -webkit-border-radius: 3em!important;
+    -moz-border-radius: 3em!important;
+    border-radius: 3em!important;
+    height: 3em!important;
+    width: 15em!important;
+}
 
 .beta2 {
     -webkit-border-radius: 3em!important;
