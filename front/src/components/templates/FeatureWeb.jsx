@@ -37,6 +37,7 @@ const FeaturesWeb = () => (
                 <div className="ui hidden divider"></div>
                 <div className="ui two column grid">
                     <div className="column center aligned row">
+                        <div className="ui vertical divider"></div>
                         <div className="column ecart">
                             <img className="ui centered tiny image" alt="chat" src={img_patient} />
                             <div className="ui hidden divider"></div>
@@ -72,7 +73,6 @@ const FeaturesWeb = () => (
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <div className="column ecart2">
@@ -87,7 +87,6 @@ const FeaturesWeb = () => (
                             <div className="ui hidden divider"></div>
                             <div className="ui hidden divider"></div>
                             <div className="ui three column grid">
-
                                 <div className="column center aligned row">
                                     <div className="column">
                                         <img className="ui centered mini1 image" alt="chat" src={img_chat} />
