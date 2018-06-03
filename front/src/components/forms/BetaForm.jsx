@@ -100,7 +100,7 @@ class BetaForm extends React.Component {
                                             de la phase de test de Homecarers.
                                             <br/><br/>
                                             Votre code postal et votre catégorie seront utilisés uniquement à des fins statistiques par Homecarers et
-                                            ne sera pas transmis à des tiers.
+                                            ne seront pas transmis à des tiers.
                                             <br /><br />
                                         </div>
                                         <div className="ui centered grid">
@@ -187,7 +187,7 @@ class BetaForm extends React.Component {
                                                 de la phase de test de Homecarers.
                                                 <br/><br/>
                                                 Votre code postal et votre catégorie seront utilisés uniquement à des fins statistiques par Homecarers et
-                                                ne sera pas transmis à des tiers.
+                                                ne seront pas transmis à des tiers.
                                                 <br /><br />
                                             </div>
                                             <div className="ui centered grid">
