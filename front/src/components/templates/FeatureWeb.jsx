@@ -37,6 +37,7 @@ const FeaturesWeb = () => (
                 <div className="ui hidden divider"></div>
                 <div className="ui two column grid">
                     <div className="column center aligned row">
+                        <div className="ui vertical divider"></div>
                         <div className="column ecart">
                             <img className="ui centered tiny image" alt="chat" src={img_patient} />
                             <div className="ui hidden divider"></div>
@@ -55,24 +56,23 @@ const FeaturesWeb = () => (
                                         <img className="ui centered mini1 image" alt="chat" src={img_note} />
                                         <div className="ui hidden divider"></div>
                                         <div className="ui hidden divider"></div>
-                                        <p className="featurelight">Notez vos symptômes afin que vos soignants aient accès à l'information.</p>
+                                        <p className="featurelight">Notez vos symptômes afin que vos soignants aient accès à l'information</p>
                                     </div>
                                     <div className="column">
                                         <img className="ui centered mini1 image" alt="chat" src={img_link} />
                                         <div className="ui hidden divider"></div>
                                         <div className="ui hidden divider"></div>
-                                        <p className="featurelight">Soyez informé sur les professionels de santé qui ont accès à votre suivi médical.</p>
+                                        <p className="featurelight">Soyez informé sur les professionels de santé qui ont accès à votre suivi médical</p>
                                     </div>
 
                                     <div className="column">
                                         <img className="ui centered mini1  image" alt="chat" src={img_star} />
                                         <div className="ui hidden divider"></div>
                                         <div className="ui hidden divider"></div>
-                                        <p className="featurelight">Bénéficiez d'un suivi médical complet et constant quel que soit votre soignant.</p>
+                                        <p className="featurelight">Bénéficiez d'un suivi médical complet et constant quel que soit votre soignant</p>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <div className="column ecart2">
@@ -87,7 +87,6 @@ const FeaturesWeb = () => (
                             <div className="ui hidden divider"></div>
                             <div className="ui hidden divider"></div>
                             <div className="ui three column grid">
-
                                 <div className="column center aligned row">
                                     <div className="column">
                                         <img className="ui centered mini1 image" alt="chat" src={img_chat} />
