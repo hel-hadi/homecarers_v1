@@ -13,6 +13,14 @@
     font-size: 1.6em!important;
 
 }
+
+.modal > .content {
+    width: 100%;
+    font-weight: 300!important;
+    font-family: 'Lato'!important;
+    color: black!important;
+}
+
 .modal > .content1 {
     width: 100%;
     padding: 10px 5px;
