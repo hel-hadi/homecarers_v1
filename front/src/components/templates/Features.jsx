@@ -3,7 +3,6 @@ import img_chat from '@img/chat1.png'
 import img_book from '@img/book1.png'
 import img_blason from '@img/blason2.png'
 import img_patient from '@img/patient12.png'
-import img_profession from '@img/profession1.png'
 import img_fiche from '@img/doctor-icon.png'
 import img_link from '@img/linker1.png'
 import img_note from '@img/note12.png'
@@ -79,7 +78,7 @@ const Features = () => (
                         <div className="column">
                             <img className="ui centered mini1 image" alt="chat" src={img_fiche} />
                             <div className="ui hidden divider"></div>
-                            <p className="gras"> Professionnel</p>
+                            <p className="gras">Professionnel</p>
                             <div className="ui hidden divider"></div>
                         </div>
                     </div>
@@ -106,16 +105,10 @@ const Features = () => (
                             <div className="ui hidden divider"></div>
                             <div className="ui hidden divider"></div>
                             <div className="ui hidden divider"></div>
-                            <p className="featurelight"> Dégréé d’accréditation et d'accès aux informations médicales </p>
+                            <p className="featurelight"> Degré d’accréditation et d'accès aux informations médicales </p>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
             </div>
         </div>
     </div>

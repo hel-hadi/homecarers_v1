@@ -173,14 +173,14 @@ class BetaForm extends React.Component {
                                         S'inscrire à la bêta
                                     </span>
                                         </button>
-                                    } modal>
+                                    } modal={true}>
                                     {close => (
                                         <div className="modal">
                                             <a className="close" onClick={close}>
                                                 &times;
                                             </a>
                                             <div className="header"> Confirmation </div>
-                                            <div className="content1">
+                                            <div className="content">
                                                 <br/>
                                                 Nous utiliserons votre adresse e-mail pour vous envoyer occasionnellement
                                                 des informations concernant le développement et le déroulement
@@ -206,12 +206,12 @@ class BetaForm extends React.Component {
                                                     <div className="field">
                                                         <select
                                                             className=""
-                                                            type="text"
+                                                            type="profile"
                                                             id="profile"
                                                             name="profile"
                                                             value={data.profile}
                                                             onChange={this.onChange}>
-                                                            <option value="Patient"> ------ </option>
+                                                            <option value=""> ------ </option>
                                                             <option value="Patient">Patient</option>
                                                             <option value="Pro">Professionnel de la sante</option>
                                                         </select>
