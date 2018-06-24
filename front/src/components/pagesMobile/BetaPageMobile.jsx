@@ -12,7 +12,7 @@ class BetaPageMobile extends React.Component {
         super(props);
         this.state = {
             loader: false,
-            message: 'C\'est fait ! Vous êtes inscrit pour participer à la version bêta de Homecarers',
+            message: 'C\'est fait ! Vous êtes inscrit pour participer à la version bêta de Helpid Software',
             validate: false
         };
     };
@@ -45,11 +45,11 @@ class BetaPageMobile extends React.Component {
                     <div className="ui centered container">
                         <img className="ui tiny centered image" alt="logo blanc home carers" src={img_hero}/>
                         <h1 className="ui inverted centered header">
-                            <span className="regularMobile">HOME</span><span className="light1">CARERS</span>
+                            <span className="regularMobile">Helpid </span><span className="light1">Software</span>
                         </h1>
                         <h1 className="ui inverted centered header">
                                 <span className="regular1">
-                                   L'outil de liaison avec les professionnels de santé
+                                    Un service de gestion médicale au service de la recherche
                                 </span>
                         </h1>
                         <div className="ui hidden divider"></div>
@@ -76,9 +76,6 @@ class BetaPageMobile extends React.Component {
                     </div>
                     <div id="oursystem">
                         <OurSystemPageMobile  />
-                    </div>
-                    <div id="aboutus">
-                        <AboutUsPageMobile />
                     </div>
                     <div id="contactus">
                         <ContactUsPageMobile />
