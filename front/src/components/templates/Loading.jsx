@@ -1,5 +1,5 @@
 import React from 'react'
-import img_logo_blanc from '@img/logosurblanc.png'
+import img_logo from '@img/logo.png'
 import { Style } from 'radium'
 
 class Loading extends React.Component {
@@ -21,7 +21,7 @@ class Loading extends React.Component {
                 <div className="">
                     <div className="ui inverted">
                         <div className="ui active inverted dimmer content">
-                            <img className="ui medium1   image" alt="logo home carers" src={img_logo_blanc}/>
+                            <img className="ui size_logo image" alt="logo home carers" src={img_logo}/>
                             <br/>
                             <br/>
                             <br/>
@@ -31,7 +31,9 @@ class Loading extends React.Component {
                             <br/>
                             <br/>
                             <br/>
-                            <div className="ui large text loader"></div>
+                            <br/>
+                            <br/>
+                            <div className="ui small text loader"></div>
                         </div>
                     </div>
                 </div>

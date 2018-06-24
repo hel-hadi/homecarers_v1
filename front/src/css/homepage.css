@@ -88,8 +88,24 @@ h2 .regular1.phrase {
     width: 160px!important;
 }
 
+.size_logo {
+    width: 60px!important;
+}
+
+.size_logo1 {
+    width: 55px!important;
+}
+
 .medium2 {
     width: 180px!important;
+}
+
+.large1 {
+    width: 340px!important;
+}
+
+.large1 {
+    width: 380px!important;
 }
 
 .pos {
@@ -315,7 +331,7 @@ h3 .light1 {
 }
 
 .footer.segment {
-    padding: 5em 0em;
+    padding: 2em 0em;
 }
 
 .secondary.pointing.menu .toc.item {
@@ -357,4 +373,6 @@ h3 .light1 {
     font-size: 1.5em!important;
     font-weight: bold!important;
 }
+
+
 
