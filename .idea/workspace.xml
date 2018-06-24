@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3878d64b-704a-47ef-be62-9c675217f50a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/front/public/index.html" afterPath="$PROJECT_DIR$/front/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/forms/BetaForm.jsx" afterPath="$PROJECT_DIR$/front/src/components/forms/BetaForm.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/pages/BetaPage.jsx" afterPath="$PROJECT_DIR$/front/src/components/pages/BetaPage.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/pages/OurGoalPage.jsx" afterPath="$PROJECT_DIR$/front/src/components/pages/OurGoalPage.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/pages/OurSystemPage.jsx" afterPath="$PROJECT_DIR$/front/src/components/pages/OurSystemPage.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/pagesMobile/BetaPageMobile.jsx" afterPath="$PROJECT_DIR$/front/src/components/pagesMobile/BetaPageMobile.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/pagesMobile/OurGoalPageMobile.jsx" afterPath="$PROJECT_DIR$/front/src/components/pagesMobile/OurGoalPageMobile.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/pagesMobile/OurSystemPageMobile.jsx" afterPath="$PROJECT_DIR$/front/src/components/pagesMobile/OurSystemPageMobile.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/templates/FeatureWeb.jsx" afterPath="$PROJECT_DIR$/front/src/components/templates/FeatureWeb.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/templates/Features.jsx" afterPath="$PROJECT_DIR$/front/src/components/templates/Features.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/templates/Footer.jsx" afterPath="$PROJECT_DIR$/front/src/components/templates/Footer.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/templates/Loading.jsx" afterPath="$PROJECT_DIR$/front/src/components/templates/Loading.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/templates/SidebarPage.jsx" afterPath="$PROJECT_DIR$/front/src/components/templates/SidebarPage.jsx" />
-      <change beforePath="$PROJECT_DIR$/front/src/css/homepage.css" afterPath="$PROJECT_DIR$/front/src/css/homepage.css" />
-      <change beforePath="$PROJECT_DIR$/front/src/img/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/front/src/index.js" afterPath="$PROJECT_DIR$/front/src/index.js" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,6 +38,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FeatureWeb.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/components/templates/FeatureWeb.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="block.rnc" pinned="false" current-in-tab="true">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="240" column="16" lean-forward="false" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="logo.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/src/img/logo.png">
           <provider selected="true" editor-type-id="images">
@@ -82,30 +87,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OurGoalPage.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/components/pages/OurGoalPage.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="39" column="76" lean-forward="false" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OurSystemPage.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/components/pages/OurSystemPage.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BetaPageMobile.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/src/components/pagesMobile/BetaPageMobile.jsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -116,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SidebarPage.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SidebarPage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/src/components/templates/SidebarPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
@@ -142,12 +123,15 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>divider</find>
       <find>mini</find>
       <find>med</find>
       <find>foo</find>
       <find>footer</find>
       <find>homecarers</find>
+      <find>divi</find>
+      <find>verti</find>
+      <find>vert</find>
+      <find>divider</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,7 +144,6 @@
         <option value="$PROJECT_DIR$/front/src/serverBis.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/front/public/index.html" />
-        <option value="$PROJECT_DIR$/front/src/components/templates/FeatureWeb.jsx" />
         <option value="$PROJECT_DIR$/front/src/components/pages/OurGoalPage.jsx" />
         <option value="$PROJECT_DIR$/front/src/components/templates/Loading.jsx" />
         <option value="$PROJECT_DIR$/front/src/components/templates/Features.jsx" />
@@ -173,6 +156,7 @@
         <option value="$PROJECT_DIR$/front/src/components/pages/BetaPage.jsx" />
         <option value="$PROJECT_DIR$/front/src/components/templates/Footer.jsx" />
         <option value="$PROJECT_DIR$/front/src/components/templates/SidebarPage.jsx" />
+        <option value="$PROJECT_DIR$/front/src/components/templates/FeatureWeb.jsx" />
       </list>
     </option>
   </component>
@@ -341,15 +325,16 @@
       <workItem from="1528717852698" duration="1134000" />
       <workItem from="1528723693925" duration="10000" />
       <workItem from="1528885757872" duration="1868000" />
-      <workItem from="1529748524147" duration="27657000" />
+      <workItem from="1529748524147" duration="29233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41186000" />
+    <option name="totallyTimeSpent" value="42762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27510917" sideWeight="0.4936508" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -360,7 +345,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27510917" sideWeight="0.5063492" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35106382" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35106382" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -660,16 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/templates/FeatureWeb.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="31" column="98" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="98" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/components/templates/Features.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -767,6 +742,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/templates/SidebarPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/components/templates/Footer.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -775,10 +760,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/templates/SidebarPage.jsx">
+    <entry file="file://$PROJECT_DIR$/front/src/components/templates/FeatureWeb.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        <state relative-caret-position="430">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
