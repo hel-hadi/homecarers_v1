@@ -94,6 +94,7 @@ let config = {
         new ExtractTextPlugin("styles.css"),
     ]
 };
+
 if (!dev) {
     config.plugins.push(new ImageminPlugin({
         test: /\.(jpe?g|png|gif|svg)$/i
@@ -107,7 +108,7 @@ if (!dev) {
     config.plugins.push(new webpack.optimize.AggressiveMergingPlugin({
     }));
     config.plugins.push(new HtmlWebpackPlugin({
-        title: 'Homecarers',
+        title: 'Helpid Software',
         template: 'front/public/index.html'
     }));
     config.plugins.push(new OptimizeCssAssetsPlugin());

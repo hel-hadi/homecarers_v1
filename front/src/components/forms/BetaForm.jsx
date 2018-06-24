@@ -15,7 +15,7 @@ class BetaForm extends React.Component {
             data: {
                 email: '',
                 postal_code: '',
-                profile: ''
+                profile: 'Pro'
 
             },
             loading: this.props.loader,
@@ -97,10 +97,10 @@ class BetaForm extends React.Component {
                                             <br/>
                                             Nous utiliserons votre adresse e-mail pour vous envoyer occasionnellement
                                             des informations concernant le développement et le déroulement
-                                            de la phase de test de Homecarers.
+                                            de la phase de test de Helpid Software.
                                             <br/><br/>
-                                            Votre code postal et votre catégorie seront utilisés uniquement à des fins statistiques par Homecarers et
-                                            ne seront pas transmis à des tiers.
+                                            Votre code postal sera utilisé uniquement à des fins statistiques par Helpid Software et
+                                            ne sera pas transmis à des tiers.
                                             <br /><br />
                                         </div>
                                         <div className="ui centered grid">
@@ -116,20 +116,20 @@ class BetaForm extends React.Component {
                                                     onChange={this.onChange}
                                                 />
                                             </div>
-                                            <div className="field">
-                                                <select
-                                                    className="betaSelect"
-                                                    type="profile"
-                                                    id="profile"
-                                                    name="profile"
-                                                    placeholder="profile"
-                                                    value={data.profile}
-                                                    onChange={this.onChange}>
-                                                    <option value="">------</option>
-                                                    <option value="Patient">Patient</option>
-                                                    <option value="Pro">Professionnel de la sante</option>
-                                                </select>
-                                            </div>
+                                            {/*<div className="field">*/}
+                                                {/*<select*/}
+                                                    {/*className="betaSelect"*/}
+                                                    {/*type="profile"*/}
+                                                    {/*id="profile"*/}
+                                                    {/*name="profile"*/}
+                                                    {/*placeholder="profile"*/}
+                                                    {/*value={data.profile}*/}
+                                                    {/*onChange={this.onChange}>*/}
+                                                    {/*<option value="">------</option>*/}
+                                                    {/*<option value="Patient">Patient</option>*/}
+                                                    {/*<option value="Pro">Professionnel de la sante</option>*/}
+                                                {/*</select>*/}
+                                            {/*</div>*/}
                                         </div>
                                         </div>
                                         <div className="ui hidden divider"></div>
@@ -184,10 +184,10 @@ class BetaForm extends React.Component {
                                                 <br/>
                                                 Nous utiliserons votre adresse e-mail pour vous envoyer occasionnellement
                                                 des informations concernant le développement et le déroulement
-                                                de la phase de test de Homecarers.
+                                                de la phase de test de Helpid Software.
                                                 <br/><br/>
-                                                Votre code postal et votre catégorie seront utilisés uniquement à des fins statistiques par Homecarers et
-                                                ne seront pas transmis à des tiers.
+                                                Votre code postal sera utilisé uniquement à des fins statistiques par Helpid Software et
+                                                ne sera pas transmis à des tiers.
                                                 <br /><br />
                                             </div>
                                             <div className="ui centered grid">
@@ -202,19 +202,6 @@ class BetaForm extends React.Component {
                                                             value={data.postal_code}
                                                             onChange={this.onChange}
                                                         />
-                                                    </div>
-                                                    <div className="field">
-                                                        <select
-                                                            className=""
-                                                            type="profile"
-                                                            id="profile"
-                                                            name="profile"
-                                                            value={data.profile}
-                                                            onChange={this.onChange}>
-                                                            <option value=""> ------ </option>
-                                                            <option value="Patient">Patient</option>
-                                                            <option value="Pro">Professionnel de la sante</option>
-                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>

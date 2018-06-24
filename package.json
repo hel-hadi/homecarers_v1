@@ -84,6 +84,7 @@
     "webpack-manifest-plugin": "^2.0.0-rc.2"
   },
   "dependencies": {
+    "cors": "^2.8.4",
     "react-headroom": "^2.2.2",
     "react-router-hash-link": "^1.2.0",
     "react-script": "^2.0.5",

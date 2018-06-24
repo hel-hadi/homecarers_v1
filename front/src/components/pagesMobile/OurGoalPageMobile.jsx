@@ -1,6 +1,6 @@
 import React from 'react'
-import img_nurse from '@img/nurse1.png'
-import img_tablette from '@img/tablette.png'
+import img_screen from '@img/Accueil.png'
+import img_lab from '@img/lab.png'
 
 const OurGoalPageMobile= () => (
     <div>
@@ -12,19 +12,17 @@ const OurGoalPageMobile= () => (
                     </h4>
                     <div className="eight wide column">
                         <div className="ui text container">
-                            <h3 className="ui header">Faciliter le travail des professionnels
+                            <h3 className="ui header">Comme votre logiciel actuel. En mieux.
                             </h3>
-                            <p className="ui centered textonepage">
-                                Homecarers est la plate-forme qui centralise les informations du patient
-                                et favorise leurs transmissions auprès des professionnels de santé.
-                                <br/>
-                                Professionnels du privé, du public ou libéraux ont accès au suivi de leurs
-                                patients, dans le but d’assurer une continuité dans les soins de chaque personne.
+                            <p className="textonepage"> Helpid est un logiciel de gestion de cabinet médical répondant aux attentes des praticiens.
+                                <br/><br/>
+                                Son ergonomie est conçue tout particulièrement pour fluidifier les consultations et le suivi des patients,
+                                grâce à des outils visuels pertinents et pratiques. Et c’est gratuit.
                             </p>
                         </div>
                     </div>
                     <div className="six wide right floated column">
-                        <img className="ui large centered rounded image" alt="medecin together" src={img_nurse} />
+                        <img className="ui large centered rounded image" alt="medecin together" src={img_screen} />
                     </div>
                 </div>
                 <h4 className="ui horizontal header divider">
@@ -32,17 +30,17 @@ const OurGoalPageMobile= () => (
                 <div className="row">
                     <div className="nine wide column">
                         <div className="ui text container">
-                        <h3 className="ui header">Améliorer la qualité du suivi médical et de soin</h3>
+                        <h3 className="ui header">Un outil centré sur la recherche</h3>
                             <p className="ui centered textonepage">
-                                Homecarers permet d’améliorer le suivi du patient grâce à l’accès aux informations pertinentes,
-                                ce qui donne aux professionnels de santé un atout majeur dans la construction de leurs diagnostics.
-                                <br/>
-                                Homecarers permet un suivi optimal du patient.
+                                Helpid est la plateforme qui permet de valoriser l’expérience des médecins généralistes en favorisant la recherche en santé publique.
+                                <br/><br/>
+                                Les données issues des soins primaires sont anonymisées et partagées entre praticiens afin de permettre un accès facile aux données épidémiologiques.
+                                {/*Helpid permet un suivi optimal du patient.*/}
                             </p>
                         </div>
                     </div>
                     <div className="seven wide right floated column">
-                        <img className="ui medium centered rounded image" alt="medecin together" src={img_tablette} />
+                        <img className="ui medium centered rounded image" alt="medecin together" src={img_lab} />
                     </div>
                 </div>
             </div>
