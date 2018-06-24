@@ -1,13 +1,13 @@
 import React from 'react'
 import { SidebarItem } from 'react-responsive-sidebar';
 import Link from "react-router-dom/Link"
-import img_logo from '@img/logosurblanc.png'
+import img_logo from '@img/logo.png'
 
 const SidebarPage = [
     <div className="ui centered center">
             <div className="ui hidden divider"></div>
             <div className="ui hidden divider"></div>
-                <img className="ui centered medium2 circular image" alt="chat" src={img_logo} />
+                <img className="ui centered tiny circular image" alt="chat" src={img_logo} />
     </div>,
     <SidebarItem textAlign="center">
         <div className="ui hidden divider"></div>
@@ -50,8 +50,8 @@ const SidebarPage = [
         <div className="ui hidden divider"></div>
     </div>,
     <SidebarItem textAlign="center">
-        <a href="https://www.facebook.com/HomecarersFrance/"><i className="facebook blue big icon"></i></a>
-        <a href="https://www.linkedin.com/company/28624734/"><i className="linkedin blue big icon"></i></a>
+        <a href="https://www.facebook.com/"><i className="facebook blue big icon"></i></a>
+        <a href="https://www.linkedin.com/company/"><i className="linkedin blue big icon"></i></a>
     </SidebarItem>,
     <div className="ui hidden divider"></div>,
     <div className="ui hidden divider"></div>,

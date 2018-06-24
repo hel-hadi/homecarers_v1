@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { hydrate } from 'react-dom'
 import BrowserRouter  from 'react-router-dom/BrowserRouter'
 import { Provider }  from 'react-redux/dist/react-redux.min'
 import { createStore, applyMiddleware } from 'redux'
@@ -15,7 +16,7 @@ const store = createStore(
     applyMiddleware(thunk)
 );
 
-ReactDOM.render(
+hydrate(
   <BrowserRouter>
               <Provider store={store}>
                 <Route component ={App} />
