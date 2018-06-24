@@ -38,6 +38,7 @@ const FeaturesWeb = () => (
                 <div className="ui hidden divider"></div>
                 <div className="ui three column grid">
                     <div className="column center aligned row">
+                        <div className="ui vertical divider"></div>
                         <div className="column ecart">
                             <img className="ui centered mini1 image" alt="chat" src={img_link} />
                             <div className="ui hidden divider"></div>
